@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Superliga" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KM1304M\SQLEXPRESS;Initial Catalog=Superliga;Integrated Security=True" SettingsObjectName="App_SuperLiga.Properties.Settings" SettingsPropertyName="SuperligaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Equipas" Member="Equipas">
+    <Type Name="Equipa">
+      <Column Name="id_equipa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="estadio" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Equipa_Imagen" Member="Imagens" ThisKey="id_equipa" OtherKey="id_equipa" Type="Imagen" />
+      <Association Name="Equipa_Jogadore" Member="Jogadores" ThisKey="id_equipa" OtherKey="id_equipa" Type="Jogadore" />
+      <Association Name="Equipa_Staff" Member="Staffs" ThisKey="id_equipa" OtherKey="id_equipa" Type="Staff" />
+      <Association Name="Equipa_Jogo" Member="Jogos" ThisKey="id_equipa" OtherKey="equipa_casa" Type="Jogo" />
+      <Association Name="Equipa_Jogo1" Member="Jogos1" ThisKey="id_equipa" OtherKey="equipa_fora" Type="Jogo" />
+      <Association Name="Equipa_Estatistica" Member="Estatisticas" ThisKey="id_equipa" OtherKey="id_equipa" Type="Estatistica" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Imagens" Member="Imagens">
+    <Type Name="Imagen">
+      <Column Name="id_imagem" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="imagem" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_equipa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Equipa_Imagen" Member="Equipa" ThisKey="id_equipa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jogadores" Member="Jogadores">
+    <Type Name="Jogadore">
+      <Column Name="id_jogador" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="posicao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_equipa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Equipa_Jogadore" Member="Equipa" ThisKey="id_equipa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="id_staff" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="funcao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_equipa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Equipa_Staff" Member="Equipa" ThisKey="id_equipa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jornadas" Member="Jornadas">
+    <Type Name="Jornada">
+      <Column Name="id_jornada" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Jornada_Jogo" Member="Jogos" ThisKey="id_jornada" OtherKey="id_jornada" Type="Jogo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jogos" Member="Jogos">
+    <Type Name="Jogo">
+      <Column Name="id_jogo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="equipa_casa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="equipa_fora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_jornada" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data_jogo" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Jogo_Resultado" Member="Resultados" ThisKey="id_jogo" OtherKey="id_jogo" Type="Resultado" />
+      <Association Name="Equipa_Jogo" Member="Equipa" ThisKey="equipa_casa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+      <Association Name="Equipa_Jogo1" Member="Equipa1" ThisKey="equipa_fora" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+      <Association Name="Jornada_Jogo" Member="Jornada" ThisKey="id_jornada" OtherKey="id_jornada" Type="Jornada" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Resultados" Member="Resultados">
+    <Type Name="Resultado">
+      <Column Name="id_resultado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_jogo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_jornada" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="golos_casa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="golos_fora" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="equipa_casa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="equipa_fora" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Jogo_Resultado" Member="Jogo" ThisKey="id_jogo" OtherKey="id_jogo" Type="Jogo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estatisticas" Member="Estatisticas">
+    <Type Name="Estatistica">
+      <Column Name="id_estatistica" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_equipa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="vitorias" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="empates" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="derrotas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pontos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="golos_marcados" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="golos_sofridos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total_jogos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Equipa_Estatistica" Member="Equipa" ThisKey="id_equipa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
