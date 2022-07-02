@@ -155,6 +155,5 @@ namespace App_SuperLiga
             this.Hide();
         }
 
-       
     }
 }

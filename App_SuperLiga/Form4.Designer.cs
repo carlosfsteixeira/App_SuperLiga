@@ -38,13 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbl_fechar = new System.Windows.Forms.Label();
-            this.btAddJogador = new System.Windows.Forms.Button();
             this.alphaGradientPanel6 = new System.Windows.Forms.AlphaGradientPanel();
             this.colorWithAlpha1 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha2 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
             this.alphaGradientPanel1 = new System.Windows.Forms.AlphaGradientPanel();
+            this.btAddJogador = new System.Windows.Forms.Button();
+            this.lbl_fechar = new System.Windows.Forms.Label();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(95, 190);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 24);
@@ -80,7 +80,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label7.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(99, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 24);
@@ -94,8 +94,8 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(99, 16);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(99, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 24);
             this.label2.TabIndex = 44;
@@ -159,7 +159,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label15.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(337, 16);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(18, 20);
@@ -173,7 +173,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(337, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 20);
@@ -187,7 +187,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(337, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 20);
@@ -202,41 +202,12 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 10);
+            this.label5.Location = new System.Drawing.Point(22, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 20);
             this.label5.TabIndex = 39;
             this.label5.Text = "Adicionar Jogador";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_fechar
-            // 
-            this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.del1;
-            this.lbl_fechar.Location = new System.Drawing.Point(443, 11);
-            this.lbl_fechar.Name = "lbl_fechar";
-            this.lbl_fechar.Size = new System.Drawing.Size(48, 39);
-            this.lbl_fechar.TabIndex = 54;
-            this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
-            // 
-            // btAddJogador
-            // 
-            this.btAddJogador.BackColor = System.Drawing.Color.Transparent;
-            this.btAddJogador.BackgroundImage = global::App_SuperLiga.Properties.Resources.confirm2;
-            this.btAddJogador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddJogador.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btAddJogador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.btAddJogador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddJogador.Location = new System.Drawing.Point(439, 254);
-            this.btAddJogador.Name = "btAddJogador";
-            this.btAddJogador.Size = new System.Drawing.Size(31, 29);
-            this.btAddJogador.TabIndex = 59;
-            this.btAddJogador.UseVisualStyleBackColor = false;
-            this.btAddJogador.Click += new System.EventHandler(this.btAddJogador_Click);
             // 
             // alphaGradientPanel6
             // 
@@ -267,32 +238,32 @@
             this.alphaGradientPanel6.Location = new System.Drawing.Point(10, 11);
             this.alphaGradientPanel6.Name = "alphaGradientPanel6";
             this.alphaGradientPanel6.Rounded = true;
-            this.alphaGradientPanel6.Size = new System.Drawing.Size(427, 39);
+            this.alphaGradientPanel6.Size = new System.Drawing.Size(440, 39);
             this.alphaGradientPanel6.TabIndex = 70;
             // 
             // colorWithAlpha1
             // 
             this.colorWithAlpha1.Alpha = 255;
-            this.colorWithAlpha1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.colorWithAlpha1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha1.Parent = this.alphaGradientPanel6;
             // 
             // colorWithAlpha2
             // 
             this.colorWithAlpha2.Alpha = 255;
-            this.colorWithAlpha2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.colorWithAlpha2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha2.Parent = this.alphaGradientPanel6;
             // 
             // colorWithAlpha3
             // 
             this.colorWithAlpha3.Alpha = 255;
-            this.colorWithAlpha3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.colorWithAlpha3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha3.Parent = this.alphaGradientPanel6;
             // 
             // alphaGradientPanel1
             // 
             this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.alphaGradientPanel1.Border = true;
-            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
             this.alphaGradientPanel1.Controls.Add(this.label2);
             this.alphaGradientPanel1.Controls.Add(this.label7);
@@ -325,11 +296,39 @@
             this.alphaGradientPanel1.Size = new System.Drawing.Size(479, 291);
             this.alphaGradientPanel1.TabIndex = 71;
             // 
+            // btAddJogador
+            // 
+            this.btAddJogador.BackColor = System.Drawing.Color.Transparent;
+            this.btAddJogador.BackgroundImage = global::App_SuperLiga.Properties.Resources.ok_32;
+            this.btAddJogador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAddJogador.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btAddJogador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddJogador.Location = new System.Drawing.Point(445, 257);
+            this.btAddJogador.Name = "btAddJogador";
+            this.btAddJogador.Size = new System.Drawing.Size(25, 25);
+            this.btAddJogador.TabIndex = 59;
+            this.btAddJogador.UseVisualStyleBackColor = false;
+            this.btAddJogador.Click += new System.EventHandler(this.btAddJogador_Click);
+            // 
+            // lbl_fechar
+            // 
+            this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
+            this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
+            this.lbl_fechar.Location = new System.Drawing.Point(458, 17);
+            this.lbl_fechar.Name = "lbl_fechar";
+            this.lbl_fechar.Size = new System.Drawing.Size(33, 30);
+            this.lbl_fechar.TabIndex = 54;
+            this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(500, 356);
             this.ControlBox = false;
             this.Controls.Add(this.alphaGradientPanel1);
