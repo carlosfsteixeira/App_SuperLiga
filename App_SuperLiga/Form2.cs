@@ -67,7 +67,7 @@ namespace App_SuperLiga
                 DataGridViewResultadosShow();
                 DataGridViewResultadosShowData();
                 PieChartShow();
-
+                
 
                 btGerarJogos.Enabled = false;
             }
@@ -121,6 +121,7 @@ namespace App_SuperLiga
 
             MostrarEstatisticasGlobais();
             MostrarVencedor();
+            MostrarEstatisticaEquipas();
         }
 
         private void HidePanels()
@@ -1849,18 +1850,203 @@ namespace App_SuperLiga
 
         private void MostrarEstatisticaEquipas()
         {
-            int maisGolos = (int)dc.Estatisticas.Max(x => x.golos_marcados);
+            PesquisarAtaque();
+            PesquisarDefesa();
+            PesquisarVitorias();
+            PesquisarEmpates();
+            PesquisarDerrotas();
+            PesquisarPontos();
+        }
 
-            var equipaComMaisPontos = from t1 in dc.Estatisticas
-                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                      where t1.pontos == maisGolos
+
+
+        private void PesquisarAtaque()
+        {
+            int maisGolosMarcados = (int)dc.Estatisticas.Max(x => x.golos_marcados);
+
+            var equipaComMaisGolos = from t1 in dc.Estatisticas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.golos_marcados == maisGolosMarcados
+                                     select t2;
+
+            lbl_maisGolosMarcados.Text = maisGolosMarcados.ToString();
+
+            foreach (var e in equipaComMaisGolos)
+            {
+                lbl_melhorAtaque.Text += $"{e.nome} ";
+            }
+
+            int menosGolosMarcados = (int)dc.Estatisticas.Min(x => x.golos_marcados);
+
+            var equipaComMenosGolos = from t1 in dc.Estatisticas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.golos_marcados == menosGolosMarcados
                                       select t2;
 
-            lbl_maisGolosMarcados.Text = maisGolos.ToString();
+            lbl_menosGolosMarcados.Text = menosGolosMarcados.ToString();
 
+            foreach (var e in equipaComMenosGolos)
+            {
+                lbl_piorAtaque.Text += $"{e.nome} ";
+            }
+        }
 
+        private void PesquisarDefesa()
+        {
+            int menosGolosSofridos = (int)dc.Estatisticas.Min(x => x.golos_sofridos);
 
+            var equipaComMenosGolos = from t1 in dc.Estatisticas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.golos_sofridos == menosGolosSofridos
+                                      select t2;
 
+            lbl_menosGolosSofridos.Text = menosGolosSofridos.ToString();
+
+            foreach (var e in equipaComMenosGolos)
+            {
+                lbl_MelhorDefesa.Text += $"{e.nome} ";
+            }
+
+            int maisGolosSofridos = (int)dc.Estatisticas.Max(x => x.golos_sofridos);
+
+            var equipaComMaisGolos = from t1 in dc.Estatisticas
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.golos_sofridos == maisGolosSofridos
+                                     select t2;
+
+            lbl_maisGolosSofridos.Text = maisGolosSofridos.ToString();
+
+            foreach (var e in equipaComMaisGolos)
+            {
+                lbl_piorDefesa.Text += $"{e.nome} ";
+            }
+
+        }
+
+        private void PesquisarVitorias()
+        {
+
+            int maisVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
+
+            var equipaMaisVitorias = from t1 in dc.Estatisticas
+                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                   where t1.vitorias == maisVitorias
+                                     select t2;
+
+            lbl_maisVitorias.Text = maisVitorias.ToString();
+
+            foreach (var e in equipaMaisVitorias)
+            {
+                lbl_equipaMaisVitorias.Text += $"{e.nome} ";
+            }
+
+            int menosVitorias = (int)dc.Estatisticas.Min(x => x.vitorias);
+
+            var equipaMenosVitorias = from t1 in dc.Estatisticas
+                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                    where t1.vitorias == menosVitorias
+                                    select t2;
+
+            lbl_menosVitorias.Text = menosVitorias.ToString();
+
+            foreach (var e in equipaMenosVitorias)
+            {
+                lbl_equipaMenosVitorias.Text += $"{e.nome} ";
+            }
+        }
+
+        private void PesquisarEmpates()
+        {
+            int maisEmpates = (int)dc.Estatisticas.Max(x => x.empates);
+
+            var equipaMaisEmpates = from t1 in dc.Estatisticas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.empates == maisEmpates
+                                    select t2;
+
+            lbl_maisEmpates.Text = maisEmpates.ToString();
+
+            foreach (var e in equipaMaisEmpates)
+            {
+                lbl_equipaMaisEmpates.Text += $"{e.nome} ";
+            }
+
+            int menosEmpates = (int)dc.Estatisticas.Min(x => x.empates);
+
+            var equipaMenosEmpates = from t1 in dc.Estatisticas
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.empates == menosEmpates
+                                     select t2;
+
+            lbl_menosEmpates.Text = menosEmpates.ToString();
+
+            foreach (var e in equipaMenosEmpates)
+            {
+                lbl_equipaMenosEmpates.Text += $"{e.nome} ";
+            }
+
+        }
+
+        private void PesquisarDerrotas()
+        {
+            int maisDerrotas = (int)dc.Estatisticas.Max(x => x.derrotas);
+
+            var equipaMaisDerrotas = from t1 in dc.Estatisticas
+                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                    where t1.derrotas == maisDerrotas
+                                     select t2;
+
+            lbl_maisDerrotas.Text = maisDerrotas.ToString();
+
+            foreach (var e in equipaMaisDerrotas)
+            {
+                lbl_equipaMaisDerrotas.Text += $"{e.nome} ";
+            }
+
+            int menosDerrotas = (int)dc.Estatisticas.Min(x => x.derrotas);
+
+            var equipaMenosDerrotas = from t1 in dc.Estatisticas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.derrotas == menosDerrotas
+                                      select t2;
+
+            lbl_menosDerrotas.Text = menosDerrotas.ToString();
+
+            foreach (var e in equipaMenosDerrotas)
+            {
+                lbl_equipaMenosDerrotas.Text += $"{e.nome} ";
+            }
+        }
+
+        private void PesquisarPontos()
+        {
+            int maisPontos = (int)dc.Estatisticas.Max(x => x.pontos);
+
+            var equipaMaisPontos = from t1 in dc.Estatisticas
+                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                   where t1.pontos == maisPontos
+                                   select t2;
+
+            lbl_maisPontos.Text = maisPontos.ToString();
+
+            foreach (var e in equipaMaisPontos)
+            {
+                lbl_equipaMaisPontos.Text += $"{e.nome} ";
+            }
+
+            int menosPontos = (int)dc.Estatisticas.Min(x => x.pontos);
+
+            var equipaMenosPontos = from t1 in dc.Estatisticas
+                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                    where t1.pontos == menosPontos
+                                    select t2;
+
+            lbl_menosPontos.Text = menosPontos.ToString();
+
+            foreach (var e in equipaMenosPontos)
+            {
+                lbl_equipaMenosPontos.Text += $"{e.nome} ";
+            }
         }
 
         #endregion
