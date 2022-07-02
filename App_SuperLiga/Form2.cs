@@ -60,15 +60,15 @@ namespace App_SuperLiga
             var pesquisaJornadasBD = from Jornada in dc.Jornadas
                                      select Jornada;
 
+            
+
             if (pesquisaJogosBD.Count() != 0 && pesquisaJornadasBD.Count() != 0)
             {
                 //mostrar dados já existentes em bd do calendario
                 DataGridViewJogosShow();
                 DataGridViewResultadosShow();
                 DataGridViewResultadosShowData();
-                PieChartShow();
                 
-
                 btGerarJogos.Enabled = false;
             }
             else
@@ -108,8 +108,8 @@ namespace App_SuperLiga
             panelJogos.Visible = false;
             panelEstatisticas.Visible = false;
 
+            dataGridViewClassificacao.Rows.Clear();
             DataGridViewClassificaoShow();
-
         }
 
         private void btEstatisticas_Click(object sender, EventArgs e)
@@ -119,9 +119,8 @@ namespace App_SuperLiga
             panelClassificacao.Visible = false;
             panelJogos.Visible = false;
 
-            MostrarEstatisticasGlobais();
-            MostrarVencedor();
-            MostrarEstatisticaEquipas();
+            LimparLabelsEstatisticas();
+            MostrarEstatisticas();
         }
 
         private void HidePanels()
@@ -1651,7 +1650,6 @@ namespace App_SuperLiga
                         MessageBox.Show(ex.Message);
                     }
 
-                    //PopularDataGridViewClassificacao(e, a, totalJogos, estatistica, linha);
                 }
                 else
                 {
@@ -1697,6 +1695,8 @@ namespace App_SuperLiga
                 PopularDataGridViewClassificacao(e, a, totalJogos, estatistica, linha);
 
                 linha++;
+
+                
             }
 
             SortingDataGridViewClassificacao();
@@ -1710,6 +1710,8 @@ namespace App_SuperLiga
             {
                 row.Height = 70;
             }
+
+            
         }
 
         private void PopularDataGridViewClassificacao(Equipa e, Image img, int jogosTotal, Estatistica estatistica, int linha)
@@ -1763,6 +1765,19 @@ namespace App_SuperLiga
         #endregion
 
         #region PanelEstatisticas
+
+        private void MostrarEstatisticas()
+        {
+            PieChartShow();
+            MostrarEstatisticasGlobais();
+            MostrarVencedor();
+            PesquisarAtaque();
+            PesquisarDefesa();
+            PesquisarVitorias();
+            PesquisarEmpates();
+            PesquisarDerrotas();
+            PesquisarPontos();
+        }
 
         private void PieChartShow()
         {
@@ -1848,18 +1863,6 @@ namespace App_SuperLiga
 
 
 
-        private void MostrarEstatisticaEquipas()
-        {
-            PesquisarAtaque();
-            PesquisarDefesa();
-            PesquisarVitorias();
-            PesquisarEmpates();
-            PesquisarDerrotas();
-            PesquisarPontos();
-        }
-
-
-
         private void PesquisarAtaque()
         {
             int maisGolosMarcados = (int)dc.Estatisticas.Max(x => x.golos_marcados);
@@ -1890,7 +1893,6 @@ namespace App_SuperLiga
                 lbl_piorAtaque.Text += $"{e.nome} ";
             }
         }
-
         private void PesquisarDefesa()
         {
             int menosGolosSofridos = (int)dc.Estatisticas.Min(x => x.golos_sofridos);
@@ -1922,7 +1924,6 @@ namespace App_SuperLiga
             }
 
         }
-
         private void PesquisarVitorias()
         {
 
@@ -2047,6 +2048,46 @@ namespace App_SuperLiga
             {
                 lbl_equipaMenosPontos.Text += $"{e.nome} ";
             }
+        }
+
+        private void LimparLabelsEstatisticas()
+        {
+            lbl_totalJogosEpoca.Text = null;
+            lbl_totalGolosEpoca.Text = null;
+            lbl_mediaGolosEpoca.Text = null;
+            lbl_totalVitoriasEpoca.Text = null;
+            lbl_totalEmpatesEpoca.Text = null;
+            lbl_totalDerrotasEpoca.Text = null;
+            lbl_Vencedor.Text = null;
+            pictureBox_Vencedor.Text = null;
+            lbl_melhorAtaque.Text = null;
+            lbl_maisGolosMarcados.Text = null;
+            lbl_piorAtaque.Text = null;
+            lbl_menosGolosMarcados.Text = null;
+            lbl_MelhorDefesa.Text = null;
+            lbl_menosGolosSofridos.Text = null;
+            lbl_piorDefesa.Text = null;
+            lbl_maisGolosSofridos.Text = null;
+            lbl_equipaMaisVitorias.Text = null;
+            lbl_maisVitorias.Text = null;
+            lbl_equipaMenosVitorias.Text = null;
+            lbl_menosVitorias.Text = null;
+            lbl_equipaMaisDerrotas.Text = null;
+            lbl_maisDerrotas.Text = null;
+            lbl_equipaMenosDerrotas.Text = null;
+            lbl_menosDerrotas.Text = null;
+            lbl_equipaMaisEmpates.Text = null;
+            lbl_maisEmpates.Text = null;
+            lbl_equipaMenosEmpates.Text = null;
+            lbl_menosEmpates.Text = null;
+            lbl_equipaMaisPontos.Text = null;
+            lbl_maisPontos.Text = null;
+            lbl_equipaMenosPontos.Text = null;
+            lbl_menosPontos.Text = null;
+            chart1.Series["s1"].Points.Clear();
+            chart1.Series["s1"].Points.Clear();
+            chart1.Series["s1"].Points.Clear();
+
         }
 
         #endregion
