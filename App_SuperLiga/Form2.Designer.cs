@@ -115,15 +115,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.alphaGradientPanel11 = new System.Windows.Forms.AlphaGradientPanel();
             this.colorWithAlpha1 = new System.Windows.Forms.ColorWithAlpha();
-            this.alphaGradientPanel8 = new System.Windows.Forms.AlphaGradientPanel();
+            this.alphaGradientPanel9 = new System.Windows.Forms.AlphaGradientPanel();
             this.colorWithAlpha2 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
-            this.label367 = new System.Windows.Forms.Label();
+            this.label368 = new System.Windows.Forms.Label();
             this.label370 = new System.Windows.Forms.Label();
             this.alphaGradientPanel10 = new System.Windows.Forms.AlphaGradientPanel();
             this.label369 = new System.Windows.Forms.Label();
-            this.alphaGradientPanel9 = new System.Windows.Forms.AlphaGradientPanel();
-            this.label368 = new System.Windows.Forms.Label();
+            this.alphaGradientPanel8 = new System.Windows.Forms.AlphaGradientPanel();
+            this.label367 = new System.Windows.Forms.Label();
             this.btEditTeam = new System.Windows.Forms.Button();
             this.treeViewStaff = new System.Windows.Forms.TreeView();
             this.treeViewPlantel = new System.Windows.Forms.TreeView();
@@ -263,9 +263,9 @@
             this.label115 = new System.Windows.Forms.Label();
             this.superligaDataSet = new App_SuperLiga.SuperligaDataSet();
             this.superligaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bt_sairApp = new App_SuperLiga.Button_WOC();
             this.btSubmeter = new App_SuperLiga.Button_WOC();
             this.btGerarJogos = new App_SuperLiga.Button_WOC();
+            this.bt_sairApp = new App_SuperLiga.Button_WOC();
             this.btAddEquipa = new App_SuperLiga.Button_WOC();
             this.panelEquipas.SuspendLayout();
             this.btDelStaff.SuspendLayout();
@@ -275,9 +275,9 @@
             this.alphaGradientPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.alphaGradientPanel11.SuspendLayout();
-            this.alphaGradientPanel8.SuspendLayout();
-            this.alphaGradientPanel10.SuspendLayout();
             this.alphaGradientPanel9.SuspendLayout();
+            this.alphaGradientPanel10.SuspendLayout();
+            this.alphaGradientPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipas)).BeginInit();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel20.SuspendLayout();
@@ -1188,37 +1188,37 @@
             this.colorWithAlpha1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha1.Parent = this.alphaGradientPanel9;
             // 
-            // alphaGradientPanel8
+            // alphaGradientPanel9
             // 
-            this.alphaGradientPanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.alphaGradientPanel8.Border = true;
-            this.alphaGradientPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel8.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel8.Controls.Add(this.label367);
-            this.alphaGradientPanel8.CornerRadius = 20;
-            this.alphaGradientPanel8.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            this.alphaGradientPanel9.BackColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel9.Border = true;
+            this.alphaGradientPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel9.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel9.Controls.Add(this.label368);
+            this.alphaGradientPanel9.CornerRadius = 20;
+            this.alphaGradientPanel9.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
             | System.Windows.Forms.Corner.BottomLeft) 
             | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel8.ForeColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel8.Gradient = true;
-            this.alphaGradientPanel8.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel8.GradientOffset = 1F;
-            this.alphaGradientPanel8.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel8.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel8.Grayscale = false;
-            this.alphaGradientPanel8.Image = null;
-            this.alphaGradientPanel8.ImageAlpha = 75;
-            this.alphaGradientPanel8.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel8.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel8.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel8.Location = new System.Drawing.Point(523, 28);
-            this.alphaGradientPanel8.Name = "alphaGradientPanel8";
-            this.alphaGradientPanel8.Rounded = true;
-            this.alphaGradientPanel8.Size = new System.Drawing.Size(466, 46);
-            this.alphaGradientPanel8.TabIndex = 67;
+            this.alphaGradientPanel9.ForeColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel9.Gradient = true;
+            this.alphaGradientPanel9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel9.GradientOffset = 1F;
+            this.alphaGradientPanel9.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel9.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel9.Grayscale = false;
+            this.alphaGradientPanel9.Image = null;
+            this.alphaGradientPanel9.ImageAlpha = 75;
+            this.alphaGradientPanel9.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel9.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel9.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel9.Location = new System.Drawing.Point(1022, 27);
+            this.alphaGradientPanel9.Name = "alphaGradientPanel9";
+            this.alphaGradientPanel9.Rounded = true;
+            this.alphaGradientPanel9.Size = new System.Drawing.Size(531, 46);
+            this.alphaGradientPanel9.TabIndex = 68;
             // 
             // colorWithAlpha2
             // 
@@ -1232,19 +1232,19 @@
             this.colorWithAlpha3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha3.Parent = this.alphaGradientPanel9;
             // 
-            // label367
+            // label368
             // 
-            this.label367.AutoSize = true;
-            this.label367.BackColor = System.Drawing.Color.Transparent;
-            this.label367.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label367.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label367.ForeColor = System.Drawing.Color.Silver;
-            this.label367.Location = new System.Drawing.Point(17, 7);
-            this.label367.Name = "label367";
-            this.label367.Size = new System.Drawing.Size(164, 24);
-            this.label367.TabIndex = 26;
-            this.label367.Text = "Mapa de Equipa";
-            this.label367.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label368.AutoSize = true;
+            this.label368.BackColor = System.Drawing.Color.Transparent;
+            this.label368.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label368.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label368.ForeColor = System.Drawing.Color.Silver;
+            this.label368.Location = new System.Drawing.Point(18, 8);
+            this.label368.Name = "label368";
+            this.label368.Size = new System.Drawing.Size(54, 24);
+            this.label368.TabIndex = 30;
+            this.label368.Text = "Info";
+            this.label368.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label370
             // 
@@ -1306,51 +1306,51 @@
             this.label369.Text = "Staff";
             this.label369.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // alphaGradientPanel9
+            // alphaGradientPanel8
             // 
-            this.alphaGradientPanel9.BackColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel9.Border = true;
-            this.alphaGradientPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel9.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel9.Controls.Add(this.label368);
-            this.alphaGradientPanel9.CornerRadius = 20;
-            this.alphaGradientPanel9.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            this.alphaGradientPanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.alphaGradientPanel8.Border = true;
+            this.alphaGradientPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel8.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel8.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel8.Controls.Add(this.label367);
+            this.alphaGradientPanel8.CornerRadius = 20;
+            this.alphaGradientPanel8.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
             | System.Windows.Forms.Corner.BottomLeft) 
             | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel9.ForeColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel9.Gradient = true;
-            this.alphaGradientPanel9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel9.GradientOffset = 1F;
-            this.alphaGradientPanel9.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel9.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel9.Grayscale = false;
-            this.alphaGradientPanel9.Image = null;
-            this.alphaGradientPanel9.ImageAlpha = 75;
-            this.alphaGradientPanel9.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel9.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel9.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel9.Location = new System.Drawing.Point(1022, 27);
-            this.alphaGradientPanel9.Name = "alphaGradientPanel9";
-            this.alphaGradientPanel9.Rounded = true;
-            this.alphaGradientPanel9.Size = new System.Drawing.Size(531, 46);
-            this.alphaGradientPanel9.TabIndex = 68;
+            this.alphaGradientPanel8.ForeColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel8.Gradient = true;
+            this.alphaGradientPanel8.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel8.GradientOffset = 1F;
+            this.alphaGradientPanel8.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel8.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel8.Grayscale = false;
+            this.alphaGradientPanel8.Image = null;
+            this.alphaGradientPanel8.ImageAlpha = 75;
+            this.alphaGradientPanel8.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel8.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel8.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel8.Location = new System.Drawing.Point(523, 28);
+            this.alphaGradientPanel8.Name = "alphaGradientPanel8";
+            this.alphaGradientPanel8.Rounded = true;
+            this.alphaGradientPanel8.Size = new System.Drawing.Size(466, 46);
+            this.alphaGradientPanel8.TabIndex = 67;
             // 
-            // label368
+            // label367
             // 
-            this.label368.AutoSize = true;
-            this.label368.BackColor = System.Drawing.Color.Transparent;
-            this.label368.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label368.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label368.ForeColor = System.Drawing.Color.Silver;
-            this.label368.Location = new System.Drawing.Point(18, 8);
-            this.label368.Name = "label368";
-            this.label368.Size = new System.Drawing.Size(54, 24);
-            this.label368.TabIndex = 30;
-            this.label368.Text = "Info";
-            this.label368.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label367.AutoSize = true;
+            this.label367.BackColor = System.Drawing.Color.Transparent;
+            this.label367.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label367.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label367.ForeColor = System.Drawing.Color.Silver;
+            this.label367.Location = new System.Drawing.Point(17, 7);
+            this.label367.Name = "label367";
+            this.label367.Size = new System.Drawing.Size(164, 24);
+            this.label367.TabIndex = 26;
+            this.label367.Text = "Mapa de Equipa";
+            this.label367.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btEditTeam
             // 
@@ -1846,9 +1846,9 @@
             this.panelEstatisticas.Controls.Add(this.pictureBox4);
             this.panelEstatisticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelEstatisticas.ForeColor = System.Drawing.Color.White;
-            this.panelEstatisticas.Location = new System.Drawing.Point(184, 75);
+            this.panelEstatisticas.Location = new System.Drawing.Point(785, 476);
             this.panelEstatisticas.Name = "panelEstatisticas";
-            this.panelEstatisticas.Size = new System.Drawing.Size(1665, 836);
+            this.panelEstatisticas.Size = new System.Drawing.Size(1064, 435);
             this.panelEstatisticas.TabIndex = 14;
             // 
             // alphaGradientPanel3
@@ -2873,7 +2873,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.panel2.Controls.Add(this.panelJogos);
             this.panel2.Controls.Add(this.panelEquipas);
             this.panel2.Controls.Add(this.lbldatetime);
             this.panel2.Controls.Add(this.btEquipas);
@@ -2902,10 +2901,10 @@
             this.panelJogos.Controls.Add(this.circularProgressBar1);
             this.panelJogos.Controls.Add(this.btGerarJogos);
             this.panelJogos.ForeColor = System.Drawing.Color.OrangeRed;
-            this.panelJogos.Location = new System.Drawing.Point(15, 400);
+            this.panelJogos.Location = new System.Drawing.Point(859, 556);
             this.panelJogos.Margin = new System.Windows.Forms.Padding(6);
             this.panelJogos.Name = "panelJogos";
-            this.panelJogos.Size = new System.Drawing.Size(144, 115);
+            this.panelJogos.Size = new System.Drawing.Size(991, 359);
             this.panelJogos.TabIndex = 11;
             // 
             // alphaGradientPanel23
@@ -3641,29 +3640,6 @@
             this.superligaDataSetBindingSource.DataSource = this.superligaDataSet;
             this.superligaDataSetBindingSource.Position = 0;
             // 
-            // bt_sairApp
-            // 
-            this.bt_sairApp.BackColor = System.Drawing.Color.Transparent;
-            this.bt_sairApp.BorderColor = System.Drawing.Color.OrangeRed;
-            this.bt_sairApp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.bt_sairApp.FlatAppearance.BorderSize = 0;
-            this.bt_sairApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.bt_sairApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.bt_sairApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_sairApp.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_sairApp.ForeColor = System.Drawing.Color.White;
-            this.bt_sairApp.Location = new System.Drawing.Point(1546, 14);
-            this.bt_sairApp.Name = "bt_sairApp";
-            this.bt_sairApp.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
-            this.bt_sairApp.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
-            this.bt_sairApp.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bt_sairApp.Size = new System.Drawing.Size(73, 41);
-            this.bt_sairApp.TabIndex = 24;
-            this.bt_sairApp.Text = "Sair";
-            this.bt_sairApp.TextColor = System.Drawing.Color.White;
-            this.bt_sairApp.UseVisualStyleBackColor = false;
-            this.bt_sairApp.Click += new System.EventHandler(this.bt_sairApp_Click);
-            // 
             // btSubmeter
             // 
             this.btSubmeter.BorderColor = System.Drawing.Color.OrangeRed;
@@ -3709,6 +3685,29 @@
             this.btGerarJogos.UseVisualStyleBackColor = true;
             this.btGerarJogos.Click += new System.EventHandler(this.btGerarJogos_Click);
             // 
+            // bt_sairApp
+            // 
+            this.bt_sairApp.BackColor = System.Drawing.Color.Transparent;
+            this.bt_sairApp.BorderColor = System.Drawing.Color.OrangeRed;
+            this.bt_sairApp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.bt_sairApp.FlatAppearance.BorderSize = 0;
+            this.bt_sairApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.bt_sairApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.bt_sairApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_sairApp.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_sairApp.ForeColor = System.Drawing.Color.White;
+            this.bt_sairApp.Location = new System.Drawing.Point(1546, 14);
+            this.bt_sairApp.Name = "bt_sairApp";
+            this.bt_sairApp.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
+            this.bt_sairApp.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
+            this.bt_sairApp.OnHoverTextColor = System.Drawing.Color.Black;
+            this.bt_sairApp.Size = new System.Drawing.Size(73, 41);
+            this.bt_sairApp.TabIndex = 24;
+            this.bt_sairApp.Text = "Sair";
+            this.bt_sairApp.TextColor = System.Drawing.Color.White;
+            this.bt_sairApp.UseVisualStyleBackColor = false;
+            this.bt_sairApp.Click += new System.EventHandler(this.bt_sairApp_Click);
+            // 
             // btAddEquipa
             // 
             this.btAddEquipa.BorderColor = System.Drawing.Color.OrangeRed;
@@ -3740,6 +3739,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1890, 937);
             this.ControlBox = false;
+            this.Controls.Add(this.panelJogos);
             this.Controls.Add(this.panelEstatisticas);
             this.Controls.Add(this.panelClassificacao);
             this.Controls.Add(this.panel5);
@@ -3764,12 +3764,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.alphaGradientPanel11.ResumeLayout(false);
             this.alphaGradientPanel11.PerformLayout();
-            this.alphaGradientPanel8.ResumeLayout(false);
-            this.alphaGradientPanel8.PerformLayout();
-            this.alphaGradientPanel10.ResumeLayout(false);
-            this.alphaGradientPanel10.PerformLayout();
             this.alphaGradientPanel9.ResumeLayout(false);
             this.alphaGradientPanel9.PerformLayout();
+            this.alphaGradientPanel10.ResumeLayout(false);
+            this.alphaGradientPanel10.PerformLayout();
+            this.alphaGradientPanel8.ResumeLayout(false);
+            this.alphaGradientPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipas)).EndInit();
             this.alphaGradientPanel6.ResumeLayout(false);
             this.alphaGradientPanel6.PerformLayout();

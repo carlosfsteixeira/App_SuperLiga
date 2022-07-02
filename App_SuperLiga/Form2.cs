@@ -109,7 +109,7 @@ namespace App_SuperLiga
             panelEstatisticas.Visible = false;
 
             DataGridViewClassificaoShow();
-            SortingDataGridViewClassificacao();
+
         }
 
         private void btEstatisticas_Click(object sender, EventArgs e)
@@ -1650,6 +1650,7 @@ namespace App_SuperLiga
                         MessageBox.Show(ex.Message);
                     }
 
+                    //PopularDataGridViewClassificacao(e, a, totalJogos, estatistica, linha);
                 }
                 else
                 {
@@ -1697,21 +1698,21 @@ namespace App_SuperLiga
                 linha++;
             }
 
+            SortingDataGridViewClassificacao();
+
             foreach (DataGridViewRow r in dataGridViewClassificacao.Rows)
             {
-                r.Cells["Posicao"].Value = (r.Index + 1 + "º");
+                r.Cells[0].Value = (r.Index + 1 + " º");
             }
 
             foreach (DataGridViewRow row in dataGridViewClassificacao.Rows)
             {
                 row.Height = 70;
             }
-
         }
 
         private void PopularDataGridViewClassificacao(Equipa e, Image img, int jogosTotal, Estatistica estatistica, int linha)
         {
-            dataGridViewClassificacao.Rows[linha].Cells[0].Value = e.id_equipa;
             dataGridViewClassificacao.Rows[linha].Cells[1].Value = img;
             dataGridViewClassificacao.Rows[linha].Cells[2].Value = e.nome;
             dataGridViewClassificacao.Rows[linha].Cells[3].Value = estatistica.pontos;
@@ -1721,8 +1722,6 @@ namespace App_SuperLiga
             dataGridViewClassificacao.Rows[linha].Cells[7].Value = estatistica.derrotas;
             dataGridViewClassificacao.Rows[linha].Cells[8].Value = estatistica.golos_marcados;
             dataGridViewClassificacao.Rows[linha].Cells[9].Value = estatistica.golos_sofridos;
-
-            RemoverLinhasDaGrid(dataGridViewClassificacao);
 
         }
 
@@ -1801,41 +1800,37 @@ namespace App_SuperLiga
                                       join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
                                       where t1.pontos == maxPontos
                                       select t2;
-
+            
             Equipa equipaVencedora = new Equipa();
 
             if (equipaComMaisPontos.Count() == 1)
             {
-
                 equipaVencedora = equipaComMaisPontos.Single();
             }
             else
             {
-                int maxVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
-
-                var equipaComMaisVitorias = from t1 in dc.Estatisticas
-                                            join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                            where t1.vitorias == maxVitorias
-                                            select t2;
-
-                if (equipaComMaisVitorias.Count() == 1)
+                foreach (var e in equipaComMaisPontos)
                 {
-                    equipaVencedora = equipaComMaisVitorias.Single();
+                    int maxVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
+                    int maxGolos = (int)dc.Estatisticas.Max(x => x.golos_marcados);
+
+                    var estatisticasDaEquipa = from t1 in dc.Estatisticas
+                                                join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                                where t1.id_equipa == e.id_equipa
+                                                select t1;
+
+                    Estatistica estatistica = new Estatistica();
+
+                    estatistica = estatisticasDaEquipa.Single();
+
+                    if (estatistica.vitorias == maxVitorias)
+                    {
+                        if (estatistica.golos_marcados == maxGolos)
+                        {
+                            equipaVencedora = e;
+                        }
+                    }
                 }
-                else
-                {
-                    int maxGolosMarcados = (int)dc.Estatisticas.Max(x => x.golos_marcados);
-
-                    var equipaComMaisGolos = from t1 in dc.Estatisticas
-                                             join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                             where t1.golos_marcados == maxGolosMarcados
-                                             select t2;
-
-                    equipaVencedora = equipaComMaisGolos.Single();
-                }
-
-                //a equipa vencedora é a equipaComMaisVitorias
-                equipaVencedora = equipaComMaisVitorias.Single();
             }
 
 
