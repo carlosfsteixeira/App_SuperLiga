@@ -38,10 +38,13 @@
             this.label15 = new System.Windows.Forms.Label();
             this.comboBoxFuncao = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btAddStaff = new System.Windows.Forms.Button();
             this.txtNomeStaff = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.lbl_fechar = new System.Windows.Forms.Label();
-            this.btAddStaff = new System.Windows.Forms.Button();
+            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -111,9 +114,12 @@
             // 
             // alphaGradientPanel1
             // 
-            this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.alphaGradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.alphaGradientPanel1.Border = true;
-            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.SlateGray;
+            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.OrangeRed;
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha4);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha5);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha6);
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
             this.alphaGradientPanel1.Controls.Add(this.label1);
             this.alphaGradientPanel1.Controls.Add(this.label15);
@@ -221,6 +227,21 @@
             this.label11.Text = "Função";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btAddStaff
+            // 
+            this.btAddStaff.BackColor = System.Drawing.Color.Transparent;
+            this.btAddStaff.BackgroundImage = global::App_SuperLiga.Properties.Resources.ok_32;
+            this.btAddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAddStaff.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.btAddStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.btAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddStaff.Location = new System.Drawing.Point(415, 250);
+            this.btAddStaff.Name = "btAddStaff";
+            this.btAddStaff.Size = new System.Drawing.Size(25, 25);
+            this.btAddStaff.TabIndex = 1;
+            this.btAddStaff.UseVisualStyleBackColor = false;
+            this.btAddStaff.Click += new System.EventHandler(this.btAddStaff_Click);
+            // 
             // txtNomeStaff
             // 
             this.txtNomeStaff.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,19 +277,23 @@
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
-            // btAddStaff
+            // colorWithAlpha4
             // 
-            this.btAddStaff.BackColor = System.Drawing.Color.Transparent;
-            this.btAddStaff.BackgroundImage = global::App_SuperLiga.Properties.Resources.ok_32;
-            this.btAddStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddStaff.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddStaff.Location = new System.Drawing.Point(415, 250);
-            this.btAddStaff.Name = "btAddStaff";
-            this.btAddStaff.Size = new System.Drawing.Size(25, 25);
-            this.btAddStaff.TabIndex = 1;
-            this.btAddStaff.UseVisualStyleBackColor = false;
-            this.btAddStaff.Click += new System.EventHandler(this.btAddStaff_Click);
+            this.colorWithAlpha4.Alpha = 255;
+            this.colorWithAlpha4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha4.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha5
+            // 
+            this.colorWithAlpha5.Alpha = 255;
+            this.colorWithAlpha5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha5.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha6
+            // 
+            this.colorWithAlpha6.Alpha = 255;
+            this.colorWithAlpha6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha6.Parent = this.alphaGradientPanel1;
             // 
             // Form3
             // 
@@ -308,5 +333,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNomeStaff;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
     }
 }

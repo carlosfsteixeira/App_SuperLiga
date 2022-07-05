@@ -45,6 +45,9 @@
             this.btAddImage = new System.Windows.Forms.Button();
             this.btAddEquipa = new System.Windows.Forms.Button();
             this.lbl_fechar = new System.Windows.Forms.Label();
+            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,7 +207,10 @@
             // 
             this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.alphaGradientPanel1.Border = true;
-            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.OrangeRed;
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha4);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha5);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha6);
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
             this.alphaGradientPanel1.Controls.Add(this.label6);
             this.alphaGradientPanel1.Controls.Add(this.pictureBox1);
@@ -289,6 +295,24 @@
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
+            // colorWithAlpha4
+            // 
+            this.colorWithAlpha4.Alpha = 255;
+            this.colorWithAlpha4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha4.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha5
+            // 
+            this.colorWithAlpha5.Alpha = 255;
+            this.colorWithAlpha5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha5.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha6
+            // 
+            this.colorWithAlpha6.Alpha = 255;
+            this.colorWithAlpha6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha6.Parent = this.alphaGradientPanel1;
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -334,5 +358,8 @@
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha2;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha3;
         private System.Windows.Forms.AlphaGradientPanel alphaGradientPanel1;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
     }
 }
