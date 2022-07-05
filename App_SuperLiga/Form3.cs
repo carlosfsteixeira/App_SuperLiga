@@ -34,33 +34,29 @@ namespace App_SuperLiga
                 MessageBox.Show("Existem campos por preencher", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            string comboBoxSel = comboBoxFuncao.SelectedItem.ToString();
-
-            if (comboBoxSel == "Treinador")
+            else
             {
-                if (ValidarExistenciaTreinador())
-                {
-                    MessageBox.Show("Ja existe um Treinador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                else
-                {
-                    AddStaffMember();
-                }
-            }
+                string comboBoxSel = comboBoxFuncao.SelectedItem.ToString();
 
-            if (comboBoxSel == "Presidente")
-            {
-                if (ValidarExistenciaPresidente())
+                if (comboBoxSel == "Treinador")
                 {
-                    MessageBox.Show("Ja existe um Presidente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
+                    if (ValidarExistenciaTreinador())
+                    {
+                        MessageBox.Show("Ja existe um Treinador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
-                else
+
+                if (comboBoxSel == "Presidente")
                 {
-                    AddStaffMember();
+                    if (ValidarExistenciaPresidente())
+                    {
+                        MessageBox.Show("Ja existe um Presidente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
+
+                AddStaffMember();
             }
         }
 

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.alphaGradientPanel1 = new System.Windows.Forms.AlphaGradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbl_reporApp = new System.Windows.Forms.Label();
             this.lbl_eliminarEquipas = new System.Windows.Forms.Label();
             this.lbl_reporJogos = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
             this.label359 = new System.Windows.Forms.Label();
             this.lbl_settings = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lbl_fechar = new System.Windows.Forms.Label();
             this.alphaGradientPanel1.SuspendLayout();
             this.alphaGradientPanel6.SuspendLayout();
@@ -50,7 +50,7 @@
             // 
             this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.alphaGradientPanel1.Border = true;
-            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.OrangeRed;
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
             this.alphaGradientPanel1.Controls.Add(this.label6);
             this.alphaGradientPanel1.Controls.Add(this.label5);
@@ -79,10 +79,50 @@
             this.alphaGradientPanel1.Size = new System.Drawing.Size(444, 275);
             this.alphaGradientPanel1.TabIndex = 75;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label6.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Image = global::App_SuperLiga.Properties.Resources.settings_24_32;
+            this.label6.Location = new System.Drawing.Point(75, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 47);
+            this.label6.TabIndex = 78;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Image = global::App_SuperLiga.Properties.Resources.football_32;
+            this.label5.Location = new System.Drawing.Point(75, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 47);
+            this.label5.TabIndex = 77;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Image = global::App_SuperLiga.Properties.Resources.calendar_32;
+            this.label4.Location = new System.Drawing.Point(75, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 47);
+            this.label4.TabIndex = 76;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbl_reporApp
             // 
             this.lbl_reporApp.AutoSize = true;
             this.lbl_reporApp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_reporApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_reporApp.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_reporApp.ForeColor = System.Drawing.Color.White;
             this.lbl_reporApp.Location = new System.Drawing.Point(125, 175);
@@ -97,6 +137,7 @@
             // 
             this.lbl_eliminarEquipas.AutoSize = true;
             this.lbl_eliminarEquipas.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_eliminarEquipas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_eliminarEquipas.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_eliminarEquipas.ForeColor = System.Drawing.Color.White;
             this.lbl_eliminarEquipas.Location = new System.Drawing.Point(125, 115);
@@ -111,6 +152,7 @@
             // 
             this.lbl_reporJogos.AutoSize = true;
             this.lbl_reporJogos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_reporJogos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_reporJogos.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_reporJogos.ForeColor = System.Drawing.Color.White;
             this.lbl_reporJogos.Location = new System.Drawing.Point(125, 58);
@@ -193,69 +235,34 @@
             this.lbl_settings.Size = new System.Drawing.Size(48, 38);
             this.lbl_settings.TabIndex = 106;
             // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Image = global::App_SuperLiga.Properties.Resources.settings_24_32;
-            this.label6.Location = new System.Drawing.Point(75, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 47);
-            this.label6.TabIndex = 78;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Image = global::App_SuperLiga.Properties.Resources.football_32;
-            this.label5.Location = new System.Drawing.Point(75, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 47);
-            this.label5.TabIndex = 77;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Image = global::App_SuperLiga.Properties.Resources.calendar_32;
-            this.label4.Location = new System.Drawing.Point(75, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 47);
-            this.label4.TabIndex = 76;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_fechar
             // 
             this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
             this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
-            this.lbl_fechar.Location = new System.Drawing.Point(426, 12);
+            this.lbl_fechar.Location = new System.Drawing.Point(424, 13);
             this.lbl_fechar.Name = "lbl_fechar";
-            this.lbl_fechar.Size = new System.Drawing.Size(31, 38);
+            this.lbl_fechar.Size = new System.Drawing.Size(41, 38);
             this.lbl_fechar.TabIndex = 74;
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(469, 344);
+            this.ClientSize = new System.Drawing.Size(466, 346);
             this.Controls.Add(this.lbl_settings);
             this.Controls.Add(this.alphaGradientPanel1);
             this.Controls.Add(this.lbl_fechar);
             this.Controls.Add(this.alphaGradientPanel6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form6";
             this.alphaGradientPanel1.ResumeLayout(false);
             this.alphaGradientPanel1.PerformLayout();

@@ -16,5 +16,29 @@ namespace App_SuperLiga
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Uh Oh... Não foi possivel conectar à página");
+            }
+        }
+
+        private void VisitLink()
+        {
+            linkLabel1.LinkVisited = true;
+
+            System.Diagnostics.Process.Start("https://github.com/carlosfsteixeira/App_SuperLiga");
+        }
+
+        private void lbl_fechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

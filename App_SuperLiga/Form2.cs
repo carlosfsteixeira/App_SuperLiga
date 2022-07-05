@@ -25,7 +25,6 @@ namespace App_SuperLiga
 
         int contadorJornadas;
         int contadorResultados;
-        bool alterado = false;
         DateTime dataJornada;
 
         public Form2()
@@ -67,10 +66,12 @@ namespace App_SuperLiga
                 DataGridViewResultadosShowData();
 
                 btGerarJogos.Enabled = false;
+                btGerarJogos.Hide();
             }
             else
             {
                 btGerarJogos.Enabled = true;
+                btGerarJogos.Show();
             }
         }
 
@@ -89,6 +90,7 @@ namespace App_SuperLiga
             panelEquipas.Visible = false;
             panelClassificacao.Visible = false;
             panelEstatisticas.Visible = false;
+
         }
 
         private void btClassificacao_Click(object sender, EventArgs e)
@@ -124,8 +126,6 @@ namespace App_SuperLiga
         #endregion
 
         #region PanelEquipas
-
-
 
         #region CRUD_BD
 
@@ -200,9 +200,9 @@ namespace App_SuperLiga
                                    where Imagen.id_equipa == id
                                    select Imagen.imagem;
 
-                Image m = (Bitmap)((new ImageConverter()).ConvertFrom(imagemEquipa.Single().ToArray()));
+                Image img = (Bitmap)((new ImageConverter()).ConvertFrom(imagemEquipa.Single().ToArray()));
 
-                pictureBox2.Image = m;
+                pictureBox2.Image = img;
 
                 RefreshAllGrids();
             }
@@ -591,18 +591,18 @@ namespace App_SuperLiga
             equipa.nome = txtNomeEquipa.Text;
             equipa.estadio = txtEstadio.Text;
 
-
             try
             {
                 dc.SubmitChanges();
+                MessageBox.Show("Atualizado com sucesso");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            RefreshAllGrids();
-            RefreshTeamGrid();
+            txtNomeEquipa.Refresh();
+            txtEstadio.Refresh();
         }
 
         private void lbl_UpgradeJogador_Click(object sender, EventArgs e)
@@ -655,6 +655,7 @@ namespace App_SuperLiga
             }
 
             RefreshAllGrids();
+            txtNomeJogador.Refresh();
         }
 
         private void lbl_UpdateStaff_Click(object sender, EventArgs e)
@@ -718,6 +719,8 @@ namespace App_SuperLiga
 
             RefreshAllGrids();
             RefreshTeamGrid();
+            txtTreinador.Refresh();
+            txtPresidente.Refresh();
         }
 
         public bool ValidarExistenciaTreinador()
@@ -1075,10 +1078,19 @@ namespace App_SuperLiga
                 MessageBox.Show("Não existem equipas suficientes para iniciar a época", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            DialogResult dialogResult = MessageBox.Show("Não poderá mais adicionar nem remover equipas\n\nIniciar Nova Época?", "Nova Epoca", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
             else
             {
                 btAddEquipa.Enabled = false;
-                btGerarJogos.Enabled = false;
+                lbl_RemoverEquipa.Enabled = false;
+
+                btGerarJogos.Hide();
+
                 circularProgressBar1.Visible = true;
                 progressBar();
                 circularProgressBar1.Visible = false;
@@ -2092,12 +2104,14 @@ namespace App_SuperLiga
 
         private void lbl_about_Click(object sender, EventArgs e)
         {
-
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
         }
 
         private void lbl_settings_Click(object sender, EventArgs e)
         {
-
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
         }
 
         private void bt_sairApp_Click(object sender, EventArgs e)

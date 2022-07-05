@@ -176,7 +176,7 @@
             this.lbl_Confirmar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Confirmar.ForeColor = System.Drawing.Color.Black;
             this.lbl_Confirmar.Image = global::App_SuperLiga.Properties.Resources.confirm16;
-            this.lbl_Confirmar.Location = new System.Drawing.Point(413, 249);
+            this.lbl_Confirmar.Location = new System.Drawing.Point(407, 245);
             this.lbl_Confirmar.Name = "lbl_Confirmar";
             this.lbl_Confirmar.Size = new System.Drawing.Size(32, 35);
             this.lbl_Confirmar.TabIndex = 71;
