@@ -44,7 +44,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddJogador_Click(object sender, EventArgs e)
+        private void lbl_Confirmar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNomeJogador.Text) || comboBoxNumCam.SelectedItem == null || comboBoxPosicao.SelectedItem == null)
             {
@@ -105,8 +105,6 @@ namespace App_SuperLiga
 
                 this.Close();
             }
-
-           
         }
 
         public bool CheckNumeroCamisola()
@@ -133,5 +131,7 @@ namespace App_SuperLiga
         {
             this.Close();
         }
+
+        
     }
 }

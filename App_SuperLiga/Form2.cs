@@ -1,6 +1,4 @@
-﻿using LiveCharts;
-using LiveCharts.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +25,7 @@ namespace App_SuperLiga
 
         int contadorJornadas;
         int contadorResultados;
+        bool alterado = false;
         DateTime dataJornada;
 
         public Form2()
@@ -60,34 +59,25 @@ namespace App_SuperLiga
             var pesquisaJornadasBD = from Jornada in dc.Jornadas
                                      select Jornada;
 
-            
-
             if (pesquisaJogosBD.Count() != 0 && pesquisaJornadasBD.Count() != 0)
             {
                 //mostrar dados já existentes em bd do calendario
                 DataGridViewJogosShow();
                 DataGridViewResultadosShow();
                 DataGridViewResultadosShowData();
-                
+
                 btGerarJogos.Enabled = false;
             }
             else
             {
                 btGerarJogos.Enabled = true;
             }
-
-
         }
 
         #region Open&Close_Panels
         private void btEquipas_Click(object sender, EventArgs e)
         {
             panelEquipas.Visible = true;
-            btSaveTeam.Hide();
-            btSavePlayer.Hide();
-            btSaveStaff.Hide();
-            btAddImagem.Hide();
-            btDelImagem.Hide();
             panelJogos.Visible = false;
             panelClassificacao.Visible = false;
             panelEstatisticas.Visible = false;
@@ -169,12 +159,6 @@ namespace App_SuperLiga
         private void dataGridViewEquipas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id;
-
-            btAddEquipa.Enabled = true;
-            btDelEquipa.Enabled = true;
-            btEditTeam.Enabled = true;
-            btAddStaff.Enabled = true;
-            btAddJogador.Enabled = true;
 
             if (e.RowIndex >= 0)
             {
@@ -271,10 +255,6 @@ namespace App_SuperLiga
 
         private void dataGridViewStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btEditStaff.Enabled = true;
-            btDelStaff.Enabled = true;
-            btAddStaff.Enabled = true;
-
             if (e.RowIndex >= 0)
             {
                 //obter um conjunto que contem todas as linhas
@@ -321,9 +301,6 @@ namespace App_SuperLiga
 
         private void dataGridViewJogadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btAddJogador.Enabled = true;
-            btEditPlayer.Enabled = true;
-            btDelJogador.Enabled = true;
 
             if (e.RowIndex >= 0)
             {
@@ -408,7 +385,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddStaff_Click(object sender, EventArgs e)
+        private void lbl_AddStaff_Click(object sender, EventArgs e)
         {
             // validar se existem 50 elementos no staff. Se sim, é necessario eliminar um deles antes de prosseguir para o form3
             if (ContarStaff())
@@ -423,7 +400,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddJogador_Click(object sender, EventArgs e)
+        private void lbl_AddJogador_Click(object sender, EventArgs e)
         {
             // validar se existem 25 jogadores. Se sim, é necessario eliminar um deles antes de prosseguir para o form4
             if (ContarJogadores())
@@ -438,32 +415,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btEditTeam_Click(object sender, EventArgs e)
-        {
-            btSaveTeam.Show();
-            btDelImagem.Show();
-            txtNomeEquipa.ReadOnly = false;
-            txtEstadio.ReadOnly = false;
-        }
-
-        private void btEditStaff_Click(object sender, EventArgs e)
-        {
-            btSaveStaff.Show();
-            txtNomeStaff.ReadOnly = false;
-            txtNomeStaff.Focus();
-            comboBoxFuncao.Enabled = true;
-        }
-
-        private void btEditPlayer_Click(object sender, EventArgs e)
-        {
-            btSavePlayer.Show();
-            txtNomeJogador.ReadOnly = false;
-            txtNomeJogador.Focus();
-            comboBoxPosicao.Enabled = true;
-            comboBoxNumCam.Enabled = true;
-        }
-
-        private void btDelEquipa_Click(object sender, EventArgs e)
+        private void lbl_EliminarEquipa_Click(object sender, EventArgs e)
         {
             // ELIMINAR EQUIPA DA BD
             DialogResult dialogResult = MessageBox.Show("Esta acção removerá tambem todo o Staff e Jogadores\n\nTem a certeza?", "Eliminar equipa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -534,7 +486,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btDelStaff_Click(object sender, EventArgs e)
+        private void lbl_RemoverStaff_Click(object sender, EventArgs e)
         {
             int IDaRemover = Convert.ToInt32(txtIdStaff.Text.ToString());
             string name = txtNomeStaff.Text;
@@ -575,10 +527,9 @@ namespace App_SuperLiga
             {
                 return;
             }
-
         }
 
-        private void btDelJogador_Click(object sender, EventArgs e)
+        private void lbl_EliminarJogador_Click(object sender, EventArgs e)
         {
             int IDaRemover = Convert.ToInt32(txtIdJogador.Text.ToString());
             string name = txtNomeJogador.Text;
@@ -620,7 +571,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btSaveTeam_Click(object sender, EventArgs e)
+        private void lbl_UpdateEquipa_Click(object sender, EventArgs e)
         {
             if (!ValidarInfoEquipa())
             {
@@ -652,14 +603,17 @@ namespace App_SuperLiga
 
             RefreshAllGrids();
             RefreshTeamGrid();
-
-            btSaveTeam.Hide();
-            btAddImagem.Hide();
-            btDelImagem.Hide();
         }
 
-        private void btSavePlayer_Click(object sender, EventArgs e)
+        private void lbl_UpdateJogador_Click(object sender, EventArgs e)
         {
+            txtNomeJogador.TextChanged += new EventHandler(NomeJogadorAlterado);
+
+            if (alterado)
+            {
+                return;
+            }
+
             if (!ValidarInfoJogadores())
             {
                 return;
@@ -696,6 +650,7 @@ namespace App_SuperLiga
             try
             {
                 dc.SubmitChanges();
+                MessageBox.Show("Alterado com sucesso");
             }
             catch (Exception ex)
             {
@@ -703,15 +658,9 @@ namespace App_SuperLiga
             }
 
             RefreshAllGrids();
-
-            txtNomeJogador.ResetText();
-            comboBoxNumCam.ResetText();
-            comboBoxPosicao.ResetText();
-            btSavePlayer.Refresh();
-
         }
 
-        private void btSaveStaff_Click(object sender, EventArgs e)
+        private void lbl_SalvarStaff_Click(object sender, EventArgs e)
         {
             if (!ValidarInfoStaff())
             {
@@ -721,6 +670,24 @@ namespace App_SuperLiga
             if (!txtNomeStaff_TextCheck())
             {
                 return;
+            }
+
+            if (comboBoxFuncao.SelectedItem.ToString() == "Treinador")
+            {
+                if (ValidarExistenciaTreinador())
+                {
+                    MessageBox.Show("Ja existe um Treinador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            if (comboBoxFuncao.SelectedItem.ToString() == "Presidente")
+            {
+                if (ValidarExistenciaPresidente())
+                {
+                    MessageBox.Show("Ja existe um Presidente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
             // SALVAR ALTERAÇOES AO STAFF NA BASE DADOS
@@ -741,7 +708,7 @@ namespace App_SuperLiga
             {
                 dc.SubmitChanges();
                 MessageBox.Show("Alterado com sucesso");
-                btSaveStaff.Hide();
+
             }
             catch (Exception ex)
             {
@@ -750,11 +717,42 @@ namespace App_SuperLiga
 
             RefreshAllGrids();
             RefreshTeamGrid();
+        }
 
-            txtNomeStaff.ResetText();
-            comboBoxFuncao.ResetText();
+        public bool ValidarExistenciaTreinador()
+        {
+            bool output = false;
 
-            comboBoxFuncao.Enabled = false;
+            var procurarTreinador = from Staff in dc.Staffs
+                                    where Staff.funcao == "Treinador"
+                                    && Staff.id_equipa == equipa.id_equipa
+                                    select Staff;
+
+            if (procurarTreinador.Count() == 1)
+            {
+                output = true;
+            }
+
+
+            return output;
+        }
+
+        public bool ValidarExistenciaPresidente()
+        {
+            bool output = false;
+
+            var procurarPresidente = from Staff in dc.Staffs
+                                     where Staff.funcao == "Presidente"
+                                     && Staff.id_equipa == equipa.id_equipa
+                                     select Staff;
+
+            if (procurarPresidente.Count() == 1)
+            {
+
+                output = true;
+            }
+
+            return output;
         }
 
         public void RefreshAllGrids()
@@ -779,7 +777,7 @@ namespace App_SuperLiga
             DataGridViewEquipaShow();
         }
 
-        private void btAddImagem_Click(object sender, EventArgs e)
+        private void lbl_AddImagem_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
 
@@ -797,19 +795,19 @@ namespace App_SuperLiga
             }
         }
 
-        private void btDelImagem_Click(object sender, EventArgs e)
+        private void lbl_ApagarImagem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show($"Eliminar imagem da equipa?", "Eliminar imagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 pictureBox2.Image = null;
-                btAddImagem.Show();
             }
             else
             {
                 return;
             }
         }
+
 
         private void EditImagem()
         {
@@ -960,6 +958,11 @@ namespace App_SuperLiga
             return output;
         }
 
+        private void NomeJogadorAlterado(object sender, EventArgs e)
+        {
+            alterado = true;
+        }
+
         public bool ValidarInfoEquipa()
         {
             bool output = true;
@@ -1056,7 +1059,7 @@ namespace App_SuperLiga
             {
                 if (num == (Convert.ToInt16(comboBoxNumCam.SelectedItem)))
                 {
-                    MessageBox.Show("Já existe um jogador com o numero " + num + " nesta equipa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"Já existe um jogador com o numero {num} nesta equipa", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     output = true;
                 }
             }
@@ -1696,7 +1699,7 @@ namespace App_SuperLiga
 
                 linha++;
 
-                
+
             }
 
             SortingDataGridViewClassificacao();
@@ -1711,7 +1714,7 @@ namespace App_SuperLiga
                 row.Height = 70;
             }
 
-            
+
         }
 
         private void PopularDataGridViewClassificacao(Equipa e, Image img, int jogosTotal, Estatistica estatistica, int linha)
@@ -1816,7 +1819,7 @@ namespace App_SuperLiga
                                       join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
                                       where t1.pontos == maxPontos
                                       select t2;
-            
+
             Equipa equipaVencedora = new Equipa();
 
             if (equipaComMaisPontos.Count() == 1)
@@ -1831,9 +1834,9 @@ namespace App_SuperLiga
                     int maxGolos = (int)dc.Estatisticas.Max(x => x.golos_marcados);
 
                     var estatisticasDaEquipa = from t1 in dc.Estatisticas
-                                                join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                                where t1.id_equipa == e.id_equipa
-                                                select t1;
+                                               join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                               where t1.id_equipa == e.id_equipa
+                                               select t1;
 
                     Estatistica estatistica = new Estatistica();
 
@@ -1882,8 +1885,8 @@ namespace App_SuperLiga
             int menosGolosMarcados = (int)dc.Estatisticas.Min(x => x.golos_marcados);
 
             var equipaComMenosGolos = from t1 in dc.Estatisticas
-                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                     where t1.golos_marcados == menosGolosMarcados
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.golos_marcados == menosGolosMarcados
                                       select t2;
 
             lbl_menosGolosMarcados.Text = menosGolosMarcados.ToString();
@@ -1898,8 +1901,8 @@ namespace App_SuperLiga
             int menosGolosSofridos = (int)dc.Estatisticas.Min(x => x.golos_sofridos);
 
             var equipaComMenosGolos = from t1 in dc.Estatisticas
-                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                     where t1.golos_sofridos == menosGolosSofridos
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.golos_sofridos == menosGolosSofridos
                                       select t2;
 
             lbl_menosGolosSofridos.Text = menosGolosSofridos.ToString();
@@ -1912,8 +1915,8 @@ namespace App_SuperLiga
             int maisGolosSofridos = (int)dc.Estatisticas.Max(x => x.golos_sofridos);
 
             var equipaComMaisGolos = from t1 in dc.Estatisticas
-                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                      where t1.golos_sofridos == maisGolosSofridos
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.golos_sofridos == maisGolosSofridos
                                      select t2;
 
             lbl_maisGolosSofridos.Text = maisGolosSofridos.ToString();
@@ -1930,8 +1933,8 @@ namespace App_SuperLiga
             int maisVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
 
             var equipaMaisVitorias = from t1 in dc.Estatisticas
-                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                   where t1.vitorias == maisVitorias
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.vitorias == maisVitorias
                                      select t2;
 
             lbl_maisVitorias.Text = maisVitorias.ToString();
@@ -1944,9 +1947,9 @@ namespace App_SuperLiga
             int menosVitorias = (int)dc.Estatisticas.Min(x => x.vitorias);
 
             var equipaMenosVitorias = from t1 in dc.Estatisticas
-                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                    where t1.vitorias == menosVitorias
-                                    select t2;
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.vitorias == menosVitorias
+                                      select t2;
 
             lbl_menosVitorias.Text = menosVitorias.ToString();
 
@@ -1961,8 +1964,8 @@ namespace App_SuperLiga
             int maisEmpates = (int)dc.Estatisticas.Max(x => x.empates);
 
             var equipaMaisEmpates = from t1 in dc.Estatisticas
-                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                     where t1.empates == maisEmpates
+                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                    where t1.empates == maisEmpates
                                     select t2;
 
             lbl_maisEmpates.Text = maisEmpates.ToString();
@@ -1975,8 +1978,8 @@ namespace App_SuperLiga
             int menosEmpates = (int)dc.Estatisticas.Min(x => x.empates);
 
             var equipaMenosEmpates = from t1 in dc.Estatisticas
-                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                      where t1.empates == menosEmpates
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.empates == menosEmpates
                                      select t2;
 
             lbl_menosEmpates.Text = menosEmpates.ToString();
@@ -1993,8 +1996,8 @@ namespace App_SuperLiga
             int maisDerrotas = (int)dc.Estatisticas.Max(x => x.derrotas);
 
             var equipaMaisDerrotas = from t1 in dc.Estatisticas
-                                    join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                    where t1.derrotas == maisDerrotas
+                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                     where t1.derrotas == maisDerrotas
                                      select t2;
 
             lbl_maisDerrotas.Text = maisDerrotas.ToString();
@@ -2007,8 +2010,8 @@ namespace App_SuperLiga
             int menosDerrotas = (int)dc.Estatisticas.Min(x => x.derrotas);
 
             var equipaMenosDerrotas = from t1 in dc.Estatisticas
-                                     join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                     where t1.derrotas == menosDerrotas
+                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                      where t1.derrotas == menosDerrotas
                                       select t2;
 
             lbl_menosDerrotas.Text = menosDerrotas.ToString();
@@ -2092,6 +2095,18 @@ namespace App_SuperLiga
 
         #endregion
 
+        private void lbl_about_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
+        }
+
+        private void lbl_settings_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
+        }
+
         private void bt_sairApp_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Fechar aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -2104,5 +2119,9 @@ namespace App_SuperLiga
                 return;
             }
         }
+
+
+
+
     }
 }

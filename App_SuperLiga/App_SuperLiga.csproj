@@ -39,14 +39,8 @@
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
-    <Reference Include="Krypton.Toolkit, Version=65.22.6.152, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Krypton.Toolkit.65.22.6.152\lib\net472\Krypton.Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
-    </Reference>
-    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -107,6 +101,18 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundButtons.cs">
@@ -131,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -177,115 +189,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stadium.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bolalogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\addimage.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ball.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\football-fan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cup.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\team.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\4762281.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\footballfield.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\confirm.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirmation.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\del1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\del2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirm1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirm2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\edit5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adduser.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pic5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close5.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\football-2-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirm4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ok-32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\trophy-4-32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\group-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\thomas-serer-r-xKieMqL34-unsplash.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\507706.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\asAwOp.jpg" />
@@ -307,6 +223,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x-mark-3-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-4-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-5-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-24-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm161.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

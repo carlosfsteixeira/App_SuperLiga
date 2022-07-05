@@ -41,9 +41,12 @@
             this.colorWithAlpha2 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
             this.alphaGradientPanel1 = new System.Windows.Forms.AlphaGradientPanel();
+            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
+            this.lbl_Confirmar = new System.Windows.Forms.Label();
+            this.lbl_AddImagem = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btAddImage = new System.Windows.Forms.Button();
-            this.btAddEquipa = new System.Windows.Forms.Button();
             this.lbl_fechar = new System.Windows.Forms.Label();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
@@ -204,12 +207,15 @@
             // 
             this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.alphaGradientPanel1.Border = true;
-            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel1.BorderColor = System.Drawing.Color.OrangeRed;
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha4);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha5);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha6);
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel1.Controls.Add(this.lbl_Confirmar);
+            this.alphaGradientPanel1.Controls.Add(this.lbl_AddImagem);
             this.alphaGradientPanel1.Controls.Add(this.label6);
             this.alphaGradientPanel1.Controls.Add(this.pictureBox1);
-            this.alphaGradientPanel1.Controls.Add(this.btAddImage);
-            this.alphaGradientPanel1.Controls.Add(this.btAddEquipa);
             this.alphaGradientPanel1.Controls.Add(this.label1);
             this.alphaGradientPanel1.Controls.Add(this.label2);
             this.alphaGradientPanel1.Controls.Add(this.label4);
@@ -237,6 +243,52 @@
             this.alphaGradientPanel1.Size = new System.Drawing.Size(487, 319);
             this.alphaGradientPanel1.TabIndex = 72;
             // 
+            // colorWithAlpha4
+            // 
+            this.colorWithAlpha4.Alpha = 255;
+            this.colorWithAlpha4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha4.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha5
+            // 
+            this.colorWithAlpha5.Alpha = 255;
+            this.colorWithAlpha5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha5.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha6
+            // 
+            this.colorWithAlpha6.Alpha = 255;
+            this.colorWithAlpha6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha6.Parent = this.alphaGradientPanel1;
+            // 
+            // lbl_Confirmar
+            // 
+            this.lbl_Confirmar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Confirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_Confirmar.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Confirmar.ForeColor = System.Drawing.Color.White;
+            this.lbl_Confirmar.Image = global::App_SuperLiga.Properties.Resources.confirm16;
+            this.lbl_Confirmar.Location = new System.Drawing.Point(445, 276);
+            this.lbl_Confirmar.Name = "lbl_Confirmar";
+            this.lbl_Confirmar.Size = new System.Drawing.Size(38, 38);
+            this.lbl_Confirmar.TabIndex = 45;
+            this.lbl_Confirmar.Click += new System.EventHandler(this.lbl_Confirmar_Click);
+            // 
+            // lbl_AddImagem
+            // 
+            this.lbl_AddImagem.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_AddImagem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_AddImagem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_AddImagem.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AddImagem.ForeColor = System.Drawing.Color.White;
+            this.lbl_AddImagem.Image = global::App_SuperLiga.Properties.Resources.image16;
+            this.lbl_AddImagem.Location = new System.Drawing.Point(417, 187);
+            this.lbl_AddImagem.Name = "lbl_AddImagem";
+            this.lbl_AddImagem.Size = new System.Drawing.Size(38, 38);
+            this.lbl_AddImagem.TabIndex = 44;
+            this.lbl_AddImagem.Click += new System.EventHandler(this.lbl_AddImagem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -247,37 +299,10 @@
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
             // 
-            // btAddImage
-            // 
-            this.btAddImage.BackColor = System.Drawing.Color.Transparent;
-            this.btAddImage.BackgroundImage = global::App_SuperLiga.Properties.Resources.pic5;
-            this.btAddImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddImage.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btAddImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddImage.Location = new System.Drawing.Point(427, 190);
-            this.btAddImage.Name = "btAddImage";
-            this.btAddImage.Size = new System.Drawing.Size(28, 28);
-            this.btAddImage.TabIndex = 35;
-            this.btAddImage.UseVisualStyleBackColor = false;
-            this.btAddImage.Click += new System.EventHandler(this.btAddImage_Click);
-            // 
-            // btAddEquipa
-            // 
-            this.btAddEquipa.BackColor = System.Drawing.Color.Transparent;
-            this.btAddEquipa.BackgroundImage = global::App_SuperLiga.Properties.Resources.ok_32;
-            this.btAddEquipa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddEquipa.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddEquipa.Location = new System.Drawing.Point(454, 286);
-            this.btAddEquipa.Name = "btAddEquipa";
-            this.btAddEquipa.Size = new System.Drawing.Size(25, 25);
-            this.btAddEquipa.TabIndex = 43;
-            this.btAddEquipa.UseVisualStyleBackColor = false;
-            this.btAddEquipa.Click += new System.EventHandler(this.btAddEquipa_Click);
-            // 
             // lbl_fechar
             // 
             this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
@@ -306,6 +331,7 @@
             this.Name = "Form5";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = " e";
             this.alphaGradientPanel6.ResumeLayout(false);
             this.alphaGradientPanel6.PerformLayout();
             this.alphaGradientPanel1.ResumeLayout(false);
@@ -321,18 +347,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEstadio;
-        private System.Windows.Forms.Button btAddImage;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btAddEquipa;
         private System.Windows.Forms.Label lbl_fechar;
         private System.Windows.Forms.AlphaGradientPanel alphaGradientPanel6;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha1;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha2;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha3;
         private System.Windows.Forms.AlphaGradientPanel alphaGradientPanel1;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
+        private System.Windows.Forms.Label lbl_AddImagem;
+        private System.Windows.Forms.Label lbl_Confirmar;
     }
 }

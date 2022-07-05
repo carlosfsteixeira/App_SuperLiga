@@ -27,14 +27,14 @@ namespace App_SuperLiga
             idEquipaSel = idEquipa;
         }
 
-        private void btAddStaff_Click(object sender, EventArgs e)
+        private void lbl_Confirmar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNomeStaff.Text) || comboBoxFuncao.SelectedItem == null)
             {
                 MessageBox.Show("Existem campos por preencher", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
- 
+
             string comboBoxSel = comboBoxFuncao.SelectedItem.ToString();
 
             if (comboBoxSel == "Treinador")
@@ -63,7 +63,6 @@ namespace App_SuperLiga
                 }
             }
         }
-
         public void AddStaffMember()
         {
             var maxIdQuery = from Staff in dc.Staffs
@@ -164,6 +163,7 @@ namespace App_SuperLiga
         {
             this.Close();
         }
+
 
     }
 }
