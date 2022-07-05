@@ -338,5 +338,20 @@
   <ItemGroup>
     <None Include="Resources\settings-24-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

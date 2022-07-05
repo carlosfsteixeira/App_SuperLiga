@@ -78,11 +78,6 @@ namespace App_SuperLiga
         private void btEquipas_Click(object sender, EventArgs e)
         {
             panelEquipas.Visible = true;
-            btSaveTeam.Hide();
-            btSavePlayer.Hide();
-            btSaveStaff.Hide();
-            btAddImagem.Hide();
-            btDelImagem.Hide();
             panelJogos.Visible = false;
             panelClassificacao.Visible = false;
             panelEstatisticas.Visible = false;
@@ -164,12 +159,6 @@ namespace App_SuperLiga
         private void dataGridViewEquipas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id;
-
-            btAddEquipa.Enabled = true;
-            btDelEquipa.Enabled = true;
-            btEditTeam.Enabled = true;
-            btAddStaff.Enabled = true;
-            btAddJogador.Enabled = true;
 
             if (e.RowIndex >= 0)
             {
@@ -266,10 +255,6 @@ namespace App_SuperLiga
 
         private void dataGridViewStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btEditStaff.Enabled = true;
-            btDelStaff.Enabled = true;
-            btAddStaff.Enabled = true;
-
             if (e.RowIndex >= 0)
             {
                 //obter um conjunto que contem todas as linhas
@@ -316,9 +301,6 @@ namespace App_SuperLiga
 
         private void dataGridViewJogadores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btAddJogador.Enabled = true;
-            btEditPlayer.Enabled = true;
-            btDelJogador.Enabled = true;
 
             if (e.RowIndex >= 0)
             {
@@ -403,7 +385,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddStaff_Click(object sender, EventArgs e)
+        private void lbl_AddStaff_Click(object sender, EventArgs e)
         {
             // validar se existem 50 elementos no staff. Se sim, é necessario eliminar um deles antes de prosseguir para o form3
             if (ContarStaff())
@@ -418,7 +400,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddJogador_Click(object sender, EventArgs e)
+        private void lbl_AddJogador_Click(object sender, EventArgs e)
         {
             // validar se existem 25 jogadores. Se sim, é necessario eliminar um deles antes de prosseguir para o form4
             if (ContarJogadores())
@@ -433,32 +415,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btEditTeam_Click(object sender, EventArgs e)
-        {
-            btSaveTeam.Show();
-            btDelImagem.Show();
-            txtNomeEquipa.ReadOnly = false;
-            txtEstadio.ReadOnly = false;
-        }
-
-        private void btEditStaff_Click(object sender, EventArgs e)
-        {
-            btSaveStaff.Show();
-            txtNomeStaff.ReadOnly = false;
-            txtNomeStaff.Focus();
-            comboBoxFuncao.Enabled = true;
-        }
-
-        private void btEditPlayer_Click(object sender, EventArgs e)
-        {
-            btSavePlayer.Show();
-            txtNomeJogador.ReadOnly = false;
-            txtNomeJogador.Focus();
-            comboBoxPosicao.Enabled = true;
-            comboBoxNumCam.Enabled = true;
-        }
-
-        private void btDelEquipa_Click(object sender, EventArgs e)
+        private void lbl_RemoverEquipa_Click(object sender, EventArgs e)
         {
             // ELIMINAR EQUIPA DA BD
             DialogResult dialogResult = MessageBox.Show("Esta acção removerá tambem todo o Staff e Jogadores\n\nTem a certeza?", "Eliminar equipa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -529,7 +486,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btDelStaff_Click(object sender, EventArgs e)
+        private void lbl_RemoverStaff_Click(object sender, EventArgs e)
         {
             int IDaRemover = Convert.ToInt32(txtIdStaff.Text.ToString());
             string name = txtNomeStaff.Text;
@@ -570,10 +527,9 @@ namespace App_SuperLiga
             {
                 return;
             }
-
         }
 
-        private void btDelJogador_Click(object sender, EventArgs e)
+        private void lbl_RemoverJogador_Click(object sender, EventArgs e)
         {
             int IDaRemover = Convert.ToInt32(txtIdJogador.Text.ToString());
             string name = txtNomeJogador.Text;
@@ -615,7 +571,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btSaveTeam_Click(object sender, EventArgs e)
+        private void lbl_UpdateEquipa_Click(object sender, EventArgs e)
         {
             if (!ValidarInfoEquipa())
             {
@@ -647,52 +603,45 @@ namespace App_SuperLiga
 
             RefreshAllGrids();
             RefreshTeamGrid();
-
-            btSaveTeam.Hide();
-            btAddImagem.Hide();
-            btDelImagem.Hide();
         }
 
-        private void btSavePlayer_Click(object sender, EventArgs e)
+        private void lbl_UpgradeJogador_Click(object sender, EventArgs e)
         {
-            txtNomeJogador.TextChanged += new EventHandler(NomeJogadorAlterado);
 
-            if (alterado)
+            if (!ValidarInfoJogadores() || !txtNomeJogador_TextCheck())
             {
                 return;
             }
 
-            if (!ValidarInfoJogadores())
-            {
-                return;
-            }
-
-            if (!txtNomeJogador_TextCheck())
-            {
-                return;
-            }
 
             // SALVAR ALTERAÇOES AO JOGADOR NA BASE DADOS
             int idJogador = Convert.ToInt32(txtIdJogador.Text.ToString());
 
-            Jogadore x = new Jogadore();
+            Jogadore jogadorEditado = new Jogadore();
 
             var pesquisa = from Jogadore in dc.Jogadores
                            where Jogadore.id_jogador == idJogador
                            select Jogadore;
 
-            x = pesquisa.Single();
+            jogadorEditado = pesquisa.Single();
 
-            x.nome = txtNomeJogador.Text;
-            x.posicao = comboBoxPosicao.SelectedItem.ToString();
-
-            if (CheckNumeroCamisola())
+            if (jogadorEditado.nome != txtIdJogador.Text)
             {
-                return;
+                jogadorEditado.nome = txtNomeJogador.Text;
             }
-            else
+
+            if (comboBoxPosicao.SelectedItem.ToString() != jogadorEditado.posicao)
             {
-                x.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
+                if (CheckNumeroCamisola())
+                {
+                    return;
+                }
+                else
+                {
+                    jogadorEditado.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
+                }
+
+                jogadorEditado.posicao = comboBoxPosicao.SelectedItem.ToString();
             }
 
             try
@@ -706,63 +655,61 @@ namespace App_SuperLiga
             }
 
             RefreshAllGrids();
-
-            txtNomeJogador.ResetText();
-            comboBoxNumCam.ResetText();
-            comboBoxPosicao.ResetText();
-            
-
         }
 
-        private void btSaveStaff_Click(object sender, EventArgs e)
+        private void lbl_UpdateStaff_Click(object sender, EventArgs e)
         {
-            if (!ValidarInfoStaff())
+            if (!ValidarInfoStaff() || !txtNomeStaff_TextCheck())
             {
                 return;
-            }
-
-            if (!txtNomeStaff_TextCheck())
-            {
-                return;
-            }
-
-            if (comboBoxFuncao.SelectedItem.ToString() == "Treinador")
-            {
-                if (ValidarExistenciaTreinador())
-                {
-                    MessageBox.Show("Ja existe um Treinador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-            }
-
-            if (comboBoxFuncao.SelectedItem.ToString() == "Presidente")
-            {
-                if (ValidarExistenciaPresidente())
-                {
-                    MessageBox.Show("Ja existe um Presidente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
             }
 
             // SALVAR ALTERAÇOES AO STAFF NA BASE DADOS
             int idStaff = Convert.ToInt32(txtIdStaff.Text.ToString());
 
-            Staff x = new Staff();
+            Staff staffEditado = new Staff();
 
             var pesquisa = from Staff in dc.Staffs
                            where Staff.id_staff == idStaff
                            select Staff;
 
-            x = pesquisa.Single();
+            staffEditado = pesquisa.Single();
 
-            x.nome = txtNomeStaff.Text;
-            x.funcao = comboBoxFuncao.SelectedItem.ToString();
+            if (staffEditado.nome != txtNomeStaff.Text)
+            {
+                staffEditado.nome = txtNomeStaff.Text;
+            }
+
+
+            if (comboBoxFuncao.SelectedItem.ToString() != staffEditado.funcao)
+            {
+                if (comboBoxFuncao.SelectedItem.ToString() == "Treinador")
+                {
+                    if (ValidarExistenciaTreinador())
+                    {
+                        MessageBox.Show("Ja existe um Treinador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                if (comboBoxFuncao.SelectedItem.ToString() == "Presidente")
+                {
+                    if (ValidarExistenciaPresidente())
+                    {
+                        MessageBox.Show("Ja existe um Presidente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
+                staffEditado.funcao = comboBoxFuncao.SelectedItem.ToString();
+            }
+
 
             try
             {
                 dc.SubmitChanges();
                 MessageBox.Show("Alterado com sucesso");
-                
+
             }
             catch (Exception ex)
             {
@@ -771,11 +718,6 @@ namespace App_SuperLiga
 
             RefreshAllGrids();
             RefreshTeamGrid();
-
-            txtNomeStaff.ResetText();
-            comboBoxFuncao.ResetText();
-
-            comboBoxFuncao.Enabled = false;
         }
 
         public bool ValidarExistenciaTreinador()
@@ -836,7 +778,7 @@ namespace App_SuperLiga
             DataGridViewEquipaShow();
         }
 
-        private void btAddImagem_Click(object sender, EventArgs e)
+        private void lbl_UploadImagem_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
 
@@ -854,13 +796,12 @@ namespace App_SuperLiga
             }
         }
 
-        private void btDelImagem_Click(object sender, EventArgs e)
+        private void lbl_RemoverImagem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show($"Eliminar imagem da equipa?", "Eliminar imagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 pictureBox2.Image = null;
-                btAddImagem.Show();
             }
             else
             {
@@ -1015,11 +956,6 @@ namespace App_SuperLiga
             }
 
             return output;
-        }
-
-        private void NomeJogadorAlterado(object sender, EventArgs e)
-        {
-            alterado = true;
         }
 
         public bool ValidarInfoEquipa()
@@ -2176,6 +2112,10 @@ namespace App_SuperLiga
                 return;
             }
         }
+
+
+
+
 
 
     }

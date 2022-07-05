@@ -27,24 +27,7 @@ namespace App_SuperLiga
             form2 = form;
             idEquipaSel = idEquipa;
         }
-
-        
-
-        private void txtNomeJogador_TextChanged(object sender, EventArgs e)
-        {
-            foreach (char car in txtNomeJogador.Text)
-            {
-                if ((char.IsDigit(car)))
-                {
-                    MessageBox.Show("Input invalido. Não são aceites numeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtNomeJogador.Text = txtNomeJogador.Text.Remove(txtNomeJogador.Text.Length - 1, 1);
-                    txtNomeJogador.Focus();
-                    break;
-                }
-            }
-        }
-
-        private void btAddJogador_Click(object sender, EventArgs e)
+        private void lbl_Confirmar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNomeJogador.Text) || comboBoxNumCam.SelectedItem == null || comboBoxPosicao.SelectedItem == null)
             {
@@ -105,8 +88,20 @@ namespace App_SuperLiga
 
                 this.Close();
             }
+        }
 
-           
+        private void txtNomeJogador_TextChanged(object sender, EventArgs e)
+        {
+            foreach (char car in txtNomeJogador.Text)
+            {
+                if ((char.IsDigit(car)))
+                {
+                    MessageBox.Show("Input invalido. Não são aceites numeros", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNomeJogador.Text = txtNomeJogador.Text.Remove(txtNomeJogador.Text.Length - 1, 1);
+                    txtNomeJogador.Focus();
+                    break;
+                }
+            }
         }
 
         public bool CheckNumeroCamisola()
@@ -133,5 +128,6 @@ namespace App_SuperLiga
         {
             this.Close();
         }
+
     }
 }

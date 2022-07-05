@@ -31,9 +31,9 @@ namespace App_SuperLiga
             novaEquipa = new Equipa();
         }
 
-        private void btAddImage_Click(object sender, EventArgs e)
+        private void lbl_AddImagem_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog open = new OpenFileDialog()) 
+            using (OpenFileDialog open = new OpenFileDialog())
             {
                 open.InitialDirectory = @"C:\Pictures";
                 open.Filter = "Image Files(*.jpg; *.jpeg; *.png;) | *.jpg; *.jpeg; *.png;";
@@ -99,7 +99,7 @@ namespace App_SuperLiga
             }
         }
 
-        private void btAddEquipa_Click(object sender, EventArgs e)
+        private void lbl_Confirmar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNomeEquipa.Text) || string.IsNullOrEmpty(txtEstadio.Text) || pictureBox1.Image == null)
             {
@@ -154,6 +154,5 @@ namespace App_SuperLiga
         {
             this.Hide();
         }
-
     }
 }
