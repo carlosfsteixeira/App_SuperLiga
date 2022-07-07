@@ -189,7 +189,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(328, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 20);
@@ -203,7 +203,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label15.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
             this.label15.Location = new System.Drawing.Point(328, 50);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(18, 20);
@@ -252,7 +252,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.LightGray;
             this.label11.Location = new System.Drawing.Point(104, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(218, 31);
@@ -273,7 +273,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.ForeColor = System.Drawing.Color.LightGray;
             this.label13.Location = new System.Drawing.Point(104, 50);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(218, 37);

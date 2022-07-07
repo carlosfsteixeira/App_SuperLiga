@@ -58,7 +58,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
             this.label8.Location = new System.Drawing.Point(95, 190);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 24);
@@ -83,7 +83,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label7.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.LightGray;
             this.label7.Location = new System.Drawing.Point(99, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 24);
@@ -97,7 +97,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(99, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 24);
@@ -162,7 +162,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label15.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.ForeColor = System.Drawing.Color.LightGray;
             this.label15.Location = new System.Drawing.Point(337, 16);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(18, 20);
@@ -176,7 +176,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(337, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 20);
@@ -190,7 +190,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(337, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 20);

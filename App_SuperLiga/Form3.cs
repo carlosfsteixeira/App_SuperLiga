@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App_SuperLiga
@@ -63,8 +58,8 @@ namespace App_SuperLiga
         public void AddStaffMember()
         {
             var maxIdQuery = from Staff in dc.Staffs
-                                orderby Staff.id_staff descending
-                                select Staff.id_staff;
+                             orderby Staff.id_staff descending
+                             select Staff.id_staff;
 
             int maxStaffID;
 
@@ -103,7 +98,7 @@ namespace App_SuperLiga
             MessageBox.Show("Adicionado com sucesso", "Novo membro no Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Close();
-            
+
         }
 
         public bool ValidarExistenciaTreinador()
@@ -119,7 +114,7 @@ namespace App_SuperLiga
             {
                 output = true;
             }
-            
+
 
             return output;
         }
@@ -129,8 +124,8 @@ namespace App_SuperLiga
             bool output = false;
 
             var procurarPresidente = from Staff in dc.Staffs
-                                    where Staff.funcao == "Presidente"
-                                    && Staff.id_equipa == idEquipaSel
+                                     where Staff.funcao == "Presidente"
+                                     && Staff.id_equipa == idEquipaSel
                                      select Staff;
 
             if (procurarPresidente.Any())

@@ -42,6 +42,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_about = new System.Windows.Forms.Label();
             this.lbl_fechar = new System.Windows.Forms.Label();
+            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +78,7 @@
             this.alphaGradientPanel6.Location = new System.Drawing.Point(59, 12);
             this.alphaGradientPanel6.Name = "alphaGradientPanel6";
             this.alphaGradientPanel6.Rounded = true;
-            this.alphaGradientPanel6.Size = new System.Drawing.Size(452, 39);
+            this.alphaGradientPanel6.Size = new System.Drawing.Size(346, 39);
             this.alphaGradientPanel6.TabIndex = 70;
             // 
             // colorWithAlpha1
@@ -114,6 +117,9 @@
             this.alphaGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.alphaGradientPanel1.Border = true;
             this.alphaGradientPanel1.BorderColor = System.Drawing.Color.OrangeRed;
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha4);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha5);
+            this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha6);
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
             this.alphaGradientPanel1.Controls.Add(this.linkLabel1);
             this.alphaGradientPanel1.Controls.Add(this.label6);
@@ -139,17 +145,17 @@
             this.alphaGradientPanel1.Location = new System.Drawing.Point(12, 57);
             this.alphaGradientPanel1.Name = "alphaGradientPanel1";
             this.alphaGradientPanel1.Rounded = true;
-            this.alphaGradientPanel1.Size = new System.Drawing.Size(533, 292);
+            this.alphaGradientPanel1.Size = new System.Drawing.Size(436, 292);
             this.alphaGradientPanel1.TabIndex = 72;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrange;
-            this.linkLabel1.Location = new System.Drawing.Point(212, 163);
+            this.linkLabel1.Location = new System.Drawing.Point(204, 163);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(137, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(154, 20);
             this.linkLabel1.TabIndex = 56;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Github/repository\r\n";
@@ -162,7 +168,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(86, 161);
+            this.label6.Location = new System.Drawing.Point(59, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 22);
             this.label6.TabIndex = 54;
@@ -175,11 +181,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(212, 125);
+            this.label4.Location = new System.Drawing.Point(204, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 22);
             this.label4.TabIndex = 53;
-            this.label4.Text = "1.0.7";
+            this.label4.Text = "1.0.9";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -188,7 +194,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(86, 125);
+            this.label3.Location = new System.Drawing.Point(59, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 22);
             this.label3.TabIndex = 52;
@@ -201,7 +207,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(212, 87);
+            this.label2.Location = new System.Drawing.Point(204, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 22);
             this.label2.TabIndex = 51;
@@ -214,7 +220,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(86, 87);
+            this.label1.Location = new System.Drawing.Point(59, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 22);
             this.label1.TabIndex = 50;
@@ -238,19 +244,37 @@
             this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
             this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
-            this.lbl_fechar.Location = new System.Drawing.Point(517, 12);
+            this.lbl_fechar.Location = new System.Drawing.Point(411, 12);
             this.lbl_fechar.Name = "lbl_fechar";
             this.lbl_fechar.Size = new System.Drawing.Size(37, 39);
             this.lbl_fechar.TabIndex = 71;
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
+            // colorWithAlpha4
+            // 
+            this.colorWithAlpha4.Alpha = 255;
+            this.colorWithAlpha4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha4.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha5
+            // 
+            this.colorWithAlpha5.Alpha = 255;
+            this.colorWithAlpha5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha5.Parent = this.alphaGradientPanel1;
+            // 
+            // colorWithAlpha6
+            // 
+            this.colorWithAlpha6.Alpha = 255;
+            this.colorWithAlpha6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.colorWithAlpha6.Parent = this.alphaGradientPanel1;
+            // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(557, 360);
+            this.ClientSize = new System.Drawing.Size(459, 360);
             this.ControlBox = false;
             this.Controls.Add(this.lbl_about);
             this.Controls.Add(this.alphaGradientPanel1);
@@ -285,5 +309,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
+        private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
     }
 }

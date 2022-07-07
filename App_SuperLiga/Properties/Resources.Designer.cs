@@ -183,6 +183,16 @@ namespace App_SuperLiga.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flag_32 {
+            get {
+                object obj = ResourceManager.GetObject("flag-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap football_2_32 {
             get {
                 object obj = ResourceManager.GetObject("football-2-32", resourceCulture);

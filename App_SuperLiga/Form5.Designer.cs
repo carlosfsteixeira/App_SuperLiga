@@ -67,7 +67,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label6.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(38, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 22);
@@ -123,7 +123,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(375, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 22);
@@ -137,8 +137,8 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 108);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(38, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 22);
             this.label1.TabIndex = 22;
@@ -284,7 +284,7 @@
             this.lbl_Confirmar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Confirmar.ForeColor = System.Drawing.Color.Black;
             this.lbl_Confirmar.Image = global::App_SuperLiga.Properties.Resources.confirm16;
-            this.lbl_Confirmar.Location = new System.Drawing.Point(452, 284);
+            this.lbl_Confirmar.Location = new System.Drawing.Point(448, 279);
             this.lbl_Confirmar.Name = "lbl_Confirmar";
             this.lbl_Confirmar.Size = new System.Drawing.Size(32, 35);
             this.lbl_Confirmar.TabIndex = 72;

@@ -60,6 +60,9 @@ namespace App_SuperLiga
 
             if (pesquisaJogosBD.Count() != 0 && pesquisaJornadasBD.Count() != 0)
             {
+                btAddEquipa.Enabled = false;
+                lbl_RemoverEquipa.Enabled = false;
+
                 //mostrar dados já existentes em bd do calendario
                 DataGridViewJogosShow();
                 DataGridViewResultadosShow();
@@ -91,6 +94,11 @@ namespace App_SuperLiga
             panelClassificacao.Visible = false;
             panelEstatisticas.Visible = false;
 
+            dataGridViewJogos.Rows.Clear();
+            DataGridViewJogosShow();
+
+            dataGridViewResultados.Rows.Clear();
+            DataGridViewResultadosShowData();
         }
 
         private void btClassificacao_Click(object sender, EventArgs e)
@@ -110,6 +118,23 @@ namespace App_SuperLiga
             panelEquipas.Visible = false;
             panelClassificacao.Visible = false;
             panelJogos.Visible = false;
+
+            var pesquisaEstatiscasBD = from Estatistica in dc.Estatisticas
+                                  select Estatistica;
+
+            var pesquisaResultadosBD = from Resultado in dc.Resultados
+                                     select Resultado;
+
+            if (pesquisaEstatiscasBD.Count() != 0 && pesquisaResultadosBD.Count() != 0)
+            {
+                LimparLabelsEstatisticas();
+                MostrarEstatisticas();
+            }
+            else
+            {
+               // MessageBox.Show("Não existem resultados para obter dados estatisticos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             LimparLabelsEstatisticas();
             MostrarEstatisticas();
@@ -158,6 +183,13 @@ namespace App_SuperLiga
 
         private void dataGridViewEquipas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtNomeStaff.ResetText();
+            txtNomeJogador.ResetText();
+            txtTreinador.ResetText();
+            txtPresidente.ResetText();
+            treeViewPlantel.Nodes.Clear();
+            treeViewStaff.Nodes.Clear();
+
             int id;
 
             if (e.RowIndex >= 0)
@@ -206,7 +238,6 @@ namespace App_SuperLiga
 
                 RefreshAllGrids();
             }
-
         }
 
         public Image byteArrayToImage(byte[] byteArrayIn)
@@ -421,9 +452,12 @@ namespace App_SuperLiga
             DialogResult dialogResult = MessageBox.Show("Esta acção removerá tambem todo o Staff e Jogadores\n\nTem a certeza?", "Eliminar equipa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                dc.ExecuteCommand("DELETE FROM Estatisticas");
+
                 var staffEliminar = from Staff in dc.Staffs
                                     where Staff.id_equipa == equipa.id_equipa
                                     select Staff;
+
 
                 foreach (var staff in staffEliminar)
                 {
@@ -603,6 +637,7 @@ namespace App_SuperLiga
 
             txtNomeEquipa.Refresh();
             txtEstadio.Refresh();
+
         }
 
         private void lbl_UpgradeJogador_Click(object sender, EventArgs e)
@@ -655,7 +690,7 @@ namespace App_SuperLiga
             }
 
             RefreshAllGrids();
-            txtNomeJogador.Refresh();
+            
         }
 
         private void lbl_UpdateStaff_Click(object sender, EventArgs e)
@@ -775,6 +810,7 @@ namespace App_SuperLiga
 
         }
 
+
         public void RefreshTeamGrid()
         {
             dataGridViewEquipas.Columns.Clear();
@@ -796,11 +832,14 @@ namespace App_SuperLiga
                 pictureBox2.Image = new Bitmap(open.FileName);
                 pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
                 EditImagem();
+                lbl_UploadImagem.Visible = false;
             }
         }
 
         private void lbl_RemoverImagem_Click(object sender, EventArgs e)
         {
+            lbl_UploadImagem.Visible = true;
+
             DialogResult dialogResult = MessageBox.Show($"Eliminar imagem da equipa?", "Eliminar imagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
@@ -1219,14 +1258,14 @@ namespace App_SuperLiga
         private void DataGridViewJogosShow()
         {
             //preenche a datagrid com os Jogos da epoca
-            dataGridViewJogos.Columns.Add("colIdJornada", "Jornada");
-            dataGridViewJogos.Columns.Add("colCasa", "Equipa Casa   ");
-            dataGridViewJogos.Columns.Add("colVisitante", "Visitante   ");
-            dataGridViewJogos.Columns.Add("colJogos", "Jogos");
-            dataGridViewJogos.Columns[3].Visible = false;
-            dataGridViewJogos.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewJogos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewJogos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewJogos.Columns.Add("colIdJornada", "Jornada");
+            //dataGridViewJogos.Columns.Add("colCasa", "Equipa Casa   ");
+            //dataGridViewJogos.Columns.Add("colVisitante", "Visitante   ");
+            //dataGridViewJogos.Columns.Add("colJogos", "Jogos");
+            //dataGridViewJogos.Columns[3].Visible = false;
+            //dataGridViewJogos.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dataGridViewJogos.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            //dataGridViewJogos.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
             DataGridViewCellStyle estilo1 = new DataGridViewCellStyle();
             estilo1.BackColor = Color.FromArgb(83, 104, 120);
@@ -1390,6 +1429,9 @@ namespace App_SuperLiga
                     dc.SubmitChanges();
 
                     MessageBox.Show("Resultado atualizado com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    LimparLabelsEstatisticas();
+                    MostrarEstatisticas();
                 }
                 catch (Exception ex)
                 {
@@ -1454,11 +1496,11 @@ namespace App_SuperLiga
 
         private void DataGridViewResultadosShow()
         {
-            dataGridViewResultados.Columns.Add("colIdJogo", " Jogo");
-            dataGridViewResultados.Columns.Add("colCasa", "Casa");
-            dataGridViewResultados.Columns.Add("colGolosCasa", "G");
-            dataGridViewResultados.Columns.Add("colGolosFora", "G");
-            dataGridViewResultados.Columns.Add("colVisitante", "Visitante");
+            //dataGridViewResultados.Columns.Add("colIdJogo", " Jogo");
+            //dataGridViewResultados.Columns.Add("colCasa", "Casa");
+            //dataGridViewResultados.Columns.Add("colGolosCasa", "G");
+            //dataGridViewResultados.Columns.Add("colGolosFora", "G");
+            //dataGridViewResultados.Columns.Add("colVisitante", "Visitante");
             dataGridViewResultados.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewResultados.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewResultados.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -1778,8 +1820,7 @@ namespace App_SuperLiga
 
         private void MostrarEstatisticas()
         {
-            PieChartShow();
-            MostrarEstatisticasGlobais();
+            CalcularEstatisticasGlobais();
             MostrarVencedor();
             PesquisarAtaque();
             PesquisarDefesa();
@@ -1789,89 +1830,162 @@ namespace App_SuperLiga
             PesquisarPontos();
         }
 
-        private void PieChartShow()
+        private void PieChartShow(int vitoriasCasa, int vitoriasFora, int empates)
         {
-            int totalVitorias = (int)dc.Estatisticas.Sum(x => x.vitorias);
-            int totalEmpates = (int)dc.Estatisticas.Sum(x => x.empates);
-            int totalDerrotas = (int)dc.Estatisticas.Sum(x => x.derrotas);
-
-            chart1.Series["s1"].Points.AddXY("Vitorias", totalVitorias);
-            chart1.Series["s1"].Points.AddXY("Empates", totalEmpates);
-            chart1.Series["s1"].Points.AddXY("Derrotas", totalDerrotas);
+            chart1.Series["s1"].Points.AddXY("Vitorias Casa", vitoriasCasa);
+            chart1.Series["s1"].Points.AddXY("Vitorias Fora", vitoriasFora);
+            chart1.Series["s1"].Points.AddXY("Empates", empates);
+           
             chart1.Series["s1"].IsValueShownAsLabel = true;
         }
 
-        private void MostrarEstatisticasGlobais()
+        private void CalcularEstatisticasGlobais()
         {
-            var golosMarcados = dc.Estatisticas.Sum(x => x.golos_marcados);
-            var golosSofridos = dc.Estatisticas.Sum(x => x.golos_sofridos);
-            var totalJogos = dc.Estatisticas.Sum(x => x.total_jogos);
+            var golosMarcados = dc.Resultados.Sum(x => x.golos_casa);
+            var golosSofridos = dc.Resultados.Sum(x => x.golos_fora);
+            int totalJogos = dc.Resultados.Count();
 
             var totalGolos = golosMarcados + golosSofridos;
+
             decimal mediaGolosJogo = (decimal)(totalGolos / totalJogos);
 
-            lbl_totalJogosEpoca.Text = dc.Estatisticas.Sum(x => x.total_jogos).ToString();
+            // calculo das estatisticas globais
+            int totalVitoriasCasa = 0;
+            int totalEmpates = 0;
+            int totalVitoriasFora = 0;
+
+            var listaResultadosJogos = from r in dc.Resultados
+                                       select r;
+
+            foreach (var resultado in listaResultadosJogos)
+            {
+                if (resultado.golos_casa > resultado.golos_fora)
+                {
+                    totalVitoriasCasa++;
+                }
+                else if (resultado.golos_casa < resultado.golos_fora)
+                {
+                    totalVitoriasFora++;
+                }
+                else
+                {
+                    totalEmpates++;
+                }
+            }
+
+            lbl_totalJogosEpoca.Text = dc.Resultados.Count().ToString();
             lbl_totalGolosEpoca.Text = totalGolos.ToString();
             lbl_mediaGolosEpoca.Text = $"{mediaGolosJogo:0.00}".ToString();
-            lbl_totalVitoriasEpoca.Text = dc.Estatisticas.Sum(x => x.vitorias).ToString();
-            lbl_totalEmpatesEpoca.Text = dc.Estatisticas.Sum(x => x.empates).ToString();
-            lbl_totalDerrotasEpoca.Text = dc.Estatisticas.Sum(x => x.derrotas).ToString();
+            lbl_totalVitoriasCasa.Text = totalVitoriasCasa.ToString();
+            lbl_totalVitoriasFora.Text = totalVitoriasFora.ToString();
+            lbl_totalEmpates.Text = totalEmpates.ToString();
+
+            PieChartShow(totalVitoriasCasa, totalVitoriasFora, totalEmpates);
         }
 
         private void MostrarVencedor()
         {
-            int maxPontos = (int)dc.Estatisticas.Max(x => x.pontos);
-
-            var equipaComMaisPontos = from t1 in dc.Estatisticas
-                                      join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                      where t1.pontos == maxPontos
-                                      select t2;
-
-            Equipa equipaVencedora = new Equipa();
-
-            if (equipaComMaisPontos.Count() == 1)
+            try
             {
-                equipaVencedora = equipaComMaisPontos.Single();
-            }
-            else
-            {
-                foreach (var e in equipaComMaisPontos)
+                //lista de equipas para guardar equipas que tenham mesmo numero de pontos, de vitorias, de golos marcados para desempatar no DesempatarVencedor
+                List<Equipa> listaEquipasEmpateGolosSofridos = new List<Equipa>();
+
+                int maiorNumGolosMarcados = 0;
+
+                int maxPontos = (int)dc.Estatisticas.Max(x => x.pontos);
+
+                var equipaComMaisPontos = from t1 in dc.Estatisticas
+                                          join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                          where t1.pontos == maxPontos
+                                          select t2;
+
+                Equipa equipaVencedora = new Equipa();
+
+                if (equipaComMaisPontos.Count() == 1)
                 {
-                    int maxVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
-                    int maxGolos = (int)dc.Estatisticas.Max(x => x.golos_marcados);
-
-                    var estatisticasDaEquipa = from t1 in dc.Estatisticas
-                                               join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                               where t1.id_equipa == e.id_equipa
-                                               select t1;
-
-                    Estatistica estatistica = new Estatistica();
-
-                    estatistica = estatisticasDaEquipa.Single();
-
-                    if (estatistica.vitorias == maxVitorias)
+                    equipaVencedora = equipaComMaisPontos.Single();
+                }
+                else
+                {
+                    foreach (var e in equipaComMaisPontos)
                     {
-                        if (estatistica.golos_marcados == maxGolos)
+                        int maxVitorias = (int)dc.Estatisticas.Max(x => x.vitorias);
+                        int maxGolos = (int)dc.Estatisticas.Max(x => x.golos_marcados);
+
+                        var estatisticasDaEquipa = from t1 in dc.Estatisticas
+                                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                                   where t1.id_equipa == e.id_equipa
+                                                   select t1;
+
+                        Estatistica estatistica = new Estatistica();
+                        estatistica = estatisticasDaEquipa.Single();
+
+
+                        int menorNumeroGolosSofridosEquipa = (int)(from t1 in dc.Estatisticas
+                                                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                                                   where t1.id_equipa == e.id_equipa
+                                                                   select t1.golos_sofridos).Single();
+
+                        if (estatistica.vitorias == maxVitorias)
                         {
-                            equipaVencedora = e;
+                            if (estatistica.golos_marcados > maiorNumGolosMarcados)
+                            {
+                                maiorNumGolosMarcados = (int)estatistica.golos_marcados;
+                                listaEquipasEmpateGolosSofridos.Add(e);
+                                equipaVencedora = e;
+                            }
+                            else if (estatistica.golos_marcados == maiorNumGolosMarcados)
+                            {
+                                listaEquipasEmpateGolosSofridos.Add(e);
+                                equipaVencedora = DesempateVencedor(listaEquipasEmpateGolosSofridos);
+                            }
                         }
                     }
                 }
+
+                lbl_Vencedor.Text = equipaVencedora.nome;
+
+                var imagemEquipa = from Imagen in dc.Imagens
+                                   where Imagen.id_equipa == equipaVencedora.id_equipa
+                                   select Imagen.imagem;
+
+                Image a = (Bitmap)((new ImageConverter()).ConvertFrom(imagemEquipa.Single().ToArray()));
+
+                pictureBox_Vencedor.Image = a;
+
             }
+            catch (Exception)
+            {
+                throw; //new UnhandledExceptionEventHandler("Sem critério de desempate perante igual numero de pontos, vitorias e golos marcados");
 
-
-            lbl_Vencedor.Text = equipaVencedora.nome;
-
-            var imagemEquipa = from Imagen in dc.Imagens
-                               where Imagen.id_equipa == equipaVencedora.id_equipa
-                               select Imagen.imagem;
-
-            Image a = (Bitmap)((new ImageConverter()).ConvertFrom(imagemEquipa.Single().ToArray()));
-
-            pictureBox_Vencedor.Image = a;
+                lbl_Vencedor.Text = "Sem vencedor";
+                pictureBox_Vencedor.Image = null;
+            }
         }
 
+        private Equipa DesempateVencedor(List<Equipa> listaEquipas)
+        {
+            int menorNumGolosSofridos = int.MaxValue;
+            Equipa aux = new Equipa();
 
+            foreach (Equipa e in listaEquipas)
+            {
+                var estatisticasDaEquipa = from t1 in dc.Estatisticas
+                                           join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
+                                           where t1.id_equipa == e.id_equipa
+                                           select t1;
+
+                Estatistica estatistica = new Estatistica();
+                estatistica = estatisticasDaEquipa.Single();
+
+                if (estatistica.golos_sofridos < menorNumGolosSofridos)
+                {
+                    menorNumGolosSofridos = (int)estatistica.golos_sofridos;
+                    aux = e;
+                }
+            }
+            return aux;
+        }
 
         private void PesquisarAtaque()
         {
@@ -2065,9 +2179,9 @@ namespace App_SuperLiga
             lbl_totalJogosEpoca.Text = null;
             lbl_totalGolosEpoca.Text = null;
             lbl_mediaGolosEpoca.Text = null;
-            lbl_totalVitoriasEpoca.Text = null;
-            lbl_totalEmpatesEpoca.Text = null;
-            lbl_totalDerrotasEpoca.Text = null;
+            lbl_totalVitoriasCasa.Text = null;
+            lbl_totalVitoriasFora.Text = null;
+            lbl_totalEmpates.Text = null;
             lbl_Vencedor.Text = null;
             pictureBox_Vencedor.Text = null;
             lbl_melhorAtaque.Text = null;
@@ -2102,16 +2216,35 @@ namespace App_SuperLiga
 
         #endregion
 
+        private void lbl_reporAplicacao_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Eliminar todos os dados da aplicação?", "Repor Aplicação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                dc.ExecuteCommand("DELETE FROM Estatisticas");
+                dc.ExecuteCommand("DELETE FROM Resultados");
+                dc.ExecuteCommand("DELETE FROM Jogos");
+                dc.ExecuteCommand("DELETE FROM Jornadas");
+                dc.ExecuteCommand("DELETE FROM Imagens");
+                dc.ExecuteCommand("DELETE FROM Jogadores");
+                dc.ExecuteCommand("DELETE FROM Staff");
+                dc.ExecuteCommand("DELETE FROM Equipas");
+
+                this.Close();
+                Form2 form2 = new Form2();
+                form2.ShowDialog();
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
         private void lbl_about_Click(object sender, EventArgs e)
         {
             Form7 form7 = new Form7();
             form7.ShowDialog();
-        }
-
-        private void lbl_settings_Click(object sender, EventArgs e)
-        {
-            Form6 form6 = new Form6();
-            form6.ShowDialog();
         }
 
         private void bt_sairApp_Click(object sender, EventArgs e)
@@ -2126,11 +2259,5 @@ namespace App_SuperLiga
                 return;
             }
         }
-
-
-
-
-
-
     }
 }

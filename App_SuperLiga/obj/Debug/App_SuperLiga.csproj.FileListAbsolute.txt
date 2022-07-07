@@ -69,7 +69,6 @@ C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Form3.resources
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Form4.resources
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Form5.resources
-C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Form6.resources
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Form7.resources
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.Properties.Resources.resources
 C:\Users\Carlos\source\repos\POO\App_SuperLiga\App_SuperLigaV7\App_SuperLiga\obj\Debug\App_SuperLiga.csproj.GenerateResource.cache
