@@ -83,6 +83,8 @@
       <Column Name="golos_marcados" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="golos_sofridos" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="total_jogos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nome_equipa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="imagem_equipa" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Equipa_Estatistica" Member="Equipa" ThisKey="id_equipa" OtherKey="id_equipa" Type="Equipa" IsForeignKey="true" />
     </Type>
   </Table>

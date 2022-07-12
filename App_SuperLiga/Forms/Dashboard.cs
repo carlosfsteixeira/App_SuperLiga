@@ -50,6 +50,10 @@ namespace App_SuperLiga
         /// </summary>
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'superligaDataSet1.Estatisticas' table. You can move, or remove it, as needed.
+            this.estatisticasTableAdapter1.Fill(this.superligaDataSet1.Estatisticas);
+            // TODO: This line of code loads data into the 'superligaDataSet.Estatisticas' table. You can move, or remove it, as needed.
+            this.estatisticasTableAdapter.Fill(this.superligaDataSet.Estatisticas);
             lbldatetime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             HidePanels();
@@ -80,7 +84,6 @@ namespace App_SuperLiga
 
                 btGerarJogos.Enabled = false;
                 btGerarJogos.Hide();
-                
             }
             else
             {
@@ -120,8 +123,9 @@ namespace App_SuperLiga
             panelJogos.Visible = false;
             panelEstatisticas.Visible = false;
 
-            dataGridViewClassificacao.Rows.Clear();
+
             DataGridViewClassificaoShow();
+
         }
 
         private void btEstatisticas_Click(object sender, EventArgs e)
@@ -164,6 +168,11 @@ namespace App_SuperLiga
 
         #endregion
 
+        /// <summary>
+        /// Criação/edição/eliminação das equipas, staffs e respetivos jogadores, com todas as validações necessarias.
+        /// Criação e preenchimento das datagridview correspondentes.
+        /// Inclusão de duas treeview: uma para todas as posições de cada jogador, e a outra para agrupar as funções do staff.
+        /// </summary>
         #region ModuloClubes
 
         #region CRUD
@@ -192,7 +201,6 @@ namespace App_SuperLiga
             }
 
             dataGridViewEquipas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
         }
 
         private void dataGridViewEquipas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -826,41 +834,6 @@ namespace App_SuperLiga
             txtPresidente.Refresh();
         }
 
-        public bool ValidarExistenciaTreinador()
-        {
-            bool output = false;
-
-            var procurarTreinador = from Staff in dc.Staffs
-                                    where Staff.funcao == "Treinador"
-                                    && Staff.id_equipa == equipa.id_equipa
-                                    select Staff;
-
-            if (procurarTreinador.Count() == 1)
-            {
-                output = true;
-            }
-
-            return output;
-        }
-
-        public bool ValidarExistenciaPresidente()
-        {
-            bool output = false;
-
-            var procurarPresidente = from Staff in dc.Staffs
-                                     where Staff.funcao == "Presidente"
-                                     && Staff.id_equipa == equipa.id_equipa
-                                     select Staff;
-
-            if (procurarPresidente.Count() == 1)
-            {
-
-                output = true;
-            }
-
-            return output;
-        }
-
         public void RefreshAllGrids()
         {
             dataGridViewJogadores.Columns.Clear();
@@ -956,7 +929,7 @@ namespace App_SuperLiga
                 id_equipa = equipa.id_equipa,
             };
 
-            //adicionar nova Equipa a bd
+            //adicionar nova Imagem a bd
             dc.Imagens.InsertOnSubmit(img);
 
             try
@@ -1015,6 +988,44 @@ namespace App_SuperLiga
         /// Todas as validaçoes necessárias ao CRUD
         /// </summary>
         /// <returns></returns>
+        /// 
+
+
+        public bool ValidarExistenciaTreinador()
+        {
+            bool output = false;
+
+            var procurarTreinador = from Staff in dc.Staffs
+                                    where Staff.funcao == "Treinador"
+                                    && Staff.id_equipa == equipa.id_equipa
+                                    select Staff;
+
+            if (procurarTreinador.Count() == 1)
+            {
+                output = true;
+            }
+
+            return output;
+        }
+
+        public bool ValidarExistenciaPresidente()
+        {
+            bool output = false;
+
+            var procurarPresidente = from Staff in dc.Staffs
+                                     where Staff.funcao == "Presidente"
+                                     && Staff.id_equipa == equipa.id_equipa
+                                     select Staff;
+
+            if (procurarPresidente.Count() == 1)
+            {
+
+                output = true;
+            }
+
+            return output;
+        }
+
         public bool txtNomeEquipa_TextCheck()
         {
             bool output = true;
@@ -1245,7 +1256,7 @@ namespace App_SuperLiga
         /// <summary>
         ///  É necessário um numero minimo (e máximo) de 6 equipas para gerar os confrontos entre equipas.
         ///  Após confirmar a criação dos jogos, fica impossibilitado de adicionar ou eliminar Equipas (Possivel a edição, e o crud do staff e jogadores).
-        ///  É gerada a lista de jogos com todos os clubes a defrontarem-se 2 vezes cada uma, efetuando alternadamente um jogo fora e um jogo em casa, num total de 30 jogos e 15 jornadas.
+        ///  É gerada a lista de jogos com todos os clubes a defrontarem-se 2 vezes cada uma, efetuando alternadamente um jogo fora e um jogo em casa, num total de 56 jogos e 14 jornadas.
         ///  Gerada a lista, fica impossibilitada de ser alterada. Todos os confrontos são gerados de uma só vez.
         ///  É necessária a inserção, manualmente, de todos os resultados para cada jogo. Estes podem ser alterados mas nunca apagados.
         ///  A partir destes resultados, é gerada e atualizada a respetiva classificação e calculadas todas as estatisticas a cada submissão de resultado.
@@ -1709,12 +1720,8 @@ namespace App_SuperLiga
         /// </summary>
         private void DataGridViewClassificaoShow()
         {
-            this.dataGridViewClassificacao.Columns["Nome"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-
             var equipas = from Equipa in dc.Equipas
                           select Equipa;
-
-            int linha = 0;
 
             foreach (Equipa e in equipas)
             {
@@ -1731,17 +1738,12 @@ namespace App_SuperLiga
                 int empates = 0;
                 int pontos = 0;
 
-                DataGridViewRow mb = new DataGridViewRow();
-                dataGridViewClassificacao.Rows.Add(mb);
-
                 // imagem de cada equipa
                 var imagemEquipa = from Imagen in dc.Imagens
                                    where Imagen.id_equipa == e.id_equipa
                                    select Imagen.imagem;
 
-                Image a = (Bitmap)((new ImageConverter()).ConvertFrom(imagemEquipa.Single().ToArray()));
 
-                //Resultados da equipa em JOGOS EM CASA
                 var listaResultadosJogos = from r in dc.Resultados
                                            where r.equipa_casa == e.id_equipa || r.equipa_fora == e.id_equipa
                                            select r;
@@ -1851,7 +1853,7 @@ namespace App_SuperLiga
                         maxIDEstatistica = maxIdQuery.Max();
                     }
 
-                    //coloca no novo objecto estatistica os novos dados da nova estatistica                    
+                    //cria uma nova estatistica associada a equipa e                   
                     estatistica.id_estatistica = maxIDEstatistica + 1;
                     estatistica.id_equipa = e.id_equipa;
                     estatistica.vitorias = vitorias;
@@ -1861,6 +1863,8 @@ namespace App_SuperLiga
                     estatistica.golos_marcados = golosMarcadosTotal;
                     estatistica.golos_sofridos = golosSofridosTotal;
                     estatistica.total_jogos = totalJogos;
+                    estatistica.imagem_equipa = imagemEquipa.Single();
+                    estatistica.nome_equipa = e.nome;
 
                     dc.Estatisticas.InsertOnSubmit(estatistica);
 
@@ -1874,56 +1878,26 @@ namespace App_SuperLiga
                     }
                 }
 
-                PopularDataGridViewClassificacao(e, a, totalJogos, estatistica, linha);
-
-                linha++;
             }
 
             SortingDataGridViewClassificacao();
 
             foreach (DataGridViewRow r in dataGridViewClassificacao.Rows)
             {
-                r.Cells[0].Value = (r.Index + 1 + " º");
+                r.Cells["Posicao"].Value = (r.Index + 1 + " º");
             }
 
-            foreach (DataGridViewRow row in dataGridViewClassificacao.Rows)
-            {
-                row.Height = 70;
-            }
-        }
-
-        private void PopularDataGridViewClassificacao(Equipa e, Image img, int jogosTotal, Estatistica estatistica, int linha)
-        {
-            dataGridViewClassificacao.Rows[linha].Cells[1].Value = img;
-            dataGridViewClassificacao.Rows[linha].Cells[2].Value = e.nome;
-            dataGridViewClassificacao.Rows[linha].Cells[3].Value = estatistica.pontos;
-            dataGridViewClassificacao.Rows[linha].Cells[4].Value = jogosTotal;
-            dataGridViewClassificacao.Rows[linha].Cells[5].Value = estatistica.vitorias;
-            dataGridViewClassificacao.Rows[linha].Cells[6].Value = estatistica.empates;
-            dataGridViewClassificacao.Rows[linha].Cells[7].Value = estatistica.derrotas;
-            dataGridViewClassificacao.Rows[linha].Cells[8].Value = estatistica.golos_marcados;
-            dataGridViewClassificacao.Rows[linha].Cells[9].Value = estatistica.golos_sofridos;
         }
 
         private void SortingDataGridViewClassificacao()
         {
-            var maisPontos = (from t1 in dc.Estatisticas
-                              select t1.pontos).Max();
 
-            var pesquisaEquipaComMaisPontos = from t1 in dc.Estatisticas
-                                              where t1.pontos == maisPontos
-                                              select t1;
 
-            if (pesquisaEquipaComMaisPontos.Count() == 1)
-            {
-                //se exitir mais que uma equipa com o mesmo numero de pontos sorting da lista por equipa com vitorias pontos
-                dataGridViewClassificacao.Sort(dataGridViewClassificacao.Columns[3], ListSortDirection.Descending);
-            }
-            else
-            {
-                // em caso de empate, a classificação é ordenada pelo maior numero de vitorias
-                dataGridViewClassificacao.Sort(dataGridViewClassificacao.Columns[5], ListSortDirection.Descending);
-            }
+            //sorting da grid da Classificaçao
+            BindingSource bindingSource = new BindingSource();
+            bindingSource = (BindingSource)dataGridViewClassificacao.DataSource;
+
+            bindingSource.Sort = "pontos DESC, vitorias DESC, golos_marcados DESC, golos_sofridos ASC";
         }
 
         private void RemoverLinhasDaGrid(DataGridView datagrid)
@@ -2005,15 +1979,12 @@ namespace App_SuperLiga
         /// Calculo do vencedor com base no numero maximo de pontos. Em caso de empate, o criterio utilizado é o maior numero de vitorias. Caso seja o mesmo,
         /// o criterio seguinto é o maior numero de golos marcados. Se mesmo assim assim o numero for o mesmo, passa ao criterio seguinte, o menor numero de golos sofridos.
         /// </summary>
-        /// <exception cref="Exception"></exception>
         private void MostrarVencedor()
         {
             try
             {
                 //lista de equipas para guardar equipas que tenham mesmo numero de pontos, de vitorias, de golos marcados para desempatar no DesempatarVencedor
                 List<Equipa> listaEquipasEmpateGolosSofridos = new List<Equipa>();
-
-                int maiorNumGolosMarcados = 0;
 
                 int maxPontos = (int)dc.Estatisticas.Max(x => x.pontos);
 
@@ -2043,28 +2014,18 @@ namespace App_SuperLiga
                         Estatistica estatistica = new Estatistica();
                         estatistica = estatisticasDaEquipa.Single();
 
-
-                        int menorNumeroGolosSofridosEquipa = (int)(from t1 in dc.Estatisticas
-                                                                   join t2 in dc.Equipas on t1.id_equipa equals t2.id_equipa
-                                                                   where t1.id_equipa == e.id_equipa
-                                                                   select t1.golos_sofridos).Single();
-
                         if (estatistica.vitorias == maxVitorias)
                         {
-                            if (estatistica.golos_marcados > maiorNumGolosMarcados)
-                            {
-                                maiorNumGolosMarcados = (int)estatistica.golos_marcados;
-                                listaEquipasEmpateGolosSofridos.Add(e);
-                                equipaVencedora = e;
-                            }
-                            else if (estatistica.golos_marcados == maiorNumGolosMarcados)
+                            if (estatistica.golos_marcados == maxGolos)
                             {
                                 listaEquipasEmpateGolosSofridos.Add(e);
-                                equipaVencedora = DesempateVencedor(listaEquipasEmpateGolosSofridos);
                             }
                         }
                     }
                 }
+
+                //
+                equipaVencedora = DesempateVencedor(listaEquipasEmpateGolosSofridos);
 
                 lbl_Vencedor.Text = equipaVencedora.nome;
 
@@ -2405,11 +2366,6 @@ namespace App_SuperLiga
             {
                 return;
             }
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

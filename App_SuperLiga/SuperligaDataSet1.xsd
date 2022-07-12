@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SuperligaDataSet1" targetNamespace="http://tempuri.org/SuperligaDataSet1.xsd" xmlns:mstns="http://tempuri.org/SuperligaDataSet1.xsd" xmlns="http://tempuri.org/SuperligaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SuperligaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SuperligaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.App_SuperLiga.Properties.Settings.GlobalReference.Default.SuperligaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EstatisticasTableAdapter" GeneratorDataComponentClassName="EstatisticasTableAdapter" Name="Estatisticas" UserDataComponentName="EstatisticasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SuperligaConnectionString (Settings)" DbObjectName="Superliga.dbo.Estatisticas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT vitorias, empates, derrotas, pontos, golos_marcados, golos_sofridos, total_jogos, nome_equipa, imagem_equipa FROM dbo.Estatisticas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vitorias" DataSetColumn="vitorias" />
+              <Mapping SourceColumn="empates" DataSetColumn="empates" />
+              <Mapping SourceColumn="derrotas" DataSetColumn="derrotas" />
+              <Mapping SourceColumn="pontos" DataSetColumn="pontos" />
+              <Mapping SourceColumn="golos_marcados" DataSetColumn="golos_marcados" />
+              <Mapping SourceColumn="golos_sofridos" DataSetColumn="golos_sofridos" />
+              <Mapping SourceColumn="total_jogos" DataSetColumn="total_jogos" />
+              <Mapping SourceColumn="nome_equipa" DataSetColumn="nome_equipa" />
+              <Mapping SourceColumn="imagem_equipa" DataSetColumn="imagem_equipa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SuperligaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="SuperligaDataSet1" msprop:Generator_DataSetName="SuperligaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Estatisticas" msprop:Generator_RowEvHandlerName="EstatisticasRowChangeEventHandler" msprop:Generator_RowDeletedName="EstatisticasRowDeleted" msprop:Generator_RowDeletingName="EstatisticasRowDeleting" msprop:Generator_RowEvArgName="EstatisticasRowChangeEvent" msprop:Generator_TablePropName="Estatisticas" msprop:Generator_RowChangedName="EstatisticasRowChanged" msprop:Generator_RowChangingName="EstatisticasRowChanging" msprop:Generator_TableClassName="EstatisticasDataTable" msprop:Generator_RowClassName="EstatisticasRow" msprop:Generator_TableVarName="tableEstatisticas" msprop:Generator_UserTableName="Estatisticas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vitorias" msprop:Generator_ColumnPropNameInRow="vitorias" msprop:Generator_ColumnPropNameInTable="vitoriasColumn" msprop:Generator_ColumnVarNameInTable="columnvitorias" msprop:Generator_UserColumnName="vitorias" type="xs:int" minOccurs="0" />
+              <xs:element name="empates" msprop:Generator_ColumnPropNameInRow="empates" msprop:Generator_ColumnPropNameInTable="empatesColumn" msprop:Generator_ColumnVarNameInTable="columnempates" msprop:Generator_UserColumnName="empates" type="xs:int" minOccurs="0" />
+              <xs:element name="derrotas" msprop:Generator_ColumnPropNameInRow="derrotas" msprop:Generator_ColumnPropNameInTable="derrotasColumn" msprop:Generator_ColumnVarNameInTable="columnderrotas" msprop:Generator_UserColumnName="derrotas" type="xs:int" minOccurs="0" />
+              <xs:element name="pontos" msprop:Generator_ColumnPropNameInRow="pontos" msprop:Generator_ColumnPropNameInTable="pontosColumn" msprop:Generator_ColumnVarNameInTable="columnpontos" msprop:Generator_UserColumnName="pontos" type="xs:int" minOccurs="0" />
+              <xs:element name="golos_marcados" msprop:Generator_ColumnPropNameInRow="golos_marcados" msprop:Generator_ColumnPropNameInTable="golos_marcadosColumn" msprop:Generator_ColumnVarNameInTable="columngolos_marcados" msprop:Generator_UserColumnName="golos_marcados" type="xs:int" minOccurs="0" />
+              <xs:element name="golos_sofridos" msprop:Generator_ColumnPropNameInRow="golos_sofridos" msprop:Generator_ColumnPropNameInTable="golos_sofridosColumn" msprop:Generator_ColumnVarNameInTable="columngolos_sofridos" msprop:Generator_UserColumnName="golos_sofridos" type="xs:int" minOccurs="0" />
+              <xs:element name="total_jogos" msprop:Generator_ColumnPropNameInRow="total_jogos" msprop:Generator_ColumnPropNameInTable="total_jogosColumn" msprop:Generator_ColumnVarNameInTable="columntotal_jogos" msprop:Generator_UserColumnName="total_jogos" type="xs:int" minOccurs="0" />
+              <xs:element name="nome_equipa" msprop:Generator_ColumnPropNameInRow="nome_equipa" msprop:Generator_ColumnPropNameInTable="nome_equipaColumn" msprop:Generator_ColumnVarNameInTable="columnnome_equipa" msprop:Generator_UserColumnName="nome_equipa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="imagem_equipa" msprop:Generator_ColumnPropNameInRow="imagem_equipa" msprop:Generator_ColumnPropNameInTable="imagem_equipaColumn" msprop:Generator_ColumnVarNameInTable="columnimagem_equipa" msprop:Generator_UserColumnName="imagem_equipa" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

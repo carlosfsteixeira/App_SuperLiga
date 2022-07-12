@@ -1648,6 +1648,10 @@ namespace App_SuperLiga
 		
 		private System.Nullable<int> _total_jogos;
 		
+		private string _nome_equipa;
+		
+		private System.Data.Linq.Binary _imagem_equipa;
+		
 		private EntityRef<Equipa> _Equipa;
 		
     #region Extensibility Method Definitions
@@ -1672,6 +1676,10 @@ namespace App_SuperLiga
     partial void Ongolos_sofridosChanged();
     partial void Ontotal_jogosChanging(System.Nullable<int> value);
     partial void Ontotal_jogosChanged();
+    partial void Onnome_equipaChanging(string value);
+    partial void Onnome_equipaChanged();
+    partial void Onimagem_equipaChanging(System.Data.Linq.Binary value);
+    partial void Onimagem_equipaChanged();
     #endregion
 		
 		public Estatistica()
@@ -1860,6 +1868,46 @@ namespace App_SuperLiga
 					this._total_jogos = value;
 					this.SendPropertyChanged("total_jogos");
 					this.Ontotal_jogosChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nome_equipa", DbType="VarChar(50)")]
+		public string nome_equipa
+		{
+			get
+			{
+				return this._nome_equipa;
+			}
+			set
+			{
+				if ((this._nome_equipa != value))
+				{
+					this.Onnome_equipaChanging(value);
+					this.SendPropertyChanging();
+					this._nome_equipa = value;
+					this.SendPropertyChanged("nome_equipa");
+					this.Onnome_equipaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_imagem_equipa", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary imagem_equipa
+		{
+			get
+			{
+				return this._imagem_equipa;
+			}
+			set
+			{
+				if ((this._imagem_equipa != value))
+				{
+					this.Onimagem_equipaChanging(value);
+					this.SendPropertyChanging();
+					this._imagem_equipa = value;
+					this.SendPropertyChanged("imagem_equipa");
+					this.Onimagem_equipaChanged();
 				}
 			}
 		}

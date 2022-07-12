@@ -65,6 +65,7 @@ namespace App_SuperLiga
 
             // Criar uma System.Data.Linq.Binary 
             System.Data.Linq.Binary file_binary = new System.Data.Linq.Binary(file_byte);
+            
             Imagen img = new Imagen
             {
                 id_imagem = (maxImgID + 1),

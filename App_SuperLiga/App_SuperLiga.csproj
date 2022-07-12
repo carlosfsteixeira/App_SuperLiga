@@ -114,6 +114,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SuperligaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SuperligaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperligaDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +176,17 @@
     </None>
     <None Include="SuperligaDataSet.xss">
       <DependentUpon>SuperligaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SuperligaDataSet1.xsc">
+      <DependentUpon>SuperligaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SuperligaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuperligaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SuperligaDataSet1.xss">
+      <DependentUpon>SuperligaDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +353,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flag-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo2%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pitchlawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundplayer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

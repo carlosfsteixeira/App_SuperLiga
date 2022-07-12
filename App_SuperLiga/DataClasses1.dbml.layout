@@ -93,17 +93,17 @@
         <classShapeMoniker Id="af117740-cc2d-495a-a8ae-471660a3a134" />
       </nodes>
     </associationConnector>
-    <classShape Id="818eb98b-1d7b-42f3-a51b-9788888d9f80" absoluteBounds="6.875, 4.5, 2, 2.5401025390625">
+    <classShape Id="90dd50c1-71b2-4937-a7a0-2aced2434656" absoluteBounds="6.625, 4.25, 2, 2.9247054036458331">
       <DataClassMoniker Name="/DataClasses1DataContext/Estatistica" />
       <nestedChildShapes>
-        <elementListCompartment Id="4527b6c9-07f3-4e80-bc31-2a71e592e943" absoluteBounds="6.89, 4.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2d50b3ca-cd3b-45f7-9257-2d4dee66a6a7" absoluteBounds="6.64, 4.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.1562525 : 3.5112939453125); (5.1562525 : 5.96277547200521); (6.875 : 5.96277547200521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.1562525 : 3.5112939453125); (5.1562525 : 6.03007690429688); (6.625 : 6.03007690429688)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClasses1DataContext/Equipa/Equipa_Estatistica" />
       <nodes>
         <classShapeMoniker Id="ab183c70-b9ee-40e6-8422-7ea00f73b773" />
-        <classShapeMoniker Id="818eb98b-1d7b-42f3-a51b-9788888d9f80" />
+        <classShapeMoniker Id="90dd50c1-71b2-4937-a7a0-2aced2434656" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
