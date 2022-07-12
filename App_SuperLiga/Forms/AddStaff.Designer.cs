@@ -176,7 +176,7 @@
             this.lbl_Confirmar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Confirmar.ForeColor = System.Drawing.Color.Black;
             this.lbl_Confirmar.Image = global::App_SuperLiga.Properties.Resources.confirm16;
-            this.lbl_Confirmar.Location = new System.Drawing.Point(407, 245);
+            this.lbl_Confirmar.Location = new System.Drawing.Point(407, 242);
             this.lbl_Confirmar.Name = "lbl_Confirmar";
             this.lbl_Confirmar.Size = new System.Drawing.Size(32, 35);
             this.lbl_Confirmar.TabIndex = 71;
@@ -262,7 +262,7 @@
             // 
             // txtNomeStaff
             // 
-            this.txtNomeStaff.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeStaff.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeStaff.Location = new System.Drawing.Point(99, 90);
             this.txtNomeStaff.Name = "txtNomeStaff";
             this.txtNomeStaff.Size = new System.Drawing.Size(247, 31);
@@ -296,7 +296,7 @@
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
-            // Form3
+            // AddStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,7 +308,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form3";
+            this.Name = "AddStaff";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.alphaGradientPanel6.ResumeLayout(false);

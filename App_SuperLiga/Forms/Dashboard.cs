@@ -48,8 +48,6 @@ namespace App_SuperLiga
         /// <summary>
         /// Pesquisa para verificar se já existem entradas na BD, e se sim, mostrar ao iniciar o programa e alternar entre paineis
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Form2_Load(object sender, EventArgs e)
         {
             lbldatetime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -67,7 +65,9 @@ namespace App_SuperLiga
             if (pesquisaJogosBD.Count() != 0 && pesquisaJornadasBD.Count() != 0)
             {
                 btAddEquipa.Enabled = false;
+                btAddEquipa.Hide();
                 lbl_RemoverEquipa.Enabled = false;
+                lbl_RemoverEquipa.Hide();
                 toolTip1.SetToolTip(lbl_RemoverEquipa, "Eliminar equipa");
                 toolTip1.SetToolTip(btAddEquipa, "Adicionar nova equipa");
 
@@ -91,8 +91,6 @@ namespace App_SuperLiga
         /// <summary>
         /// Alternar entre os diferentes paineis
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         #region Alternar Separadores
         private void btEquipas_Click(object sender, EventArgs e)
         {
@@ -101,7 +99,6 @@ namespace App_SuperLiga
             panelClassificacao.Visible = false;
             panelEstatisticas.Visible = false;
         }
-
         private void btJogos_Click(object sender, EventArgs e)
         {
             panelJogos.Visible = true;
@@ -438,6 +435,11 @@ namespace App_SuperLiga
 
         private void lbl_AddStaff_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
             // validar se existem 50 elementos no staff. Se sim, é necessario eliminar um deles antes de prosseguir para o form Add Staff
             if (ContarStaff())
             {
@@ -453,6 +455,11 @@ namespace App_SuperLiga
 
         private void lbl_AddJogador_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
             // validar se existem 25 jogadores. Se sim, é necessario eliminar um deles antes de prosseguir para o form Add Jogador
             if (ContarJogadores())
             {
@@ -468,6 +475,10 @@ namespace App_SuperLiga
 
         private void lbl_RemoverEquipa_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
             // eliminar equipa da BD conforme os constraints das FK relacionadas com a tabela Equipas
             DialogResult dialogResult = MessageBox.Show("Esta acção removerá tambem todo o Staff e Jogadores\n\nTem a certeza?", "Eliminar equipa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
@@ -541,6 +552,16 @@ namespace App_SuperLiga
 
         private void lbl_RemoverStaff_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
+            if (!ValidarInfoStaff())
+            {
+                return;
+            }
+            
             int IDaRemover = Convert.ToInt32(txtIdStaff.Text.ToString());
             string nome = txtNomeStaff.Text;
 
@@ -583,6 +604,16 @@ namespace App_SuperLiga
 
         private void lbl_RemoverJogador_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
+            if (!ValidarIdJogador())
+            {
+                return;
+            }
+            
             int IDaRemover = Convert.ToInt32(txtIdJogador.Text.ToString());
             string nome = txtNomeJogador.Text;
 
@@ -624,6 +655,11 @@ namespace App_SuperLiga
 
         private void lbl_UpdateEquipa_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
             // editar o nome da equipa, o simbolo e o nome do estadio
             if (!ValidarInfoEquipa())
             {
@@ -655,13 +691,20 @@ namespace App_SuperLiga
 
             txtNomeEquipa.Refresh();
             txtEstadio.Refresh();
+            RefreshTeamGrid();
+            RefreshAllGrids();
         }
 
-        private void lbl_UpgradeJogador_Click(object sender, EventArgs e)
+        private void lbl_UpdateJogador_Click(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(lbl_UpgradeJogador, "Guardar alterações");
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
 
-            if (!ValidarInfoJogadores() || !txtNomeJogador_TextCheck())
+            toolTip1.SetToolTip(lbl_UpdateJogador, "Guardar alterações");
+
+            if (!ValidarInfoJogadores() || !txtNomeJogador_TextCheck() || !ValidarIdJogador())
             {
                 return;
             }
@@ -685,16 +728,16 @@ namespace App_SuperLiga
 
             if (comboBoxPosicao.SelectedItem.ToString() != jogadorEditado.posicao)
             {
-                if (CheckNumeroCamisola())
-                {
-                    return;
-                }
-                else
-                {
-                    jogadorEditado.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
-                }
-
                 jogadorEditado.posicao = comboBoxPosicao.SelectedItem.ToString();
+            }
+
+            if (CheckNumeroCamisola())
+            {
+                return;
+            }
+            else
+            {
+                jogadorEditado.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
             }
 
             try
@@ -713,7 +756,12 @@ namespace App_SuperLiga
 
         private void lbl_UpdateStaff_Click(object sender, EventArgs e)
         {
-            if (!ValidarInfoStaff() || !txtNomeStaff_TextCheck())
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
+            if (!ValidarInfoStaff() || !txtNomeStaff_TextCheck() || !ValidarIdStaff())
             {
                 return;
             }
@@ -721,6 +769,8 @@ namespace App_SuperLiga
             // salvar alterações ao staff na bd
 
             int idStaff = Convert.ToInt32(txtIdStaff.Text.ToString());
+
+
 
             Staff staffEditado = new Staff();
 
@@ -834,6 +884,11 @@ namespace App_SuperLiga
 
         private void lbl_UploadImagem_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
             OpenFileDialog open = new OpenFileDialog();
 
             open.InitialDirectory = @"C:\Pictures";
@@ -853,6 +908,12 @@ namespace App_SuperLiga
 
         private void lbl_RemoverImagem_Click(object sender, EventArgs e)
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                lbl_UploadImagem.Visible = false;
+                return;
+            }
+
             lbl_UploadImagem.Visible = true;
 
             DialogResult dialogResult = MessageBox.Show($"Eliminar imagem da equipa?", "Eliminar imagem", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -910,6 +971,11 @@ namespace App_SuperLiga
 
         public void DeleteImagemDB()
         {
+            if (!ValidarExistenciaEquipas())
+            {
+                return;
+            }
+
             // eliminar imagem da bd
 
             Imagen x = new Imagen();
@@ -1035,6 +1101,22 @@ namespace App_SuperLiga
             return output;
         }
 
+        public bool ValidarExistenciaEquipas()
+        {
+            var pesquisarSeExistemEquipas = from Equipa in dc.Equipas select Equipa;
+
+            bool output = true;
+
+            // validar panel info
+            if (pesquisarSeExistemEquipas.Count() == 0)
+            {
+                MessageBox.Show("Não existem equipas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                output = false;
+            }
+
+            return output;
+        }
+
         public bool ValidarInfoStaff()
         {
             bool output = true;
@@ -1043,6 +1125,20 @@ namespace App_SuperLiga
             if (string.IsNullOrEmpty(txtNomeStaff.Text) || comboBoxFuncao.SelectedItem == null)
             {
                 MessageBox.Show("Existem campos por preencher", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                output = false;
+            }
+
+            return output;
+        }
+
+        public bool ValidarIdStaff()
+        {
+            bool output = true;
+
+            // validar panel info
+            if (string.IsNullOrEmpty(txtIdStaff.Text))
+            {
+                MessageBox.Show("Nenhum membro selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 output = false;
             }
 
@@ -1063,13 +1159,27 @@ namespace App_SuperLiga
             return output;
         }
 
+        public bool ValidarIdJogador()
+        {
+            bool output = true;
+
+            // validar panel info
+            if (string.IsNullOrEmpty(txtIdJogador.Text))
+            {
+                MessageBox.Show("Nenhum jogador selecionado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                output = false;
+            }
+
+            return output;
+        }
+
         public bool ContarEquipas()
         {
             bool output = false;
 
             var contarEquipas = from Equipa in dc.Equipas select Equipa;
 
-            if (contarEquipas.Count() == 6)
+            if (contarEquipas.Count() == 8)
             {
                 output = true;
             }
@@ -1081,7 +1191,9 @@ namespace App_SuperLiga
         {
             bool output = false;
 
-            var contarStaff = from Staff in dc.Staffs select Staff;
+            var contarStaff = from Staff in dc.Staffs
+                              where Staff.id_equipa == equipa.id_equipa
+                              select Staff;
 
             if (contarStaff.Count() == 50)
             {
@@ -1095,7 +1207,9 @@ namespace App_SuperLiga
         {
             bool output = false;
 
-            var contarJogadores = from Jogadore in dc.Jogadores select Jogadore;
+            var contarJogadores = from Jogadore in dc.Jogadores
+                                  where Jogadore.id_equipa == equipa.id_equipa
+                                  select Jogadore;
 
             if (contarJogadores.Count() == 25)
             {
@@ -1136,15 +1250,13 @@ namespace App_SuperLiga
         ///  É necessária a inserção, manualmente, de todos os resultados para cada jogo. Estes podem ser alterados mas nunca apagados.
         ///  A partir destes resultados, é gerada e atualizada a respetiva classificação e calculadas todas as estatisticas a cada submissão de resultado.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         #region ModuloJogos
         private void btGerarJogos_Click(object sender, EventArgs e)
         {
             if (!ContarEquipas())
             {
-                // validar se existem 6 equipas. Se não, é necessario criar.
-                MessageBox.Show("Não existem equipas suficientes para iniciar a época", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // validar se existem 8 equipas. Se não, é necessario criar.
+                MessageBox.Show("São necessárias 8 equipas para gerar os confrontos da época", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -1156,7 +1268,9 @@ namespace App_SuperLiga
             else
             {
                 btAddEquipa.Enabled = false;
+                btAddEquipa.Hide();
                 lbl_RemoverEquipa.Enabled = false;
+                lbl_RemoverEquipa.Hide();
 
                 btGerarJogos.Hide();
 
@@ -1214,7 +1328,6 @@ namespace App_SuperLiga
         /// segunda vez para gerar a segunda volta. A primeira equipa é sempre fixa e as outras vao alternando nos jogos umas contras as outras, entre jogos em casa
         /// e jogos fora.
         /// </summary>
-        /// <param name="listaEquipas"></param>
         public void GerarCalendarioVolta(List<Equipa> listaEquipas)
         {
             int numJornadas = (listaEquipas.Count - 1);
@@ -1808,8 +1921,7 @@ namespace App_SuperLiga
             }
             else
             {
-                //sorting da list
-                //a por equipa com mais pontos
+                // em caso de empate, a classificação é ordenada pelo maior numero de vitorias
                 dataGridViewClassificacao.Sort(dataGridViewClassificacao.Columns[5], ListSortDirection.Descending);
             }
         }
@@ -2229,6 +2341,11 @@ namespace App_SuperLiga
             DialogResult dialogResult = MessageBox.Show("Eliminar todos os dados da aplicação?", "Repor Aplicação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
+                if (!ValidarExistenciaEquipas())
+                {
+                    return;
+                }
+
                 try
                 {
                     dc.ExecuteCommand("DELETE FROM Estatisticas");
@@ -2272,7 +2389,7 @@ namespace App_SuperLiga
             toolTip1.SetToolTip(lbl_UpdateEquipa, "Guardar alterações");
             toolTip1.SetToolTip(lbl_AddJogador, "Adicionar jogador ao plantel");
             toolTip1.SetToolTip(lbl_RemoverJogador, "Remover jogador do plantel");
-            toolTip1.SetToolTip(lbl_UpgradeJogador, "Guardar alterações");
+            toolTip1.SetToolTip(lbl_UpdateJogador, "Guardar alterações");
             toolTip1.SetToolTip(lbl_about, "Sobre nós");
             toolTip1.SetToolTip(lbl_reporAplicacao, "Repor definições");
         }
@@ -2288,6 +2405,11 @@ namespace App_SuperLiga
             {
                 return;
             }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

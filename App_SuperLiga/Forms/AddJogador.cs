@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace App_SuperLiga
@@ -84,7 +79,7 @@ namespace App_SuperLiga
                 form2.RefreshAllGrids();
                 form2.RefreshTeamGrid();
 
-                MessageBox.Show("Adicionado com sucesso", "Novo jogador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Adicionado com sucesso", "Novo jogador");
 
                 this.Close();
             }

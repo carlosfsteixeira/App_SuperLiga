@@ -34,17 +34,18 @@
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
             this.label359 = new System.Windows.Forms.Label();
             this.alphaGradientPanel1 = new System.Windows.Forms.AlphaGradientPanel();
+            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
+            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_about = new System.Windows.Forms.Label();
             this.lbl_fechar = new System.Windows.Forms.Label();
-            this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
-            this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
-            this.colorWithAlpha6 = new System.Windows.Forms.ColorWithAlpha();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,10 +76,10 @@
             this.alphaGradientPanel6.ImagePadding = new System.Windows.Forms.Padding(5);
             this.alphaGradientPanel6.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
             this.alphaGradientPanel6.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel6.Location = new System.Drawing.Point(59, 12);
+            this.alphaGradientPanel6.Location = new System.Drawing.Point(12, 12);
             this.alphaGradientPanel6.Name = "alphaGradientPanel6";
             this.alphaGradientPanel6.Rounded = true;
-            this.alphaGradientPanel6.Size = new System.Drawing.Size(346, 39);
+            this.alphaGradientPanel6.Size = new System.Drawing.Size(395, 39);
             this.alphaGradientPanel6.TabIndex = 70;
             // 
             // colorWithAlpha1
@@ -121,6 +122,8 @@
             this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha5);
             this.alphaGradientPanel1.Colors.Add(this.colorWithAlpha6);
             this.alphaGradientPanel1.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel1.Controls.Add(this.label7);
+            this.alphaGradientPanel1.Controls.Add(this.label5);
             this.alphaGradientPanel1.Controls.Add(this.linkLabel1);
             this.alphaGradientPanel1.Controls.Add(this.label6);
             this.alphaGradientPanel1.Controls.Add(this.label4);
@@ -148,109 +151,6 @@
             this.alphaGradientPanel1.Size = new System.Drawing.Size(436, 292);
             this.alphaGradientPanel1.TabIndex = 72;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrange;
-            this.linkLabel1.Location = new System.Drawing.Point(204, 163);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(154, 20);
-            this.linkLabel1.TabIndex = 56;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Github/repository\r\n";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(59, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 22);
-            this.label6.TabIndex = 54;
-            this.label6.Text = "Project URL";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(204, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 22);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "1.0.9";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(59, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 22);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Versão";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(204, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 22);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "Carlos Teixeira";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(59, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 22);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Autor";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_about
-            // 
-            this.lbl_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_about.Image = global::App_SuperLiga.Properties.Resources.info_5_32;
-            this.lbl_about.Location = new System.Drawing.Point(12, 12);
-            this.lbl_about.Name = "lbl_about";
-            this.lbl_about.Size = new System.Drawing.Size(41, 37);
-            this.lbl_about.TabIndex = 74;
-            // 
-            // lbl_fechar
-            // 
-            this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
-            this.lbl_fechar.Location = new System.Drawing.Point(411, 12);
-            this.lbl_fechar.Name = "lbl_fechar";
-            this.lbl_fechar.Size = new System.Drawing.Size(37, 39);
-            this.lbl_fechar.TabIndex = 71;
-            this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
-            // 
             // colorWithAlpha4
             // 
             this.colorWithAlpha4.Alpha = 255;
@@ -269,20 +169,139 @@
             this.colorWithAlpha6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.colorWithAlpha6.Parent = this.alphaGradientPanel1;
             // 
-            // Form7
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.DarkOrange;
+            this.linkLabel1.Location = new System.Drawing.Point(212, 184);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(154, 20);
+            this.linkLabel1.TabIndex = 56;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Github/repository\r\n";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(67, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 22);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "Project URL";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(212, 108);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 22);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "1.0.10";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightGray;
+            this.label3.Location = new System.Drawing.Point(67, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 22);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Versão";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(212, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 22);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Carlos Teixeira";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(67, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 22);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Autor";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_fechar
+            // 
+            this.lbl_fechar.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_fechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
+            this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
+            this.lbl_fechar.Location = new System.Drawing.Point(411, 12);
+            this.lbl_fechar.Name = "lbl_fechar";
+            this.lbl_fechar.Size = new System.Drawing.Size(37, 39);
+            this.lbl_fechar.TabIndex = 71;
+            this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LightGray;
+            this.label5.Location = new System.Drawing.Point(67, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 22);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Data ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(212, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 22);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "2022/07/15";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(459, 360);
             this.ControlBox = false;
-            this.Controls.Add(this.lbl_about);
             this.Controls.Add(this.alphaGradientPanel1);
             this.Controls.Add(this.lbl_fechar);
             this.Controls.Add(this.alphaGradientPanel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimizeBox = false;
-            this.Name = "Form7";
+            this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
             this.alphaGradientPanel6.ResumeLayout(false);
@@ -302,7 +321,6 @@
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha2;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha3;
         private System.Windows.Forms.AlphaGradientPanel alphaGradientPanel1;
-        private System.Windows.Forms.Label lbl_about;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -312,5 +330,7 @@
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
     }
 }

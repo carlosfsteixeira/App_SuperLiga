@@ -95,7 +95,7 @@ namespace App_SuperLiga
             form2.RefreshAllGrids();
             form2.RefreshTeamGrid();
 
-            MessageBox.Show("Adicionado com sucesso", "Novo membro no Staff", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Adicionado com sucesso", "Novo membro no Staff");
 
             this.Close();
 

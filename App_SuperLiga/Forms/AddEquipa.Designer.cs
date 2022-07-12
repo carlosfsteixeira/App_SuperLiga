@@ -293,7 +293,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox1.BackColor = System.Drawing.Color.SlateGray;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(325, 54);
             this.pictureBox1.Name = "pictureBox1";
@@ -315,7 +315,7 @@
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
-            // Form5
+            // AddEquipa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,7 +329,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form5";
+            this.Name = "AddEquipa";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.alphaGradientPanel6.ResumeLayout(false);

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace App_SuperLiga
 {
@@ -144,7 +139,7 @@ namespace App_SuperLiga
                 form2.RefreshAllGrids();
                 form2.RefreshTeamGrid();
 
-                MessageBox.Show("Adicionada com sucesso", "Nova Equipa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Adicionada com sucesso", "Nova Equipa");
 
                 this.Close();
             }

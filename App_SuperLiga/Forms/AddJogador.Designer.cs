@@ -59,7 +59,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label8.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.LightGray;
-            this.label8.Location = new System.Drawing.Point(95, 190);
+            this.label8.Location = new System.Drawing.Point(90, 190);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 24);
             this.label8.TabIndex = 47;
@@ -70,8 +70,8 @@
             // 
             this.txtNomeJogador.BackColor = System.Drawing.Color.White;
             this.txtNomeJogador.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeJogador.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeJogador.Location = new System.Drawing.Point(99, 39);
+            this.txtNomeJogador.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeJogador.Location = new System.Drawing.Point(94, 39);
             this.txtNomeJogador.Name = "txtNomeJogador";
             this.txtNomeJogador.Size = new System.Drawing.Size(240, 24);
             this.txtNomeJogador.TabIndex = 46;
@@ -84,7 +84,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label7.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(99, 101);
+            this.label7.Location = new System.Drawing.Point(94, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 24);
             this.label7.TabIndex = 45;
@@ -98,7 +98,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(99, 12);
+            this.label2.Location = new System.Drawing.Point(94, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 24);
             this.label2.TabIndex = 44;
@@ -136,7 +136,7 @@
             "23",
             "24",
             "25"});
-            this.comboBoxNumCam.Location = new System.Drawing.Point(99, 217);
+            this.comboBoxNumCam.Location = new System.Drawing.Point(94, 217);
             this.comboBoxNumCam.Name = "comboBoxNumCam";
             this.comboBoxNumCam.Size = new System.Drawing.Size(240, 26);
             this.comboBoxNumCam.TabIndex = 49;
@@ -151,7 +151,7 @@
             "Defesa",
             "Medio",
             "Avancado"});
-            this.comboBoxPosicao.Location = new System.Drawing.Point(99, 128);
+            this.comboBoxPosicao.Location = new System.Drawing.Point(94, 128);
             this.comboBoxPosicao.Name = "comboBoxPosicao";
             this.comboBoxPosicao.Size = new System.Drawing.Size(240, 26);
             this.comboBoxPosicao.TabIndex = 48;
@@ -163,7 +163,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label15.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.LightGray;
-            this.label15.Location = new System.Drawing.Point(337, 16);
+            this.label15.Location = new System.Drawing.Point(332, 16);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(18, 20);
             this.label15.TabIndex = 50;
@@ -177,7 +177,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(337, 101);
+            this.label1.Location = new System.Drawing.Point(332, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 20);
             this.label1.TabIndex = 51;
@@ -191,7 +191,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(337, 190);
+            this.label3.Location = new System.Drawing.Point(332, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 20);
             this.label3.TabIndex = 52;
@@ -241,7 +241,7 @@
             this.alphaGradientPanel6.Location = new System.Drawing.Point(10, 11);
             this.alphaGradientPanel6.Name = "alphaGradientPanel6";
             this.alphaGradientPanel6.Rounded = true;
-            this.alphaGradientPanel6.Size = new System.Drawing.Size(440, 39);
+            this.alphaGradientPanel6.Size = new System.Drawing.Size(414, 39);
             this.alphaGradientPanel6.TabIndex = 70;
             // 
             // colorWithAlpha1
@@ -299,7 +299,7 @@
             this.alphaGradientPanel1.Location = new System.Drawing.Point(12, 56);
             this.alphaGradientPanel1.Name = "alphaGradientPanel1";
             this.alphaGradientPanel1.Rounded = true;
-            this.alphaGradientPanel1.Size = new System.Drawing.Size(479, 291);
+            this.alphaGradientPanel1.Size = new System.Drawing.Size(451, 291);
             this.alphaGradientPanel1.TabIndex = 71;
             // 
             // colorWithAlpha4
@@ -328,7 +328,7 @@
             this.lbl_Confirmar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Confirmar.ForeColor = System.Drawing.Color.Black;
             this.lbl_Confirmar.Image = global::App_SuperLiga.Properties.Resources.confirm16;
-            this.lbl_Confirmar.Location = new System.Drawing.Point(440, 251);
+            this.lbl_Confirmar.Location = new System.Drawing.Point(412, 249);
             this.lbl_Confirmar.Name = "lbl_Confirmar";
             this.lbl_Confirmar.Size = new System.Drawing.Size(32, 35);
             this.lbl_Confirmar.TabIndex = 72;
@@ -342,19 +342,19 @@
             this.lbl_fechar.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fechar.ForeColor = System.Drawing.Color.Black;
             this.lbl_fechar.Image = global::App_SuperLiga.Properties.Resources.x_mark_3_24;
-            this.lbl_fechar.Location = new System.Drawing.Point(458, 17);
+            this.lbl_fechar.Location = new System.Drawing.Point(430, 15);
             this.lbl_fechar.Name = "lbl_fechar";
             this.lbl_fechar.Size = new System.Drawing.Size(33, 30);
             this.lbl_fechar.TabIndex = 54;
             this.lbl_fechar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_fechar.Click += new System.EventHandler(this.lbl_fechar_Click);
             // 
-            // Form4
+            // AddJogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(500, 356);
+            this.ClientSize = new System.Drawing.Size(474, 356);
             this.ControlBox = false;
             this.Controls.Add(this.alphaGradientPanel1);
             this.Controls.Add(this.alphaGradientPanel6);
@@ -362,7 +362,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form4";
+            this.Name = "AddJogador";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Adicionar Jogador";
