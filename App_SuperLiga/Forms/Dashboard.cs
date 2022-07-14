@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
@@ -27,6 +26,7 @@ namespace App_SuperLiga
         int contadorResultados;
         DateTime dataJornada;
 
+
         public Dashboard()
         {
             dc = new DataClasses1DataContext();
@@ -42,7 +42,6 @@ namespace App_SuperLiga
             dataJornada = DateTime.Now.AddDays(20);
 
             InitToolTips();
-
         }
 
         /// <summary>
@@ -52,8 +51,7 @@ namespace App_SuperLiga
         {
             // TODO: This line of code loads data into the 'superligaDataSet1.Estatisticas' table. You can move, or remove it, as needed.
             this.estatisticasTableAdapter1.Fill(this.superligaDataSet1.Estatisticas);
-            // TODO: This line of code loads data into the 'superligaDataSet.Estatisticas' table. You can move, or remove it, as needed.
-            this.estatisticasTableAdapter.Fill(this.superligaDataSet.Estatisticas);
+
             lbldatetime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             HidePanels();
@@ -123,8 +121,9 @@ namespace App_SuperLiga
             panelJogos.Visible = false;
             panelEstatisticas.Visible = false;
 
-
-            DataGridViewClassificaoShow();
+            //volta a fazer binding para a datagrid para atualizar os dados
+            ReloadDataGridViewClassificacao();
+            SortingDataGridViewClassificacao();
 
         }
 
@@ -137,10 +136,10 @@ namespace App_SuperLiga
 
             // efetuar a pesquisa pela existencia de resultados e estatisticas nas respetivas tabelas
             var pesquisaEstatiscasBD = from Estatistica in dc.Estatisticas
-                                  select Estatistica;
+                                       select Estatistica;
 
             var pesquisaResultadosBD = from Resultado in dc.Resultados
-                                     select Resultado;
+                                       select Resultado;
 
             if (pesquisaEstatiscasBD.Count() != 0 && pesquisaResultadosBD.Count() != 0)
             {
@@ -431,7 +430,7 @@ namespace App_SuperLiga
             if (ContarEquipas())
             {
                 // validar se existem 6 equipas. Se sim, é necessario eliminar uma delas antes de prosseguir para o form Add Equipa
-                MessageBox.Show("Competição com máximo de 6 equipas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Competição com máximo de 8 equipas", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -569,7 +568,7 @@ namespace App_SuperLiga
             {
                 return;
             }
-            
+
             int IDaRemover = Convert.ToInt32(txtIdStaff.Text.ToString());
             string nome = txtNomeStaff.Text;
 
@@ -621,7 +620,7 @@ namespace App_SuperLiga
             {
                 return;
             }
-            
+
             int IDaRemover = Convert.ToInt32(txtIdJogador.Text.ToString());
             string nome = txtNomeJogador.Text;
 
@@ -718,7 +717,6 @@ namespace App_SuperLiga
             }
 
             // guardar alterações ao jogador na bd
-
             int idJogador = Convert.ToInt32(txtIdJogador.Text.ToString());
 
             Jogadore jogadorEditado = new Jogadore();
@@ -729,23 +727,31 @@ namespace App_SuperLiga
 
             jogadorEditado = pesquisa.Single();
 
+
+            //caso seja editado o nome do jogador
             if (jogadorEditado.nome != txtIdJogador.Text)
             {
                 jogadorEditado.nome = txtNomeJogador.Text;
             }
 
+            //caso seja editado o valor da posicao do jogador
             if (comboBoxPosicao.SelectedItem.ToString() != jogadorEditado.posicao)
             {
                 jogadorEditado.posicao = comboBoxPosicao.SelectedItem.ToString();
             }
 
-            if (CheckNumeroCamisola())
+
+            //caso seja editado o numero do jogador
+            if (comboBoxNumCam.SelectedItem.ToString() != jogadorEditado.numero.ToString())
             {
-                return;
-            }
-            else
-            {
-                jogadorEditado.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
+                if (CheckNumeroCamisola())
+                {
+                    return;
+                }
+                else
+                {
+                    jogadorEditado.numero = Convert.ToInt32(comboBoxNumCam.SelectedItem);
+                }
             }
 
             try
@@ -759,7 +765,7 @@ namespace App_SuperLiga
             }
 
             RefreshAllGrids();
-            
+
         }
 
         private void lbl_UpdateStaff_Click(object sender, EventArgs e)
@@ -989,8 +995,6 @@ namespace App_SuperLiga
         /// </summary>
         /// <returns></returns>
         /// 
-
-
         public bool ValidarExistenciaTreinador()
         {
             bool output = false;
@@ -1568,6 +1572,12 @@ namespace App_SuperLiga
 
                 resultadoSelecionado = pesquisaResultado.Single();
 
+                if (string.IsNullOrEmpty(txtGolosCasa.Text) || string.IsNullOrEmpty(txtGolosFora.Text))
+                {
+                    MessageBox.Show("Existem campos por preencher", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 resultadoSelecionado.golos_casa = Convert.ToInt16(txtGolosCasa.Text);
                 resultadoSelecionado.golos_fora = Convert.ToInt16(txtGolosFora.Text);
 
@@ -1638,6 +1648,10 @@ namespace App_SuperLiga
 
             //refresca a grid com os resultados
             DataGridViewResultadosShowData();
+
+            CalcularEstatisticasEquipas();
+
+            //ReloadDataGridViewClassificacao();
         }
 
         private void DataGridViewResultadosShow()
@@ -1718,7 +1732,7 @@ namespace App_SuperLiga
         /// Classificação gerada e atualizada a cada submissão de um resultado.
         /// Estatisticas geradas e atualizadas a cada submissão de um resultado.
         /// </summary>
-        private void DataGridViewClassificaoShow()
+        private void CalcularEstatisticasEquipas()
         {
             var equipas = from Equipa in dc.Equipas
                           select Equipa;
@@ -1879,9 +1893,14 @@ namespace App_SuperLiga
                 }
 
             }
+        }
 
-            SortingDataGridViewClassificacao();
+        private void SortingDataGridViewClassificacao()
+        {
+            //sorting da grid da Classificaçao
+            estatisticasBindingSource.Sort = "pontos DESC, vitorias DESC, golos_marcados DESC, golos_sofridos ASC";
 
+            //coluna Posicao
             foreach (DataGridViewRow r in dataGridViewClassificacao.Rows)
             {
                 r.Cells["Posicao"].Value = (r.Index + 1 + " º");
@@ -1889,15 +1908,20 @@ namespace App_SuperLiga
 
         }
 
-        private void SortingDataGridViewClassificacao()
+        private void ReloadDataGridViewClassificacao()
         {
+            estatisticasTableAdapter1.Fill(superligaDataSet1.Estatisticas);
 
+            estatisticasBindingSource.DataMember = "Estatisticas";
+            estatisticasBindingSource.DataSource = superligaDataSet1;
 
-            //sorting da grid da Classificaçao
-            BindingSource bindingSource = new BindingSource();
-            bindingSource = (BindingSource)dataGridViewClassificacao.DataSource;
+            dataGridViewClassificacao.DataSource = estatisticasBindingSource;
 
-            bindingSource.Sort = "pontos DESC, vitorias DESC, golos_marcados DESC, golos_sofridos ASC";
+            //coluna Posicao
+            foreach (DataGridViewRow r in dataGridViewClassificacao.Rows)
+            {
+                r.Cells["Posicao"].Value = (r.Index + 1 + " º");
+            }
         }
 
         private void RemoverLinhasDaGrid(DataGridView datagrid)
@@ -2022,10 +2046,11 @@ namespace App_SuperLiga
                             }
                         }
                     }
+
+                    equipaVencedora = DesempateVencedor(listaEquipasEmpateGolosSofridos);
                 }
 
                 //
-                equipaVencedora = DesempateVencedor(listaEquipasEmpateGolosSofridos);
 
                 lbl_Vencedor.Text = equipaVencedora.nome;
 
@@ -2037,9 +2062,9 @@ namespace App_SuperLiga
 
                 pictureBox_Vencedor.Image = a;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception("Não foi possivel atribuir vencedor devido ao mesmo numero de pontos, vitorias, golos marcados e sofridos");
+                MessageBox.Show(ex.Message);
 
                 lbl_Vencedor.Text = "Sem vencedor";
                 pictureBox_Vencedor.Image = null;

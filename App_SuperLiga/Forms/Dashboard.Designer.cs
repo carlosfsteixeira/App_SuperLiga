@@ -48,29 +48,34 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btEquipas = new System.Windows.Forms.Button();
             this.btJogos = new System.Windows.Forms.Button();
@@ -117,19 +122,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.alphaGradientPanel11 = new System.Windows.Forms.AlphaGradientPanel();
             this.colorWithAlpha1 = new System.Windows.Forms.ColorWithAlpha();
-            this.alphaGradientPanel9 = new System.Windows.Forms.AlphaGradientPanel();
+            this.alphaGradientPanel6 = new System.Windows.Forms.AlphaGradientPanel();
             this.colorWithAlpha2 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha3 = new System.Windows.Forms.ColorWithAlpha();
-            this.label368 = new System.Windows.Forms.Label();
+            this.label359 = new System.Windows.Forms.Label();
             this.label370 = new System.Windows.Forms.Label();
             this.alphaGradientPanel10 = new System.Windows.Forms.AlphaGradientPanel();
             this.label369 = new System.Windows.Forms.Label();
+            this.alphaGradientPanel9 = new System.Windows.Forms.AlphaGradientPanel();
+            this.label368 = new System.Windows.Forms.Label();
             this.alphaGradientPanel8 = new System.Windows.Forms.AlphaGradientPanel();
             this.label367 = new System.Windows.Forms.Label();
+            this.btAddEquipa = new App_SuperLiga.Button_WOC();
             this.treeViewStaff = new System.Windows.Forms.TreeView();
             this.treeViewPlantel = new System.Windows.Forms.TreeView();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewEquipas = new System.Windows.Forms.DataGridView();
+            this.alphaGradientPanel20 = new System.Windows.Forms.AlphaGradientPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.alphaGradientPanel5 = new System.Windows.Forms.AlphaGradientPanel();
+            this.label16 = new System.Windows.Forms.Label();
             this.alphaGradientPanel22 = new System.Windows.Forms.AlphaGradientPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.alphaGradientPanel19 = new System.Windows.Forms.AlphaGradientPanel();
@@ -140,12 +152,6 @@
             this.label311 = new System.Windows.Forms.Label();
             this.alphaGradientPanel13 = new System.Windows.Forms.AlphaGradientPanel();
             this.label310 = new System.Windows.Forms.Label();
-            this.alphaGradientPanel6 = new System.Windows.Forms.AlphaGradientPanel();
-            this.label359 = new System.Windows.Forms.Label();
-            this.alphaGradientPanel20 = new System.Windows.Forms.AlphaGradientPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.alphaGradientPanel5 = new System.Windows.Forms.AlphaGradientPanel();
-            this.label16 = new System.Windows.Forms.Label();
             this.panelEstatisticas = new System.Windows.Forms.Panel();
             this.alphaGradientPanel3 = new System.Windows.Forms.AlphaGradientPanel();
             this.lbl_Vencedor = new System.Windows.Forms.Label();
@@ -219,6 +225,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_reporAplicacao = new System.Windows.Forms.Label();
+            this.lbl_about = new System.Windows.Forms.Label();
+            this.lbldatetime = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelJogos = new System.Windows.Forms.Panel();
             this.alphaGradientPanel23 = new System.Windows.Forms.AlphaGradientPanel();
             this.alphaGradientPanel25 = new System.Windows.Forms.AlphaGradientPanel();
@@ -229,6 +239,7 @@
             this.colorWithAlpha4 = new System.Windows.Forms.ColorWithAlpha();
             this.colorWithAlpha5 = new System.Windows.Forms.ColorWithAlpha();
             this.txtGolosCasa = new System.Windows.Forms.TextBox();
+            this.btSubmeter = new App_SuperLiga.Button_WOC();
             this.lblVersus = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
@@ -256,26 +267,9 @@
             this.Visitante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColJogos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.lbl_reporAplicacao = new System.Windows.Forms.Label();
-            this.lbl_about = new System.Windows.Forms.Label();
-            this.lbldatetime = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btGerarJogos = new App_SuperLiga.Button_WOC();
             this.panelClassificacao = new System.Windows.Forms.Panel();
             this.dataGridViewClassificacao = new System.Windows.Forms.DataGridView();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label115 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.superligaDataSet = new App_SuperLiga.SuperligaDataSet();
-            this.estatisticasTableAdapter = new App_SuperLiga.SuperligaDataSetTableAdapters.EstatisticasTableAdapter();
-            this.superligaDataSet1 = new App_SuperLiga.SuperligaDataSet1();
-            this.estatisticasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estatisticasTableAdapter1 = new App_SuperLiga.SuperligaDataSet1TableAdapters.EstatisticasTableAdapter();
-            this.bt_sairApp = new App_SuperLiga.Button_WOC();
-            this.btSubmeter = new App_SuperLiga.Button_WOC();
-            this.btGerarJogos = new App_SuperLiga.Button_WOC();
-            this.btAddEquipa = new App_SuperLiga.Button_WOC();
             this.Posicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -286,6 +280,15 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatisticasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.superligaDataSet1 = new App_SuperLiga.SuperligaDataSet1();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.bt_sairApp = new App_SuperLiga.Button_WOC();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label115 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.estatisticasTableAdapter1 = new App_SuperLiga.SuperligaDataSet1TableAdapters.EstatisticasTableAdapter();
             this.panelEquipas.SuspendLayout();
             this.btDelStaff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStaff)).BeginInit();
@@ -294,18 +297,18 @@
             this.alphaGradientPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.alphaGradientPanel11.SuspendLayout();
-            this.alphaGradientPanel9.SuspendLayout();
+            this.alphaGradientPanel6.SuspendLayout();
             this.alphaGradientPanel10.SuspendLayout();
+            this.alphaGradientPanel9.SuspendLayout();
             this.alphaGradientPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipas)).BeginInit();
+            this.alphaGradientPanel20.SuspendLayout();
+            this.alphaGradientPanel5.SuspendLayout();
             this.alphaGradientPanel22.SuspendLayout();
             this.alphaGradientPanel19.SuspendLayout();
             this.alphaGradientPanel7.SuspendLayout();
             this.alphaGradientPanel4.SuspendLayout();
             this.alphaGradientPanel13.SuspendLayout();
-            this.alphaGradientPanel6.SuspendLayout();
-            this.alphaGradientPanel20.SuspendLayout();
-            this.alphaGradientPanel5.SuspendLayout();
             this.panelEstatisticas.SuspendLayout();
             this.alphaGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vencedor)).BeginInit();
@@ -333,11 +336,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJogos)).BeginInit();
             this.panelClassificacao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassificacao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estatisticasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet1)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estatisticasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -441,21 +443,21 @@
             this.panelEquipas.Controls.Add(this.label3);
             this.panelEquipas.Controls.Add(this.dataGridViewEquipas);
             this.panelEquipas.ForeColor = System.Drawing.Color.White;
-            this.panelEquipas.Location = new System.Drawing.Point(19, 402);
+            this.panelEquipas.Location = new System.Drawing.Point(192, 90);
             this.panelEquipas.Margin = new System.Windows.Forms.Padding(6);
             this.panelEquipas.Name = "panelEquipas";
-            this.panelEquipas.Size = new System.Drawing.Size(133, 153);
+            this.panelEquipas.Size = new System.Drawing.Size(1681, 845);
             this.panelEquipas.TabIndex = 8;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(192, 400);
+            this.label17.Location = new System.Drawing.Point(240, 401);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(238, 16);
+            this.label17.Size = new System.Drawing.Size(181, 16);
             this.label17.TabIndex = 107;
-            this.label17.Text = "* Limite minimo e maximo de 8 equipas";
+            this.label17.Text = "* Limite maximo de 8 equipas";
             // 
             // lbl_RemoverEquipa
             // 
@@ -1167,65 +1169,64 @@
             // 
             this.colorWithAlpha1.Alpha = 255;
             this.colorWithAlpha1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.colorWithAlpha1.Parent = this.alphaGradientPanel8;
+            this.colorWithAlpha1.Parent = this.alphaGradientPanel13;
             // 
-            // alphaGradientPanel9
+            // alphaGradientPanel6
             // 
-            this.alphaGradientPanel9.BackColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel9.Border = true;
-            this.alphaGradientPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel9.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel9.Controls.Add(this.label368);
-            this.alphaGradientPanel9.CornerRadius = 20;
-            this.alphaGradientPanel9.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            this.alphaGradientPanel6.BackColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel6.Border = true;
+            this.alphaGradientPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel6.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel6.Controls.Add(this.label359);
+            this.alphaGradientPanel6.CornerRadius = 20;
+            this.alphaGradientPanel6.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
             | System.Windows.Forms.Corner.BottomLeft) 
             | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel9.ForeColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel9.Gradient = true;
-            this.alphaGradientPanel9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel9.GradientOffset = 1F;
-            this.alphaGradientPanel9.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel9.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel9.Grayscale = false;
-            this.alphaGradientPanel9.Image = null;
-            this.alphaGradientPanel9.ImageAlpha = 75;
-            this.alphaGradientPanel9.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel9.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel9.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel9.Location = new System.Drawing.Point(1022, 27);
-            this.alphaGradientPanel9.Name = "alphaGradientPanel9";
-            this.alphaGradientPanel9.Rounded = true;
-            this.alphaGradientPanel9.Size = new System.Drawing.Size(531, 46);
-            this.alphaGradientPanel9.TabIndex = 68;
+            this.alphaGradientPanel6.ForeColor = System.Drawing.Color.White;
+            this.alphaGradientPanel6.Gradient = true;
+            this.alphaGradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel6.GradientOffset = 1F;
+            this.alphaGradientPanel6.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel6.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel6.Grayscale = false;
+            this.alphaGradientPanel6.Image = null;
+            this.alphaGradientPanel6.ImageAlpha = 75;
+            this.alphaGradientPanel6.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel6.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel6.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel6.Location = new System.Drawing.Point(1335, 22);
+            this.alphaGradientPanel6.Name = "alphaGradientPanel6";
+            this.alphaGradientPanel6.Rounded = true;
+            this.alphaGradientPanel6.Size = new System.Drawing.Size(229, 49);
+            this.alphaGradientPanel6.TabIndex = 68;
             // 
             // colorWithAlpha2
             // 
             this.colorWithAlpha2.Alpha = 255;
             this.colorWithAlpha2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.colorWithAlpha2.Parent = this.alphaGradientPanel8;
+            this.colorWithAlpha2.Parent = this.alphaGradientPanel13;
             // 
             // colorWithAlpha3
             // 
             this.colorWithAlpha3.Alpha = 255;
             this.colorWithAlpha3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.colorWithAlpha3.Parent = this.alphaGradientPanel8;
+            this.colorWithAlpha3.Parent = this.alphaGradientPanel13;
             // 
-            // label368
+            // label359
             // 
-            this.label368.AutoSize = true;
-            this.label368.BackColor = System.Drawing.Color.Transparent;
-            this.label368.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label368.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label368.ForeColor = System.Drawing.Color.LightGray;
-            this.label368.Location = new System.Drawing.Point(18, 8);
-            this.label368.Name = "label368";
-            this.label368.Size = new System.Drawing.Size(54, 24);
-            this.label368.TabIndex = 30;
-            this.label368.Text = "Info";
-            this.label368.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label359.AutoSize = true;
+            this.label359.BackColor = System.Drawing.Color.Transparent;
+            this.label359.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label359.ForeColor = System.Drawing.Color.White;
+            this.label359.Location = new System.Drawing.Point(21, 9);
+            this.label359.Name = "label359";
+            this.label359.Size = new System.Drawing.Size(108, 27);
+            this.label359.TabIndex = 49;
+            this.label359.Text = "Vencedor";
+            this.label359.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label370
             // 
@@ -1287,6 +1288,52 @@
             this.label369.Text = "Staff";
             this.label369.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // alphaGradientPanel9
+            // 
+            this.alphaGradientPanel9.BackColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel9.Border = true;
+            this.alphaGradientPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel9.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel9.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel9.Controls.Add(this.label368);
+            this.alphaGradientPanel9.CornerRadius = 20;
+            this.alphaGradientPanel9.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            | System.Windows.Forms.Corner.BottomLeft) 
+            | System.Windows.Forms.Corner.BottomRight)));
+            this.alphaGradientPanel9.ForeColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel9.Gradient = true;
+            this.alphaGradientPanel9.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel9.GradientOffset = 1F;
+            this.alphaGradientPanel9.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel9.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel9.Grayscale = false;
+            this.alphaGradientPanel9.Image = null;
+            this.alphaGradientPanel9.ImageAlpha = 75;
+            this.alphaGradientPanel9.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel9.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel9.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel9.Location = new System.Drawing.Point(1022, 27);
+            this.alphaGradientPanel9.Name = "alphaGradientPanel9";
+            this.alphaGradientPanel9.Rounded = true;
+            this.alphaGradientPanel9.Size = new System.Drawing.Size(531, 46);
+            this.alphaGradientPanel9.TabIndex = 68;
+            // 
+            // label368
+            // 
+            this.label368.AutoSize = true;
+            this.label368.BackColor = System.Drawing.Color.Transparent;
+            this.label368.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label368.Font = new System.Drawing.Font("Cascadia Code", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label368.ForeColor = System.Drawing.Color.LightGray;
+            this.label368.Location = new System.Drawing.Point(18, 8);
+            this.label368.Name = "label368";
+            this.label368.Size = new System.Drawing.Size(54, 24);
+            this.label368.TabIndex = 30;
+            this.label368.Text = "Info";
+            this.label368.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // alphaGradientPanel8
             // 
             this.alphaGradientPanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
@@ -1332,6 +1379,29 @@
             this.label367.TabIndex = 26;
             this.label367.Text = "Mapa de Equipa";
             this.label367.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btAddEquipa
+            // 
+            this.btAddEquipa.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btAddEquipa.ButtonColor = System.Drawing.Color.SlateGray;
+            this.btAddEquipa.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btAddEquipa.FlatAppearance.BorderSize = 0;
+            this.btAddEquipa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btAddEquipa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btAddEquipa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddEquipa.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAddEquipa.ForeColor = System.Drawing.Color.SlateGray;
+            this.btAddEquipa.Location = new System.Drawing.Point(353, 28);
+            this.btAddEquipa.Name = "btAddEquipa";
+            this.btAddEquipa.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
+            this.btAddEquipa.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
+            this.btAddEquipa.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btAddEquipa.Size = new System.Drawing.Size(115, 46);
+            this.btAddEquipa.TabIndex = 35;
+            this.btAddEquipa.Text = "Criar";
+            this.btAddEquipa.TextColor = System.Drawing.Color.White;
+            this.btAddEquipa.UseVisualStyleBackColor = true;
+            this.btAddEquipa.Click += new System.EventHandler(this.btAddEquipa_Click);
             // 
             // treeViewStaff
             // 
@@ -1420,6 +1490,96 @@
             this.dataGridViewEquipas.TabIndex = 0;
             this.dataGridViewEquipas.TabStop = false;
             this.dataGridViewEquipas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEquipas_CellClick);
+            // 
+            // alphaGradientPanel20
+            // 
+            this.alphaGradientPanel20.BackColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel20.Border = true;
+            this.alphaGradientPanel20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel20.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel20.Controls.Add(this.label12);
+            this.alphaGradientPanel20.CornerRadius = 20;
+            this.alphaGradientPanel20.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            | System.Windows.Forms.Corner.BottomLeft) 
+            | System.Windows.Forms.Corner.BottomRight)));
+            this.alphaGradientPanel20.ForeColor = System.Drawing.Color.White;
+            this.alphaGradientPanel20.Gradient = true;
+            this.alphaGradientPanel20.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel20.GradientOffset = 1F;
+            this.alphaGradientPanel20.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel20.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel20.Grayscale = false;
+            this.alphaGradientPanel20.Image = null;
+            this.alphaGradientPanel20.ImageAlpha = 75;
+            this.alphaGradientPanel20.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel20.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel20.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel20.Location = new System.Drawing.Point(73, 96);
+            this.alphaGradientPanel20.Name = "alphaGradientPanel20";
+            this.alphaGradientPanel20.Rounded = true;
+            this.alphaGradientPanel20.Size = new System.Drawing.Size(457, 46);
+            this.alphaGradientPanel20.TabIndex = 68;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.label12.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.LightGray;
+            this.label12.Location = new System.Drawing.Point(17, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 22);
+            this.label12.TabIndex = 26;
+            this.label12.Text = " Lista de jogos";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // alphaGradientPanel5
+            // 
+            this.alphaGradientPanel5.BackColor = System.Drawing.Color.Black;
+            this.alphaGradientPanel5.Border = true;
+            this.alphaGradientPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha1);
+            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha2);
+            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha3);
+            this.alphaGradientPanel5.ContentPadding = new System.Windows.Forms.Padding(0);
+            this.alphaGradientPanel5.Controls.Add(this.label16);
+            this.alphaGradientPanel5.CornerRadius = 20;
+            this.alphaGradientPanel5.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
+            | System.Windows.Forms.Corner.BottomLeft) 
+            | System.Windows.Forms.Corner.BottomRight)));
+            this.alphaGradientPanel5.ForeColor = System.Drawing.Color.White;
+            this.alphaGradientPanel5.Gradient = true;
+            this.alphaGradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.alphaGradientPanel5.GradientOffset = 1F;
+            this.alphaGradientPanel5.GradientSize = new System.Drawing.Size(0, 0);
+            this.alphaGradientPanel5.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
+            this.alphaGradientPanel5.Grayscale = false;
+            this.alphaGradientPanel5.Image = null;
+            this.alphaGradientPanel5.ImageAlpha = 75;
+            this.alphaGradientPanel5.ImagePadding = new System.Windows.Forms.Padding(5);
+            this.alphaGradientPanel5.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
+            this.alphaGradientPanel5.ImageSize = new System.Drawing.Size(48, 48);
+            this.alphaGradientPanel5.Location = new System.Drawing.Point(90, 362);
+            this.alphaGradientPanel5.Name = "alphaGradientPanel5";
+            this.alphaGradientPanel5.Rounded = true;
+            this.alphaGradientPanel5.Size = new System.Drawing.Size(1473, 46);
+            this.alphaGradientPanel5.TabIndex = 67;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(24, 8);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 27);
+            this.label16.TabIndex = 62;
+            this.label16.Text = "Equipas";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // alphaGradientPanel22
             // 
@@ -1645,141 +1805,6 @@
             this.label310.TabIndex = 2;
             this.label310.Text = "Classificação geral";
             this.label310.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // alphaGradientPanel6
-            // 
-            this.alphaGradientPanel6.BackColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel6.Border = true;
-            this.alphaGradientPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel6.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel6.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel6.Controls.Add(this.label359);
-            this.alphaGradientPanel6.CornerRadius = 20;
-            this.alphaGradientPanel6.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
-            | System.Windows.Forms.Corner.BottomLeft) 
-            | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel6.ForeColor = System.Drawing.Color.White;
-            this.alphaGradientPanel6.Gradient = true;
-            this.alphaGradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel6.GradientOffset = 1F;
-            this.alphaGradientPanel6.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel6.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel6.Grayscale = false;
-            this.alphaGradientPanel6.Image = null;
-            this.alphaGradientPanel6.ImageAlpha = 75;
-            this.alphaGradientPanel6.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel6.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel6.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel6.Location = new System.Drawing.Point(1335, 22);
-            this.alphaGradientPanel6.Name = "alphaGradientPanel6";
-            this.alphaGradientPanel6.Rounded = true;
-            this.alphaGradientPanel6.Size = new System.Drawing.Size(229, 49);
-            this.alphaGradientPanel6.TabIndex = 68;
-            // 
-            // label359
-            // 
-            this.label359.AutoSize = true;
-            this.label359.BackColor = System.Drawing.Color.Transparent;
-            this.label359.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label359.ForeColor = System.Drawing.Color.White;
-            this.label359.Location = new System.Drawing.Point(21, 9);
-            this.label359.Name = "label359";
-            this.label359.Size = new System.Drawing.Size(108, 27);
-            this.label359.TabIndex = 49;
-            this.label359.Text = "Vencedor";
-            this.label359.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // alphaGradientPanel20
-            // 
-            this.alphaGradientPanel20.BackColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel20.Border = true;
-            this.alphaGradientPanel20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel20.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel20.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel20.Controls.Add(this.label12);
-            this.alphaGradientPanel20.CornerRadius = 20;
-            this.alphaGradientPanel20.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
-            | System.Windows.Forms.Corner.BottomLeft) 
-            | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel20.ForeColor = System.Drawing.Color.White;
-            this.alphaGradientPanel20.Gradient = true;
-            this.alphaGradientPanel20.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel20.GradientOffset = 1F;
-            this.alphaGradientPanel20.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel20.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel20.Grayscale = false;
-            this.alphaGradientPanel20.Image = null;
-            this.alphaGradientPanel20.ImageAlpha = 75;
-            this.alphaGradientPanel20.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel20.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel20.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel20.Location = new System.Drawing.Point(73, 96);
-            this.alphaGradientPanel20.Name = "alphaGradientPanel20";
-            this.alphaGradientPanel20.Rounded = true;
-            this.alphaGradientPanel20.Size = new System.Drawing.Size(457, 46);
-            this.alphaGradientPanel20.TabIndex = 68;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.label12.Font = new System.Drawing.Font("Cascadia Code", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightGray;
-            this.label12.Location = new System.Drawing.Point(17, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 22);
-            this.label12.TabIndex = 26;
-            this.label12.Text = " Lista de jogos";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // alphaGradientPanel5
-            // 
-            this.alphaGradientPanel5.BackColor = System.Drawing.Color.Black;
-            this.alphaGradientPanel5.Border = true;
-            this.alphaGradientPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha1);
-            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha2);
-            this.alphaGradientPanel5.Colors.Add(this.colorWithAlpha3);
-            this.alphaGradientPanel5.ContentPadding = new System.Windows.Forms.Padding(0);
-            this.alphaGradientPanel5.Controls.Add(this.label16);
-            this.alphaGradientPanel5.CornerRadius = 20;
-            this.alphaGradientPanel5.Corners = ((System.Windows.Forms.Corner)((((System.Windows.Forms.Corner.TopLeft | System.Windows.Forms.Corner.TopRight) 
-            | System.Windows.Forms.Corner.BottomLeft) 
-            | System.Windows.Forms.Corner.BottomRight)));
-            this.alphaGradientPanel5.ForeColor = System.Drawing.Color.White;
-            this.alphaGradientPanel5.Gradient = true;
-            this.alphaGradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.alphaGradientPanel5.GradientOffset = 1F;
-            this.alphaGradientPanel5.GradientSize = new System.Drawing.Size(0, 0);
-            this.alphaGradientPanel5.GradientWrapMode = System.Drawing.Drawing2D.WrapMode.Tile;
-            this.alphaGradientPanel5.Grayscale = false;
-            this.alphaGradientPanel5.Image = null;
-            this.alphaGradientPanel5.ImageAlpha = 75;
-            this.alphaGradientPanel5.ImagePadding = new System.Windows.Forms.Padding(5);
-            this.alphaGradientPanel5.ImagePosition = System.Windows.Forms.ImagePosition.BottomRight;
-            this.alphaGradientPanel5.ImageSize = new System.Drawing.Size(48, 48);
-            this.alphaGradientPanel5.Location = new System.Drawing.Point(90, 362);
-            this.alphaGradientPanel5.Name = "alphaGradientPanel5";
-            this.alphaGradientPanel5.Rounded = true;
-            this.alphaGradientPanel5.Size = new System.Drawing.Size(1473, 46);
-            this.alphaGradientPanel5.TabIndex = 67;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(24, 8);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 27);
-            this.label16.TabIndex = 62;
-            this.label16.Text = "Equipas";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelEstatisticas
             // 
@@ -2811,8 +2836,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.panel2.Controls.Add(this.panelJogos);
-            this.panel2.Controls.Add(this.panelEquipas);
             this.panel2.Controls.Add(this.lbl_reporAplicacao);
             this.panel2.Controls.Add(this.lbl_about);
             this.panel2.Controls.Add(this.lbldatetime);
@@ -2825,6 +2848,45 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(178, 951);
             this.panel2.TabIndex = 16;
+            // 
+            // lbl_reporAplicacao
+            // 
+            this.lbl_reporAplicacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_reporAplicacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_reporAplicacao.Image = global::App_SuperLiga.Properties.Resources.settings_24_32;
+            this.lbl_reporAplicacao.Location = new System.Drawing.Point(101, 861);
+            this.lbl_reporAplicacao.Name = "lbl_reporAplicacao";
+            this.lbl_reporAplicacao.Size = new System.Drawing.Size(44, 44);
+            this.lbl_reporAplicacao.TabIndex = 105;
+            this.lbl_reporAplicacao.Click += new System.EventHandler(this.lbl_reporAplicacao_Click);
+            // 
+            // lbl_about
+            // 
+            this.lbl_about.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_about.Image = global::App_SuperLiga.Properties.Resources.info_5_32;
+            this.lbl_about.Location = new System.Drawing.Point(35, 861);
+            this.lbl_about.Name = "lbl_about";
+            this.lbl_about.Size = new System.Drawing.Size(44, 44);
+            this.lbl_about.TabIndex = 73;
+            this.lbl_about.Click += new System.EventHandler(this.lbl_about_Click);
+            // 
+            // lbldatetime
+            // 
+            this.lbldatetime.AutoSize = true;
+            this.lbldatetime.Font = new System.Drawing.Font("Cascadia Code", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldatetime.Location = new System.Drawing.Point(9, 925);
+            this.lbldatetime.Name = "lbldatetime";
+            this.lbldatetime.Size = new System.Drawing.Size(96, 17);
+            this.lbldatetime.TabIndex = 18;
+            this.lbldatetime.Text = "data / hora";
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(210, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1579, 55);
+            this.panel3.TabIndex = 16;
             // 
             // panelJogos
             // 
@@ -2842,10 +2904,10 @@
             this.panelJogos.Controls.Add(this.circularProgressBar1);
             this.panelJogos.Controls.Add(this.btGerarJogos);
             this.panelJogos.ForeColor = System.Drawing.Color.OrangeRed;
-            this.panelJogos.Location = new System.Drawing.Point(15, 573);
+            this.panelJogos.Location = new System.Drawing.Point(210, 84);
             this.panelJogos.Margin = new System.Windows.Forms.Padding(6);
             this.panelJogos.Name = "panelJogos";
-            this.panelJogos.Size = new System.Drawing.Size(144, 109);
+            this.panelJogos.Size = new System.Drawing.Size(1669, 754);
             this.panelJogos.TabIndex = 11;
             // 
             // alphaGradientPanel23
@@ -2938,6 +3000,7 @@
             this.txtGolosFora.Size = new System.Drawing.Size(54, 50);
             this.txtGolosFora.TabIndex = 54;
             this.txtGolosFora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGolosFora.TextChanged += new System.EventHandler(this.txtGolosFora_TextChanged);
             // 
             // alphaGradientPanel24
             // 
@@ -2994,6 +3057,30 @@
             this.txtGolosCasa.Size = new System.Drawing.Size(56, 50);
             this.txtGolosCasa.TabIndex = 53;
             this.txtGolosCasa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGolosCasa.TextChanged += new System.EventHandler(this.txtGolosCasa_TextChanged);
+            // 
+            // btSubmeter
+            // 
+            this.btSubmeter.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btSubmeter.ButtonColor = System.Drawing.Color.SlateGray;
+            this.btSubmeter.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
+            this.btSubmeter.FlatAppearance.BorderSize = 0;
+            this.btSubmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btSubmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btSubmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSubmeter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSubmeter.ForeColor = System.Drawing.Color.White;
+            this.btSubmeter.Location = new System.Drawing.Point(379, 265);
+            this.btSubmeter.Name = "btSubmeter";
+            this.btSubmeter.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
+            this.btSubmeter.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
+            this.btSubmeter.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btSubmeter.Size = new System.Drawing.Size(139, 38);
+            this.btSubmeter.TabIndex = 52;
+            this.btSubmeter.Text = "Submeter";
+            this.btSubmeter.TextColor = System.Drawing.Color.White;
+            this.btSubmeter.UseVisualStyleBackColor = true;
+            this.btSubmeter.Click += new System.EventHandler(this.btSubmeter_Click);
             // 
             // lblVersus
             // 
@@ -3204,7 +3291,7 @@
             this.dataGridViewResultados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewResultados.BackgroundColor = System.Drawing.Color.SlateGray;
             this.dataGridViewResultados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
@@ -3220,14 +3307,14 @@
             this.ColGolosCasa,
             this.ColGolosFora,
             this.ColVisitante});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResultados.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResultados.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewResultados.EnableHeadersVisualStyles = false;
             this.dataGridViewResultados.GridColor = System.Drawing.Color.Black;
             this.dataGridViewResultados.Location = new System.Drawing.Point(1150, 145);
@@ -3235,21 +3322,22 @@
             this.dataGridViewResultados.Name = "dataGridViewResultados";
             this.dataGridViewResultados.ReadOnly = true;
             this.dataGridViewResultados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResultados.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResultados.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewResultados.RowHeadersVisible = false;
             this.dataGridViewResultados.RowHeadersWidth = 51;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewResultados.RowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewResultados.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridViewResultados.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewResultados.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(49)))));
             this.dataGridViewResultados.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.dataGridViewResultados.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange;
@@ -3262,6 +3350,8 @@
             // 
             // IDJogo
             // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.IDJogo.DefaultCellStyle = dataGridViewCellStyle17;
             this.IDJogo.HeaderText = "Jogo";
             this.IDJogo.MinimumWidth = 6;
             this.IDJogo.Name = "IDJogo";
@@ -3278,18 +3368,24 @@
             // 
             // ColGolosCasa
             // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColGolosCasa.DefaultCellStyle = dataGridViewCellStyle18;
             this.ColGolosCasa.HeaderText = "G";
             this.ColGolosCasa.MinimumWidth = 6;
             this.ColGolosCasa.Name = "ColGolosCasa";
             this.ColGolosCasa.ReadOnly = true;
+            this.ColGolosCasa.ToolTipText = "Golos";
             this.ColGolosCasa.Width = 52;
             // 
             // ColGolosFora
             // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColGolosFora.DefaultCellStyle = dataGridViewCellStyle19;
             this.ColGolosFora.HeaderText = "G";
             this.ColGolosFora.MinimumWidth = 6;
             this.ColGolosFora.Name = "ColGolosFora";
             this.ColGolosFora.ReadOnly = true;
+            this.ColGolosFora.ToolTipText = "Golos";
             this.ColGolosFora.Width = 52;
             // 
             // ColVisitante
@@ -3308,28 +3404,28 @@
             this.dataGridViewJogos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewJogos.BackgroundColor = System.Drawing.Color.SlateGray;
             this.dataGridViewJogos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewJogos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewJogos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridViewJogos.ColumnHeadersHeight = 29;
             this.dataGridViewJogos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdJornada,
             this.Casa,
             this.Visitante,
             this.ColJogos});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewJogos.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewJogos.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewJogos.EnableHeadersVisualStyles = false;
             this.dataGridViewJogos.GridColor = System.Drawing.Color.Black;
             this.dataGridViewJogos.Location = new System.Drawing.Point(74, 145);
@@ -3337,21 +3433,21 @@
             this.dataGridViewJogos.Name = "dataGridViewJogos";
             this.dataGridViewJogos.ReadOnly = true;
             this.dataGridViewJogos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewJogos.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewJogos.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewJogos.RowHeadersVisible = false;
             this.dataGridViewJogos.RowHeadersWidth = 51;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewJogos.RowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewJogos.RowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewJogos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(49)))));
             this.dataGridViewJogos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.dataGridViewJogos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DarkOrange;
@@ -3365,6 +3461,8 @@
             // 
             // IdJornada
             // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.IdJornada.DefaultCellStyle = dataGridViewCellStyle24;
             this.IdJornada.HeaderText = "Jornada";
             this.IdJornada.MinimumWidth = 6;
             this.IdJornada.Name = "IdJornada";
@@ -3373,6 +3471,8 @@
             // 
             // Casa
             // 
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Casa.DefaultCellStyle = dataGridViewCellStyle25;
             this.Casa.HeaderText = "Equipa Casa";
             this.Casa.MinimumWidth = 6;
             this.Casa.Name = "Casa";
@@ -3428,44 +3528,27 @@
             this.circularProgressBar1.Value = 68;
             this.circularProgressBar1.Visible = false;
             // 
-            // lbl_reporAplicacao
+            // btGerarJogos
             // 
-            this.lbl_reporAplicacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_reporAplicacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_reporAplicacao.Image = global::App_SuperLiga.Properties.Resources.settings_24_32;
-            this.lbl_reporAplicacao.Location = new System.Drawing.Point(98, 861);
-            this.lbl_reporAplicacao.Name = "lbl_reporAplicacao";
-            this.lbl_reporAplicacao.Size = new System.Drawing.Size(44, 44);
-            this.lbl_reporAplicacao.TabIndex = 105;
-            this.lbl_reporAplicacao.Click += new System.EventHandler(this.lbl_reporAplicacao_Click);
-            // 
-            // lbl_about
-            // 
-            this.lbl_about.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_about.Image = global::App_SuperLiga.Properties.Resources.info_5_32;
-            this.lbl_about.Location = new System.Drawing.Point(32, 861);
-            this.lbl_about.Name = "lbl_about";
-            this.lbl_about.Size = new System.Drawing.Size(44, 44);
-            this.lbl_about.TabIndex = 73;
-            this.lbl_about.Click += new System.EventHandler(this.lbl_about_Click);
-            // 
-            // lbldatetime
-            // 
-            this.lbldatetime.AutoSize = true;
-            this.lbldatetime.Font = new System.Drawing.Font("Cascadia Code", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldatetime.Location = new System.Drawing.Point(9, 925);
-            this.lbldatetime.Name = "lbldatetime";
-            this.lbldatetime.Size = new System.Drawing.Size(96, 17);
-            this.lbldatetime.TabIndex = 18;
-            this.lbldatetime.Text = "data / hora";
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(210, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1579, 55);
-            this.panel3.TabIndex = 16;
+            this.btGerarJogos.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btGerarJogos.ButtonColor = System.Drawing.Color.SlateGray;
+            this.btGerarJogos.FlatAppearance.BorderSize = 0;
+            this.btGerarJogos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btGerarJogos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btGerarJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btGerarJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGerarJogos.ForeColor = System.Drawing.Color.White;
+            this.btGerarJogos.Location = new System.Drawing.Point(39, 18);
+            this.btGerarJogos.Name = "btGerarJogos";
+            this.btGerarJogos.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
+            this.btGerarJogos.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
+            this.btGerarJogos.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btGerarJogos.Size = new System.Drawing.Size(190, 38);
+            this.btGerarJogos.TabIndex = 23;
+            this.btGerarJogos.Text = "Gerar calendário";
+            this.btGerarJogos.TextColor = System.Drawing.Color.White;
+            this.btGerarJogos.UseVisualStyleBackColor = true;
+            this.btGerarJogos.Click += new System.EventHandler(this.btGerarJogos_Click);
             // 
             // panelClassificacao
             // 
@@ -3482,25 +3565,25 @@
             this.dataGridViewClassificacao.AllowUserToDeleteRows = false;
             this.dataGridViewClassificacao.AllowUserToResizeColumns = false;
             this.dataGridViewClassificacao.AllowUserToResizeRows = false;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewClassificacao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewClassificacao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewClassificacao.AutoGenerateColumns = false;
             this.dataGridViewClassificacao.BackgroundColor = System.Drawing.Color.SlateGray;
             this.dataGridViewClassificacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewClassificacao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewClassificacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewClassificacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewClassificacao.ColumnHeadersHeight = 50;
             this.dataGridViewClassificacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewClassificacao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -3516,36 +3599,36 @@
             this.dataGridViewTextBoxColumn6});
             this.dataGridViewClassificacao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridViewClassificacao.DataSource = this.estatisticasBindingSource;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewClassificacao.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewClassificacao.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewClassificacao.GridColor = System.Drawing.Color.SlateGray;
             this.dataGridViewClassificacao.Location = new System.Drawing.Point(58, 65);
             this.dataGridViewClassificacao.MultiSelect = false;
             this.dataGridViewClassificacao.Name = "dataGridViewClassificacao";
             this.dataGridViewClassificacao.ReadOnly = true;
             this.dataGridViewClassificacao.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewClassificacao.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewClassificacao.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridViewClassificacao.RowHeadersVisible = false;
             this.dataGridViewClassificacao.RowHeadersWidth = 51;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewClassificacao.RowsDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewClassificacao.RowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridViewClassificacao.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
             this.dataGridViewClassificacao.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewClassificacao.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -3559,6 +3642,159 @@
             this.dataGridViewClassificacao.Size = new System.Drawing.Size(1522, 759);
             this.dataGridViewClassificacao.TabIndex = 72;
             // 
+            // Posicao
+            // 
+            this.Posicao.DataPropertyName = "Posicao";
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(10);
+            this.Posicao.DefaultCellStyle = dataGridViewCellStyle31;
+            this.Posicao.HeaderText = "P";
+            this.Posicao.MinimumWidth = 6;
+            this.Posicao.Name = "Posicao";
+            this.Posicao.ReadOnly = true;
+            this.Posicao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Posicao.ToolTipText = "Posicao";
+            this.Posicao.Width = 125;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "imagem_equipa";
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle32.NullValue")));
+            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dataGridViewImageColumn1.FillWeight = 80F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn1.ToolTipText = "Simbolo";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "nome_equipa";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle33;
+            this.dataGridViewTextBoxColumn8.HeaderText = "EQUIPA";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn8.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "pontos";
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle34;
+            this.dataGridViewTextBoxColumn4.HeaderText = " PTS";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.ToolTipText = "Pontos";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_jogos";
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle35;
+            this.dataGridViewTextBoxColumn7.HeaderText = " J";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.ToolTipText = "Jogos";
+            this.dataGridViewTextBoxColumn7.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "vitorias";
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle36;
+            this.dataGridViewTextBoxColumn1.HeaderText = " V";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.ToolTipText = "Vitorias";
+            this.dataGridViewTextBoxColumn1.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "empates";
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle37;
+            this.dataGridViewTextBoxColumn2.HeaderText = " E";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.ToolTipText = "Empates";
+            this.dataGridViewTextBoxColumn2.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "derrotas";
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle38;
+            this.dataGridViewTextBoxColumn3.HeaderText = " D";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.ToolTipText = "Derrotas";
+            this.dataGridViewTextBoxColumn3.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "golos_marcados";
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle39.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle39;
+            this.dataGridViewTextBoxColumn5.HeaderText = " GM";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.ToolTipText = "Golos Marcados";
+            this.dataGridViewTextBoxColumn5.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "golos_sofridos";
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.Padding = new System.Windows.Forms.Padding(10);
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle40;
+            this.dataGridViewTextBoxColumn6.HeaderText = " GS";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn6.ToolTipText = "Golos Sofridos";
+            this.dataGridViewTextBoxColumn6.Width = 90;
+            // 
+            // estatisticasBindingSource
+            // 
+            this.estatisticasBindingSource.DataMember = "Estatisticas";
+            this.estatisticasBindingSource.DataSource = this.superligaDataSet1;
+            // 
+            // superligaDataSet1
+            // 
+            this.superligaDataSet1.DataSetName = "SuperligaDataSet1";
+            this.superligaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
@@ -3567,52 +3803,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(1631, 78);
             this.panel13.TabIndex = 17;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
-            this.panel5.Controls.Add(this.label115);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(267, 77);
-            this.panel5.TabIndex = 25;
-            // 
-            // label115
-            // 
-            this.label115.BackColor = System.Drawing.Color.Transparent;
-            this.label115.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label115.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label115.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label115.Image = global::App_SuperLiga.Properties.Resources.football_2_32;
-            this.label115.Location = new System.Drawing.Point(22, 13);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(56, 54);
-            this.label115.TabIndex = 15;
-            this.label115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // superligaDataSet
-            // 
-            this.superligaDataSet.DataSetName = "SuperligaDataSet";
-            this.superligaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estatisticasTableAdapter
-            // 
-            this.estatisticasTableAdapter.ClearBeforeFill = true;
-            // 
-            // superligaDataSet1
-            // 
-            this.superligaDataSet1.DataSetName = "SuperligaDataSet1";
-            this.superligaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estatisticasBindingSource
-            // 
-            this.estatisticasBindingSource.DataMember = "Estatisticas";
-            this.estatisticasBindingSource.DataSource = this.superligaDataSet1;
-            // 
-            // estatisticasTableAdapter1
-            // 
-            this.estatisticasTableAdapter1.ClearBeforeFill = true;
             // 
             // bt_sairApp
             // 
@@ -3637,215 +3827,32 @@
             this.bt_sairApp.UseVisualStyleBackColor = false;
             this.bt_sairApp.Click += new System.EventHandler(this.bt_sairApp_Click);
             // 
-            // btSubmeter
+            // panel5
             // 
-            this.btSubmeter.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btSubmeter.ButtonColor = System.Drawing.Color.SlateGray;
-            this.btSubmeter.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btSubmeter.FlatAppearance.BorderSize = 0;
-            this.btSubmeter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.btSubmeter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btSubmeter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSubmeter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSubmeter.ForeColor = System.Drawing.Color.White;
-            this.btSubmeter.Location = new System.Drawing.Point(379, 265);
-            this.btSubmeter.Name = "btSubmeter";
-            this.btSubmeter.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
-            this.btSubmeter.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
-            this.btSubmeter.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btSubmeter.Size = new System.Drawing.Size(139, 38);
-            this.btSubmeter.TabIndex = 52;
-            this.btSubmeter.Text = "Submeter";
-            this.btSubmeter.TextColor = System.Drawing.Color.White;
-            this.btSubmeter.UseVisualStyleBackColor = true;
-            this.btSubmeter.Click += new System.EventHandler(this.btSubmeter_Click);
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(104)))), ((int)(((byte)(120)))));
+            this.panel5.Controls.Add(this.label115);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(267, 77);
+            this.panel5.TabIndex = 25;
             // 
-            // btGerarJogos
+            // label115
             // 
-            this.btGerarJogos.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btGerarJogos.ButtonColor = System.Drawing.Color.SlateGray;
-            this.btGerarJogos.FlatAppearance.BorderSize = 0;
-            this.btGerarJogos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.btGerarJogos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btGerarJogos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btGerarJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGerarJogos.ForeColor = System.Drawing.Color.White;
-            this.btGerarJogos.Location = new System.Drawing.Point(39, 18);
-            this.btGerarJogos.Name = "btGerarJogos";
-            this.btGerarJogos.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
-            this.btGerarJogos.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
-            this.btGerarJogos.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btGerarJogos.Size = new System.Drawing.Size(190, 38);
-            this.btGerarJogos.TabIndex = 23;
-            this.btGerarJogos.Text = "Gerar calendário";
-            this.btGerarJogos.TextColor = System.Drawing.Color.White;
-            this.btGerarJogos.UseVisualStyleBackColor = true;
-            this.btGerarJogos.Click += new System.EventHandler(this.btGerarJogos_Click);
+            this.label115.BackColor = System.Drawing.Color.Transparent;
+            this.label115.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label115.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label115.Image = global::App_SuperLiga.Properties.Resources.football_2_32;
+            this.label115.Location = new System.Drawing.Point(22, 13);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(56, 54);
+            this.label115.TabIndex = 15;
+            this.label115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btAddEquipa
+            // estatisticasTableAdapter1
             // 
-            this.btAddEquipa.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btAddEquipa.ButtonColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.FlatAppearance.BorderColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.FlatAppearance.BorderSize = 0;
-            this.btAddEquipa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddEquipa.Font = new System.Drawing.Font("Cascadia Code SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddEquipa.ForeColor = System.Drawing.Color.SlateGray;
-            this.btAddEquipa.Location = new System.Drawing.Point(353, 28);
-            this.btAddEquipa.Name = "btAddEquipa";
-            this.btAddEquipa.OnHoverBorderColor = System.Drawing.Color.OrangeRed;
-            this.btAddEquipa.OnHoverButtonColor = System.Drawing.Color.OrangeRed;
-            this.btAddEquipa.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btAddEquipa.Size = new System.Drawing.Size(115, 46);
-            this.btAddEquipa.TabIndex = 35;
-            this.btAddEquipa.Text = "Criar";
-            this.btAddEquipa.TextColor = System.Drawing.Color.White;
-            this.btAddEquipa.UseVisualStyleBackColor = true;
-            this.btAddEquipa.Click += new System.EventHandler(this.btAddEquipa_Click);
-            // 
-            // Posicao
-            // 
-            this.Posicao.DataPropertyName = "Posicao";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Padding = new System.Windows.Forms.Padding(10);
-            this.Posicao.DefaultCellStyle = dataGridViewCellStyle26;
-            this.Posicao.HeaderText = "P";
-            this.Posicao.MinimumWidth = 6;
-            this.Posicao.Name = "Posicao";
-            this.Posicao.ReadOnly = true;
-            this.Posicao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Posicao.ToolTipText = "Posicao";
-            this.Posicao.Width = 125;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.DataPropertyName = "imagem_equipa";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle27.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle27.NullValue")));
-            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridViewImageColumn1.FillWeight = 80F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn1.ToolTipText = "Simbolo";
-            this.dataGridViewImageColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "nome_equipa";
-            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewTextBoxColumn8.HeaderText = " CLUBE";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn8.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "pontos";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridViewTextBoxColumn4.HeaderText = " PTS";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.ToolTipText = "Pontos";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "total_jogos";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridViewTextBoxColumn7.HeaderText = " J";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn7.ToolTipText = "Jogos";
-            this.dataGridViewTextBoxColumn7.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "vitorias";
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle31;
-            this.dataGridViewTextBoxColumn1.HeaderText = " V";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.ToolTipText = "Vitorias";
-            this.dataGridViewTextBoxColumn1.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "empates";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridViewTextBoxColumn2.HeaderText = " E";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.ToolTipText = "Empates";
-            this.dataGridViewTextBoxColumn2.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "derrotas";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle33;
-            this.dataGridViewTextBoxColumn3.HeaderText = " D";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.ToolTipText = "Derrotas";
-            this.dataGridViewTextBoxColumn3.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "golos_marcados";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle34;
-            this.dataGridViewTextBoxColumn5.HeaderText = " GM";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn5.ToolTipText = "Golos Marcados";
-            this.dataGridViewTextBoxColumn5.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "golos_sofridos";
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle35.Padding = new System.Windows.Forms.Padding(10);
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle35;
-            this.dataGridViewTextBoxColumn6.HeaderText = " GS";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn6.ToolTipText = "Golos Sofridos";
-            this.dataGridViewTextBoxColumn6.Width = 90;
+            this.estatisticasTableAdapter1.ClearBeforeFill = true;
             // 
             // Dashboard
             // 
@@ -3853,8 +3860,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1894, 954);
+            this.ClientSize = new System.Drawing.Size(1891, 945);
             this.ControlBox = false;
+            this.Controls.Add(this.panelEquipas);
+            this.Controls.Add(this.panelJogos);
             this.Controls.Add(this.panelClassificacao);
             this.Controls.Add(this.panelEstatisticas);
             this.Controls.Add(this.panel5);
@@ -3881,13 +3890,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.alphaGradientPanel11.ResumeLayout(false);
             this.alphaGradientPanel11.PerformLayout();
-            this.alphaGradientPanel9.ResumeLayout(false);
-            this.alphaGradientPanel9.PerformLayout();
+            this.alphaGradientPanel6.ResumeLayout(false);
+            this.alphaGradientPanel6.PerformLayout();
             this.alphaGradientPanel10.ResumeLayout(false);
             this.alphaGradientPanel10.PerformLayout();
+            this.alphaGradientPanel9.ResumeLayout(false);
+            this.alphaGradientPanel9.PerformLayout();
             this.alphaGradientPanel8.ResumeLayout(false);
             this.alphaGradientPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEquipas)).EndInit();
+            this.alphaGradientPanel20.ResumeLayout(false);
+            this.alphaGradientPanel20.PerformLayout();
+            this.alphaGradientPanel5.ResumeLayout(false);
+            this.alphaGradientPanel5.PerformLayout();
             this.alphaGradientPanel22.ResumeLayout(false);
             this.alphaGradientPanel22.PerformLayout();
             this.alphaGradientPanel19.ResumeLayout(false);
@@ -3898,12 +3913,6 @@
             this.alphaGradientPanel4.PerformLayout();
             this.alphaGradientPanel13.ResumeLayout(false);
             this.alphaGradientPanel13.PerformLayout();
-            this.alphaGradientPanel6.ResumeLayout(false);
-            this.alphaGradientPanel6.PerformLayout();
-            this.alphaGradientPanel20.ResumeLayout(false);
-            this.alphaGradientPanel20.PerformLayout();
-            this.alphaGradientPanel5.ResumeLayout(false);
-            this.alphaGradientPanel5.PerformLayout();
             this.panelEstatisticas.ResumeLayout(false);
             this.alphaGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vencedor)).EndInit();
@@ -3939,12 +3948,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJogos)).EndInit();
             this.panelClassificacao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClassificacao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estatisticasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet1)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.superligaDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estatisticasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3990,7 +3998,6 @@
         private System.Windows.Forms.Label lbldatetime;
         private System.Windows.Forms.Label lblAvisoCalendario;
         private System.Windows.Forms.Panel panel5;
-        private SuperligaDataSet superligaDataSet;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.AlphaGradientPanel alphaGradientPanel1;
         private System.Windows.Forms.Label lbl_totalEmpates;
@@ -4136,22 +4143,12 @@
         private System.Windows.Forms.Label lbl_UploadImagem;
         private System.Windows.Forms.Label lbl_UpdateEquipa;
         private System.Windows.Forms.Label lbl_RemoverImagem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdJornada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Casa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Visitante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColJogos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDJogo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCasa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColGolosCasa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColGolosFora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColVisitante;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha6;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha7;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha4;
         private System.Windows.Forms.ColorWithAlpha colorWithAlpha5;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label17;
-        private SuperligaDataSetTableAdapters.EstatisticasTableAdapter estatisticasTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewClassificacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn idestatisticaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idequipaDataGridViewTextBoxColumn;
@@ -4167,6 +4164,15 @@
         private SuperligaDataSet1 superligaDataSet1;
         private System.Windows.Forms.BindingSource estatisticasBindingSource;
         private SuperligaDataSet1TableAdapters.EstatisticasTableAdapter estatisticasTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDJogo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColGolosCasa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColGolosFora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColVisitante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdJornada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Casa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Visitante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColJogos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Posicao;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;

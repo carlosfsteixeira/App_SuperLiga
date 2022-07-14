@@ -109,11 +109,6 @@
     <Compile Include="RoundButtons.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SuperligaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SuperligaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SuperligaDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,17 +161,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SuperligaDataSet.xsc">
-      <DependentUpon>SuperligaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SuperligaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SuperligaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SuperligaDataSet.xss">
-      <DependentUpon>SuperligaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="SuperligaDataSet1.xsc">
       <DependentUpon>SuperligaDataSet1.xsd</DependentUpon>
     </None>
